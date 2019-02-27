@@ -18,5 +18,5 @@ A Dashboard for usage stats for individual users or groups of schools.
 * Internal use for employees, but use APIs to grab data from webpage.
   > 
   * API access by end of the week.
-* Separate from the website, standalone application. (not JS?)
+* Separate from the website, standalone application.
  
