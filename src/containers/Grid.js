@@ -3,16 +3,17 @@ import GridLayout from 'react-grid-layout';
 import '../css/gridLayoutStyle.css';
 import '../css/resizableStyle.css';
 
-class MyFirstGrid extends Component {
+class Grid extends Component {
   render() {
-    // layout is an array of objects, see the demo for more complete usage
+    //https://github.com/STRML/react-grid-layout
     var layout = [
-      {i: 'hello', x: 0, y: 0, w: 1, h: 2, static: true},
-      {i: 'b', x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4},
-      {i: 'c', x: 4, y: 0, w: 1, h: 2}
+      {i: 'a', x: 0, y: 0, w: 3, h: 3, static: true /*static item*/},
+      {i: 'b', x: 3, y: 0, w: 3, h: 3, minW: 3, maxW: 6 /*restrict the size of the item with min/max*/},
+      {i: 'c', x: 6, y: 0, w: 3, h: 3 /*does whatever it wants*/}
     ];
     return (
       <GridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
+        {/*sets the size of the grid*/}
         <div key="a">hello</div>
         <div key="b">b</div>
         <div key="c">c</div>
@@ -20,4 +21,4 @@ class MyFirstGrid extends Component {
     )
   }
 }
-export default MyFirstGrid;
+export default Grid;
