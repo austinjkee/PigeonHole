@@ -10,7 +10,7 @@ const App = () => (
         <div className="App">
             <h1>Bar title</h1>
             
-            <Grid />
+            <Grid/>
         </div>
     </div>
 )
