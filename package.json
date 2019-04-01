@@ -5,11 +5,13 @@
   "dependencies": {
     "@nivo/bar": "^0.55.0",
     "@nivo/generators": "^0.55.0",
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
+    "twit": "^2.2.11",
     "twitter-lite": "^0.9.4"
   },
   "scripts": {
