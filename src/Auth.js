@@ -30,10 +30,10 @@ class Auth extends React.Component {
     }
     else{
         var packet;
-        //Bcrypt.hash(this.state.pword, 10, function(err, hash) {
+        //bcrypt.hash(this.state.pword, 10, function(err, hash) {
             packet = {uname: this.state.uname, pword: this.state.pword};
         //});
-        var dat = fetch('/check',{
+        var dat = fetch('http://localhost:3001/check',{
             method: 'post',
             body : JSON.stringify(packet),
             headers:{
@@ -46,10 +46,7 @@ class Auth extends React.Component {
 
         if(dat != undefined && dat.id != undefined){
             //Passed the test!  Go to dash!
-            var landing = document.getElementById("landing");
-            landing.classList.add("hide");
-            var element = document.getElementById("dash");
-            element.classList.add("authorized");
+            window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
         }
         else{
             alert('Bad username or password.');
@@ -64,11 +61,11 @@ class Auth extends React.Component {
     }
     else{
         var packet;
-        //Bcrypt.hash(this.state.pword, 10, function(err, hash) {
+        //bcrypt.hash(this.state.pword, 10, function(err, hash) {
             //account creation
             packet = {id: 10, uname: this.state.uname, pword: this.state.pword};
         //});
-        fetch('/create',{
+        fetch('http://localhost:3001/create',{
             method: 'put',
             body : JSON.stringify(packet),
             headers:{
@@ -78,11 +75,7 @@ class Auth extends React.Component {
         .then(res => res.json())
         .then(response => console.log('Success:', JSON.stringify(response)))
         .catch(error => console.error('Error:', error));
-
-        var landing = document.getElementById("landing");
-        landing.classList.add("hide");
-        var element = document.getElementById("dash");
-        element.classList.add("authorized");
+        window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
     }
     event.preventDefault();
   }

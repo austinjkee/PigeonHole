@@ -1,23 +1,12 @@
 .LoginPage {
-    position: fixed;
     height:100%;
     background-color: LightSlateGrey;
     overflow:hidden;
 }
 
-.LoginPage.hide {
-    visibility:hidden;
-}
-
 .Dashboard {
     position: fixed;
-    height:0px;
     overflow:hidden;
-    visibility:hidden;
-}
-
-.Dashboard.authorized {
-    visibility:visible;
 }
 
 @media (min-width: 1000px) {
