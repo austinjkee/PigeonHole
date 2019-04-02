@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './App.css'
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
-import Bar from './containers/Bar';
 import Grid from './containers/Grid';
-import Info from './containers/Info';
+
+var server = require('./server.js');
 
 class App extends Component {
     constructor() {
@@ -14,12 +14,13 @@ class App extends Component {
 
     render() {
       function handleClick(){
+        console.log(server.jsonData);
         alert("Hehe");
       }
       return (
           <div className="App">
           <h1>Widget Dashboard</h1>
-          <Button type="Submit" className="submit" onClick={handleClick}>cool</Button>
+          <Button type="Submit" className="submit" onClick={handleClick}>Welcome</Button>
           <Grid/>
           </div>
       );

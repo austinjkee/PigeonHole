@@ -2,8 +2,13 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
+import * as data from '../json/search_university.json';
+const stuff = data[0].name;
+console.log(stuff);
+
 const Bar = () => (
-    <div style={{height: '25em', width: '40em'}}>
+    <div style={{height: '20em', width: '30em'}}>
+
     <ResponsiveBar
     data={[
   {
