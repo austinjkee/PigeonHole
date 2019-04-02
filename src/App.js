@@ -1,5 +1,5 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
 import Bar from './containers/Bar';
 import Grid from './containers/Grid';

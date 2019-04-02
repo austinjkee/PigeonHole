@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from 'react-bootstrap';
+import App from './App.js';
 
 const bcrypt = require('bcryptjs'),
     fetch = require('node-fetch');
@@ -46,7 +47,14 @@ class Auth extends React.Component {
 
         if(dat != undefined && dat.id != undefined){
             //Passed the test!  Go to dash!
-            window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
+            //window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
+            window.location.pathname = "dash.html";
+            const Authed = () => (
+                <div>
+                    <App/>
+                </div>
+            )
+            ReactDOM.render(<Authed />, document.getElementById('root'));
         }
         else{
             alert('Bad username or password.');
@@ -75,7 +83,9 @@ class Auth extends React.Component {
         .then(res => res.json())
         .then(response => console.log('Success:', JSON.stringify(response)))
         .catch(error => console.error('Error:', error));
-        window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
+        //window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
+        window.location.pathname = "dash.html";
+
     }
     event.preventDefault();
   }
