@@ -1,18 +1,149 @@
 #login-background {
     background-color: LightSlateGrey;
+    overflow: hidden;
 }
 
-#login-form{
-    position: relative;
-    margin: auto;
-    top: 15%;
-    height: 250px;
-    width: 400px;
-    background-color: DarkSlateBlue;
+@media (min-width: 1000px) {
+    @media (max-height: 350px) {
+        #logo {
+            position: relative;
+            float: left;
+            height: 0%;
+            width: 0%;
+            visibility:hidden;
+        }
 
-    border-left-style: solid;
-    border-left-width: 50px;
-    border-color: DimGrey;
+        #logo-image {
+            position: relative;
+            height: 0px;
+            width: 0px;
+            object-fit: contain;
+            visibility: hidden;
+        }
+
+        #logo-image-mobile {
+            position: relative;
+            max-height: 100%;
+            object-fit: contain;
+            visibility: visible;
+        }
+
+        #text-fields {
+            position: relative;
+            float: left;
+            margin-left: 5%;
+            margin-right: auto;
+        }
+
+        #buttons {
+            position: relative;
+            float: right;
+            margin-right: 5%;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-height: 350px){
+        #logo {
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+
+        #logo-image {
+            position: relative;
+            max-width: 50%;
+            object-fit: contain;
+            visibility: visible;
+        }
+
+        #login-form{
+            position: relative;
+            float: right;
+            height: 100%;
+            width: 40%;
+            background-color: DarkSlateBlue;
+
+            border-left-style: solid;
+            border-left-width: 50px;
+            border-color: DimGrey;
+        }
+
+        #logo-image-mobile {
+            position: relative;
+            height: 0px;
+            width: 0px;
+            visibility: hidden;
+        }
+
+        #text-fields {
+            position: relative;
+        }
+
+        #buttons {
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #logo {
+        position: relative;
+        float: left;
+        height: 0%;
+        width: 0%;
+        visibility:hidden;
+    }
+
+    #logo-image {
+        position: relative;
+        height: 0px;
+        width: 0px;
+        object-fit: contain;
+        visibility: hidden;
+    }
+
+    #logo-image-mobile {
+        position: relative;
+        max-height: 100%;
+        object-fit: contain;
+        visibility: visible;
+    }
+
+    @media (max-height: 350px) {
+        #text-fields {
+            position: relative;
+            float: left;
+            margin-left: 5%;
+            margin-right: auto;
+        }
+
+        #buttons {
+            position: relative;
+            float: right;
+            margin-right: 5%;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-height: 350px){
+        #text-fields {
+            position: relative;
+        }
+
+        #buttons {
+            position: relative;
+        }
+    }
+}
+
+.login-button {
+    background-color: White;
+
+    font: Arial;
+    font-weight: bold;
+    color: DimGrey;
 }
 
 .login-text {
@@ -21,15 +152,6 @@
     font: Arial;
     font-style: oblique;
     color: #00aced;
-}
-
-.login-button {
-    background-color: White;
-    border-style:
-
-    font: Arial;
-    font-weight: bold;
-    color: DimGrey;
 }
 
 .navbar.login {
