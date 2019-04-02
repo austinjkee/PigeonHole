@@ -1,7 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import { Button } from 'react-bootstrap';
-import { MySQL } from 'mysql';
-import { Bcrypt } from 'bcryptjs';
+
+const bcrypt = require('bcryptjs'),
+    fetch = require('node-fetch');
 
 class Auth extends React.Component {
   constructor(props) {
@@ -28,12 +30,54 @@ class Auth extends React.Component {
     }
     else{
         alert('A name was submitted: ' + this.state.uname + this.state.pword);
+        var packet;
+        //Bcrypt.hash(this.state.pword, 10, function(err, hash) {
+            packet = {uname: this.state.uname, pword: this.state.pword};
+        //});
+        var dat = fetch('/check',{
+            method: 'post',
+            body : JSON.stringify(packet),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(response => console.log('Success:', JSON.stringify(response)))
+        .catch(error => console.error('Error:', error));
+
+        if(dat != undefined && dat.id != undefined){
+            //Passed the test!  Go to dash!
+            window.location.pathname = "dash.html";
+        }
+        else{
+            alert('Bad username or password.');
+        }
     }
     event.preventDefault();
   }
 
   handleAdd(event) {
-    alert('An entry was added: ' + this.state.uname + this.state.pword);
+    if(this.state.uname == '' || this.state.pword == ''){
+        alert('Missing fields!');
+    }
+    else{
+        var packet;
+        //Bcrypt.hash(this.state.pword, 10, function(err, hash) {
+            //account creation
+            packet = {id: 10, uname: this.state.uname, pword: this.state.pword};
+        //});
+        fetch('/create',{
+            method: 'put',
+            body : JSON.stringify(packet),
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(response => console.log('Success:', JSON.stringify(response)))
+        .catch(error => console.error('Error:', error));
+        window.location.pathname = "dash.html";
+    }
     event.preventDefault();
   }
 
@@ -42,10 +86,10 @@ class Auth extends React.Component {
         <form onSubmit={this.handleSubmit}>
         <div id="text-fields">
             <br />
-                <input class="login-text" type="text" name="username" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
+                <input className="login-text" type="text" name="username" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
             <br />
             <br />
-                <input class="login-text" type="password" name="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
+                <input className="login-text" type="password" name="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
             <br />
         </div>
         <div id="buttons">
