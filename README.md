@@ -70,4 +70,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 =======
 # CEN3031Team5
 tutormatchingservice.com Features
+<<<<<<< HEAD
 >>>>>>> Initial commit
+=======
+
+We are developing features for Tutoring-Matching Service
+
+For now, we will be developing a feature:
+
+A Dashboard for usage stats for individual users or groups of schools.
+>>>>>>> Update README.md
