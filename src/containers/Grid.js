@@ -6,6 +6,7 @@ import BarBar from './Bar.js';
 import Info from './Info.js';
 
 class Grid extends Component {
+  
   render() {
     //https://github.com/STRML/react-grid-layout
     var layout = [
@@ -14,13 +15,14 @@ class Grid extends Component {
       {i: 'c', x: 17, y: 0, w: 3, h: 3 /*does whatever it wants*/}
     ];
     function handleClick() {
-      alert("Lasers deployed []-----");
+      alert("An element should be added.");
     }
 
     return (
       <div>
-        <button onClick={handleClick}>Activate Lasers</button>
-
+        <button onClick={handleClick}>Add Graph</button>
+        <button onClick={handleClick}>Add Table</button>
+        <button onClick={handleClick}>Add Map</button>
 
         <GridLayout className="layout" layout={layout} cols={20} rowHeight={30} width={1200}>
           {/*sets the size of the grid*/}

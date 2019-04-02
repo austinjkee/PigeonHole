@@ -8,8 +8,8 @@ import Info from './containers/Info';
 const App = () => (
     <div>
         <div className="App">
-            <h1>Bar title</h1>
-            
+            <h1>Widget Dashboard</h1>
+
             <Grid/>
         </div>
     </div>

@@ -2,8 +2,14 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
-const Bar = () => (
-    <div style={{height: '25em', width: '40em'}}>
+class Bar extends React.Component{
+    componentDidMount(){
+      let {clientHeight, clientWidth} = this.refs.BarBar;
+      console.log(clientHeight, clientWidth);
+    }
+    render(){
+      return(
+    <div ref="BarBar" style={{height: '25em', width: '40em'}}>
     <ResponsiveBar
     data={[
   {
@@ -215,6 +221,8 @@ const Bar = () => (
 />
         <div className="Title">BAR</div>
     </div>
-)
+  );
+}
+}
 
 export default Bar
