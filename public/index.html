@@ -3,26 +3,76 @@
 <head>
   <meta charset="utf-8">
   <title>Login</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-touch.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-sanitize.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="styleSheet" href="stylesheets/styles.css">
 </head>
-<body id="login-background">
-    <header class="navbar navbar-default fixed-top login">
-        <il>P I G E O N &nbsp &nbsp &nbsp H O L E</il>
-        <img id="logo-image-mobile" src="./resources/PigeonTC.png" align="right">
-    </header>
-    <div class="header-placeholder"></div>
-    <div id="logo" align="center">
-        <img id="logo-image" src="./resources/PigeonTC.png">
+<body scroll="no">
+    <div id="landing" class="LoginPage">
+        <header class="navbar navbar-default fixed-top login">
+            <il>P I G E O N &nbsp &nbsp &nbsp H O L E</il>
+            <img id="logo-image-mobile" src="./resources/PigeonTC.png" align="right">
+        </header>
+        <div class="header-placeholder"></div>
+        <div id="logo" align="center">
+            <img id="logo-image" src="./resources/PigeonTC.png">
+        </div>
+        <div id="login-form" align="center"></div>
     </div>
-    <div id="login-form" align="center"></div>
+    <div id="dash" class="Dashboard">
+        <header class="navbar navbar-default fixed-top navbar-inner home">
+            <nav class="hidden-ms navbar-light navbar-expand-lg navbar-header" ng-controller="ViewController">
+                <ul class="nav navbar-nav">
+                    <a href="#top" role="button" class="navbar-brand" ng-click="changeToPage("home")">
+                      <img id="navbarBrand" src="resources/PigeonTC.png">
+                    </a>
+                    <div class="navbar navbar-default navbar-header" id="navbarDesktop">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Widgets
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#chart" ng-click="changeToPage("sentinel")">Chart</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#toptweet" ng-click="changeToPage("chronic")">Top Tweet</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#map" ng-click="changeToPage("chronic")">Map</a>
+                        </div>
+                      </li>
+                    <li class="nav-item">
+                      <a href="#" role="button" class="nav-link" ng-click="changeToPage("blog")">
+                          <li>Beep</li>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#about" role="button" class="nav-link" ng-click="changeToPage("about")">
+                          <li>Boop</li>
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+            </nav>
+            <nav class="hidden-ms navbar-light navbar-expand-lg ml-auto">
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <script>
+                    function logout(){
+                        var landing = document.getElementById("landing");
+                        landing.classList.remove("hide");
+                        var element = document.getElementById("dash");
+                        element.classList.remove("authorized");
+                    }
+                    </script>
+                  <a onclick="logout()" role="button" class="nav-link">
+                      <li>Log Out</li>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </header>
+        <div id="root"></div>
+    </div>
 </body>
 </html>

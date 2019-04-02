@@ -1,6 +1,23 @@
-#login-background {
+.LoginPage {
+    position: fixed;
+    height:100%;
     background-color: LightSlateGrey;
-    overflow: hidden;
+    overflow:hidden;
+}
+
+.LoginPage.hide {
+    visibility:hidden;
+}
+
+.Dashboard {
+    position: fixed;
+    height:0px;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+.Dashboard.authorized {
+    visibility:visible;
 }
 
 @media (min-width: 1000px) {
@@ -304,9 +321,7 @@
 
 #navbarBrand {
   position: fixed;
-  margin-top: 8px;
-  width: 120px;
-  margin-bottom: 8px;
+  max-height: 50px;
   background-size: contain;
 }
 
