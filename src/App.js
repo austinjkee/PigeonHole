@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import './App.css';
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
@@ -14,5 +15,36 @@ const App = () => (
         </div>
     </div>
 )
+=======
+import React, { Component } from 'react'
+import './App.css'
+import { Button, ButtonToolbar, Table } from 'react-bootstrap';
+import Grid from './containers/Grid';
 
-export default App
+var server = require('./server.js');
+
+class App extends Component {
+    constructor() {
+      super();
+      this.state = { data: [], yes: 1 };
+      console.log("asdhfkasj");
+    }
+
+    render() {
+      function handleClick(){
+        console.log(server.jsonData);
+        alert("Hehe");
+      }
+      return (
+          <div className="App">
+          <h1>Widget Dashboard</h1>
+          <Button type="Submit" className="submit" onClick={handleClick}>Welcome</Button>
+          <Grid/>
+          </div>
+      );
+  }
+>>>>>>> 2feafb147a280c70af28337190565d96fbe0f3a7
+
+}
+
+export default App;
