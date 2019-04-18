@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from 'react-bootstrap';
-import App from './App.js';
 
 const bcrypt = require('bcryptjs'),
     fetch = require('node-fetch');
