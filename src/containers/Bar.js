@@ -1,20 +1,9 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
-//import * as data from '../json/search_university.json';
 
-//const stuff = data[0].name;
-
-//console.log(stuff);
-
-class Bar extends React.Component{
-    componentDidMount(){
-      let {clientHeight, clientWidth} = this.refs.BarBar;
-      console.log(clientHeight, clientWidth);
-    }
-    render(){
-      return(
-    <div style={{height: '20em', width: '30em'}}>
+const Bar = () => (
+    <div style={{height: '25em', width: '40em'}}>
     <ResponsiveBar
     data={[
   {
@@ -226,8 +215,6 @@ class Bar extends React.Component{
 />
         <div className="Title">BAR</div>
     </div>
-  );
-}
-}
+)
 
 export default Bar

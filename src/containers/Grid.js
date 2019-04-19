@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import GridLayout from 'react-grid-layout';
-
-import { Button, ButtonToolbar, Table } from 'react-bootstrap';
 import '../css/gridLayoutStyle.css';
 import '../css/resizableStyle.css';
 import BarBar from './Bar.js';
 import Info from './Info.js';
-import Info2 from './Table.js';
 
 class Grid extends Component {
 
@@ -23,15 +20,15 @@ class Grid extends Component {
 
     return (
       <div>
-        <Button onClick={handleClick}>Add Graph</Button>
-        <Button onClick={handleClick}>Add Table</Button>
-        <Button onClick={handleClick}>Add Map</Button>
+        <button onClick={handleClick}>Add Graph</button>
+        <button onClick={handleClick}>Add Table</button>
+        <button onClick={handleClick}>Add Map</button>
 
-        <GridLayout className="layout" layout={layout} cols={24} rowHeight={30} width={1300}>
+        <GridLayout className="layout" layout={layout} cols={20} rowHeight={30} width={1200}>
           {/*sets the size of the grid*/}
           <div key="a" class="BarBar"><BarBar/></div>
           <div key="b" class="Info"><Info/></div>
-          <div key="c" class="Info2"><Info2/></div>
+          <div key="c">c</div>
         </GridLayout>
       </div>
     );
