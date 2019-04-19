@@ -33,9 +33,9 @@ class App extends Component {
       }
       return (
           <div className="App">
-          <h1>Widget Dashboard</h1>
-          <Button type="Submit" className="submit" onClick={handleClick}>Welcome</Button>
-          <Grid/>
+            <h1>Widget Dashboard</h1>
+            <Button type="Submit" className="submit" onClick={handleClick}>Welcome</Button>
+            <Grid/>
           </div>
       );
   }

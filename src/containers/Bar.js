@@ -1,11 +1,11 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
-import * as data from '../json/search_university.json';
+//import * as data from '../json/search_university.json';
 
-const stuff = data[0].name;
+//const stuff = data[0].name;
 
-console.log(stuff);
+//console.log(stuff);
 
 class Bar extends React.Component{
     componentDidMount(){
