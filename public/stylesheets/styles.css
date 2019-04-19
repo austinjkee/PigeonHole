@@ -1,0 +1,435 @@
+.LoginPage {
+    height:100%;
+    background-color: LightSlateGrey;
+    overflow:hidden;
+}
+
+.Dashboard {
+    position: fixed;
+    overflow:hidden;
+}
+
+@media (min-width: 1000px) {
+    @media (max-height: 350px) {
+        #logo {
+            position: relative;
+            float: left;
+            height: 0%;
+            width: 0%;
+            visibility:hidden;
+        }
+
+        #logo-image {
+            position: relative;
+            height: 0px;
+            width: 0px;
+            object-fit: contain;
+            visibility: hidden;
+        }
+
+        #logo-image-mobile {
+            position: relative;
+            max-height: 100%;
+            object-fit: contain;
+            visibility: visible;
+        }
+
+        #text-fields {
+            position: relative;
+            float: left;
+            margin-left: 5%;
+            margin-right: auto;
+        }
+
+        #buttons {
+            position: relative;
+            float: right;
+            margin-right: 5%;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-height: 350px){
+        #logo {
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+
+        #logo-image {
+            position: relative;
+            max-width: 50%;
+            object-fit: contain;
+            visibility: visible;
+        }
+
+        #login-form{
+            position: relative;
+            float: right;
+            height: 100%;
+            width: 40%;
+            background-color: DarkSlateBlue;
+
+            border-left-style: solid;
+            border-left-width: 50px;
+            border-color: DimGrey;
+        }
+
+        #logo-image-mobile {
+            position: relative;
+            height: 0px;
+            width: 0px;
+            visibility: hidden;
+        }
+
+        #text-fields {
+            position: relative;
+        }
+
+        #buttons {
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #logo {
+        position: relative;
+        float: left;
+        height: 0%;
+        width: 0%;
+        visibility:hidden;
+    }
+
+    #logo-image {
+        position: relative;
+        height: 0px;
+        width: 0px;
+        object-fit: contain;
+        visibility: hidden;
+    }
+
+    #logo-image-mobile {
+        position: relative;
+        max-height: 100%;
+        object-fit: contain;
+        visibility: visible;
+    }
+
+    @media (max-height: 350px) {
+        #text-fields {
+            position: relative;
+            float: left;
+            margin-left: 5%;
+            margin-right: auto;
+        }
+
+        #buttons {
+            position: relative;
+            float: right;
+            margin-right: 5%;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-height: 350px){
+        #text-fields {
+            position: relative;
+        }
+
+        #buttons {
+            position: relative;
+        }
+    }
+}
+
+.login-button {
+    background-color: White;
+
+    font: Arial;
+    font-weight: bold;
+    color: DimGrey;
+}
+
+.login-text {
+    background-color: DimGrey;
+
+    font: Arial;
+    font-style: oblique;
+    color: #00aced;
+}
+
+.navbar.login {
+    height: 25%;
+    background-color: DarkSlateGrey;
+    border: none;
+
+
+    font: Arial;
+    font-weight: bold;
+    color: #00aced;
+
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+
+      #overview {
+        visibility: visible;
+      }
+}
+
+.navbar.home {
+  height: 50px;
+  background-color: white;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
+
+    #overview {
+      visibility: visible;
+    }
+
+}
+
+.navbar.sentinel {
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+
+    #overview {
+      visibility: hidden;
+    }
+
+    .navbar-brand {
+      color: #C57ED3;
+      transition: color 1s ease 0s;
+    }
+
+    .navbar-nav {
+
+       > li {
+
+          > a {
+            color: #C57ED3;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end .navbar-nav
+
+}
+
+.navbar.chronic {
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+
+    #overview {
+      visibility: hidden;
+    }
+
+    .navbar-brand {
+      color: #C57ED3;
+      transition: color 1s ease 0s;
+    }
+
+    .navbar-nav {
+
+       > li {
+
+          > a {
+            color: #C57ED3;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end .navbar-nav
+
+}
+
+.navbar.blog {
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+
+    #overview {
+      visibility: hidden;
+    }
+
+    .navbar-brand {
+      color: #C57ED3;
+      transition: color 1s ease 0s;
+    }
+
+    .navbar-nav {
+
+       > li {
+
+          > a {
+            color: #C57ED3;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end .navbar-nav
+
+}
+
+.navbar.about {
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+
+    #overview {
+      visibility: hidden;
+    }
+
+    .navbar-brand {
+      color: #C57ED3;
+      transition: color 1s ease 0s;
+    }
+
+    .navbar-nav {
+
+       > li {
+
+          > a {
+            color: #C57ED3;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end .navbar-nav
+
+}
+
+#navbarBrand {
+  position: fixed;
+  max-height: 50px;
+  background-size: contain;
+}
+
+.navbar-inner {
+  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+}
+
+.header-placeholder {
+  height: 25%;
+}
+
+.carousel-indicators li {
+  background-color: #ffd46f;
+}
+
+.carousel-indicators .active {
+  background-color: #ffd46f;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height:80px;
+  width:35px;
+  background-color: #ffd46f;
+}
+
+.carousel-control-next-icon:after
+{
+  color: #ff8f55;
+}
+
+.carousel-control-prev-icon:after {
+  color: #ff8f55;
+}
+
+.carousel-caption {
+    top: 10%;
+    bottom: auto;
+    left: 10%;
+    right: auto;
+}
+
+#carouselCardTitle {
+  font-size:80px;
+}
+
+#carouselBox {
+  width:100%;
+  max-height: 80% !important;
+}
+
+@media (min-width: 1000px) {
+
+  #navbarDesktop {
+    position: relative;
+    margin-top: 5px;
+    left: 120px;
+    margin-bottom: 5px;
+    visibility: visible;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  #navbarDesktop {
+    visibility: hidden;
+  }
+
+}
+
+#map {
+  height: 100%;
+}
+
+/*add some cool colors*/
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#floating-panel {
+  background-color: #fff;
+  border: 1px solid #999;
+  left: 25%;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  z-index: 5;
+}
+
+#widgetA1 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#widgetA1header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
