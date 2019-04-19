@@ -15,11 +15,6 @@ const App = () => (
     </div>
 )
 
-import React, { Component } from 'react'
-import './App.css'
-import { Button, ButtonToolbar, Table } from 'react-bootstrap';
-import Grid from './containers/Grid';
-
 var server = require('./server.js');
 
 class App extends Component {
