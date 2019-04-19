@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
 import Bar from './containers/Bar';
