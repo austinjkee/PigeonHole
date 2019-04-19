@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://35.227.94.70/",
+  "homepage": "http://35.227.94.70/login",
   "dependencies": {
     "@nivo/bar": "^0.55.0",
     "@nivo/generators": "^0.55.0",
