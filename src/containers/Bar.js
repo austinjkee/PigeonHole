@@ -1,8 +1,12 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
+import * as data from '../json/search_university.json';
 
-<<<<<<< HEAD
+const stuff = data[0].name;
+
+console.log(stuff);
+
 class Bar extends React.Component{
     componentDidMount(){
       let {clientHeight, clientWidth} = this.refs.BarBar;
@@ -11,15 +15,8 @@ class Bar extends React.Component{
     render(){
       return(
     <div ref="BarBar" style={{height: '25em', width: '40em'}}>
-=======
-import * as data from '../json/search_university.json';
-const stuff = data[0].name;
-console.log(stuff);
 
-const Bar = () => (
     <div style={{height: '20em', width: '30em'}}>
-
->>>>>>> 2feafb147a280c70af28337190565d96fbe0f3a7
     <ResponsiveBar
     data={[
   {
