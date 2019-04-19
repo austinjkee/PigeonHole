@@ -5,6 +5,7 @@ import Bar from './containers/Bar';
 import Grid from './containers/Grid';
 import Info from './containers/Info';
 
+/*
 const App = () => (
     <div>
         <div className="App">
@@ -14,6 +15,7 @@ const App = () => (
         </div>
     </div>
 )
+*/
 
 var server = require('./server.js');
 
