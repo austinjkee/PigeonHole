@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Auth from './Auth';
-import * as serviceWorker from './serviceWorker';
+import `${process.env.PUBLIC_URL}/index.css`;
+import Auth from `${process.env.PUBLIC_URL}/Auth`;
+import * as serviceWorker from `${process.env.PUBLIC_URL}/serviceWorker`;
 
 ReactDOM.render(<Auth />, document.getElementById('login-form'));
 
