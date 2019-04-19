@@ -14,8 +14,6 @@ class Bar extends React.Component{
     }
     render(){
       return(
-    <div ref="BarBar" style={{height: '25em', width: '40em'}}>
-
     <div style={{height: '20em', width: '30em'}}>
     <ResponsiveBar
     data={[
