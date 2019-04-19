@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
 import ReactTable from "react-table";
 
-import * as data from '../json/search_university.json';
+//import * as data from '../json/search_university.json';
 
-const stuff = data[0].name;
-console.log(stuff);
+//const stuff = data[0].name;
+//console.log(stuff);
 
 class Info extends Component{
   render(){

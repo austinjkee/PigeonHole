@@ -1,3 +1,4 @@
+/*
 var Twit = require('twit');
 
 var jsonData;
@@ -27,3 +28,4 @@ var jsonData;
 
         console.log('Authentication successful. Running bot...\r\n')
     }
+    */
