@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import './App.css';
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
@@ -15,7 +14,7 @@ const App = () => (
         </div>
     </div>
 )
-=======
+
 import React, { Component } from 'react'
 import './App.css'
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
@@ -43,7 +42,6 @@ class App extends Component {
           </div>
       );
   }
->>>>>>> 2feafb147a280c70af28337190565d96fbe0f3a7
 
 }
 
