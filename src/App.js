@@ -1,31 +1,48 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
+import Bar from './containers/Bar';
 import Grid from './containers/Grid';
-
-var server = require('./server.js');
+import Info from './containers/Info';
 
 class App extends Component {
-    constructor() {
-      super();
-      this.state = { data: [], yes: 1 };
-      console.log("asdhfkasj");
-    }
+state = {
+    data: null
+  };
 
-    render() {
-      function handleClick(){
-        console.log(server.jsonData);
-        alert("Hehe");
-      }
-      return (
-          <div className="App">
-          <h1>Widget Dashboard</h1>
-          <Button type="Submit" className="submit" onClick={handleClick}>Welcome</Button>
-          <Grid/>
-          </div>
-      );
+  componentDidMount() {
+    this.callBackendAPI()
+      .then(res => {
+          console.log("aasdfasdf:", res.express);
+          this.setState(
+          { data: res.express.id })})
+
+      .catch(err => console.log(err));
   }
 
+  callBackendAPI = async () => {
+    const response = await fetch('/twitter');
+    console.log(response);
+    const body = await response.json();
+    console.log(body);
+
+    if (response.status !== 200) {
+      throw Error(body.message)
+    }
+    return body;
+  };
+
+  render() {
+    return (
+        <div className="App">
+              <h1>Widget Dashboard</h1>
+
+              <Grid/>
+
+              <p className="App-intro">{this.state.data}</p>
+          </div>
+    );
+  }
 }
 
-export default App;
+export default App
