@@ -1,0 +1,2252 @@
+[{
+	"id": 1665823832,
+	"id_str": "1665823832",
+	"name": "Twitter University",
+	"screen_name": "University",
+	"location": "San Francisco, CA",
+	"description": "Building a culture of learning for @TwitterEng and the world at large.",
+	"url": "http:\/\/t.co\/mrV8k9XPP1",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/mrV8k9XPP1",
+				"expanded_url": "https:\/\/university.twitter.com",
+				"display_url": "university.twitter.com",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 39260,
+	"friends_count": 82,
+	"listed_count": 577,
+	"created_at": "Mon Aug 12 19:13:51 +0000 2013",
+	"favourites_count": 65,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 286,
+	"lang": "en",
+	"status": {
+		"created_at": "Fri Feb 22 22:45:04 +0000 2019",
+		"id": 1099077641892552710,
+		"id_str": "1099077641892552710",
+		"text": "RT @ElliottSaslow: TWITTER ELECTION INTEGRITY DATASETS\n\nWe are very lucky @galvanize to be hosting @Twitter\u2019s own @ivantures discussing the\u2026",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "ElliottSaslow",
+				"name": "Elliott Saslow",
+				"id": 122030189,
+				"id_str": "122030189",
+				"indices": [3, 17]
+			}, {
+				"screen_name": "galvanize",
+				"name": "Galvanize",
+				"id": 299081229,
+				"id_str": "299081229",
+				"indices": [74, 84]
+			}, {
+				"screen_name": "Twitter",
+				"name": "Twitter",
+				"id": 783214,
+				"id_str": "783214",
+				"indices": [99, 107]
+			}, {
+				"screen_name": "ivantures",
+				"name": "Ivan Corneillet",
+				"id": 1491429667,
+				"id_str": "1491429667",
+				"indices": [114, 124]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweeted_status": {
+			"created_at": "Fri Feb 22 20:40:37 +0000 2019",
+			"id": 1099046321908928512,
+			"id_str": "1099046321908928512",
+			"text": "TWITTER ELECTION INTEGRITY DATASETS\n\nWe are very lucky @galvanize to be hosting @Twitter\u2019s own @ivantures discussin\u2026 https:\/\/t.co\/Nx2bBi4jYP",
+			"truncated": true,
+			"entities": {
+				"hashtags": [],
+				"symbols": [],
+				"user_mentions": [{
+					"screen_name": "galvanize",
+					"name": "Galvanize",
+					"id": 299081229,
+					"id_str": "299081229",
+					"indices": [55, 65]
+				}, {
+					"screen_name": "Twitter",
+					"name": "Twitter",
+					"id": 783214,
+					"id_str": "783214",
+					"indices": [80, 88]
+				}, {
+					"screen_name": "ivantures",
+					"name": "Ivan Corneillet",
+					"id": 1491429667,
+					"id_str": "1491429667",
+					"indices": [95, 105]
+				}],
+				"urls": [{
+					"url": "https:\/\/t.co\/Nx2bBi4jYP",
+					"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1099046321908928512",
+					"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+					"indices": [117, 140]
+				}]
+			},
+			"source": "\u003ca href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter for iPhone\u003c\/a\u003e",
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"geo": null,
+			"coordinates": null,
+			"place": {
+				"id": "5a110d312052166f",
+				"url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/5a110d312052166f.json",
+				"place_type": "city",
+				"name": "San Francisco",
+				"full_name": "San Francisco, CA",
+				"country_code": "US",
+				"country": "United States",
+				"contained_within": [],
+				"bounding_box": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[-122.514926, 37.708075],
+							[-122.357031, 37.708075],
+							[-122.357031, 37.833238],
+							[-122.514926, 37.833238]
+						]
+					]
+				},
+				"attributes": {}
+			},
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 8,
+			"favorite_count": 11,
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"lang": "en"
+		},
+		"is_quote_status": false,
+		"retweet_count": 8,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "C0DEED",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/378800000377095090\/2b9815a0d13f3615a8dcd497068c60f6_normal.png",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/378800000377095090\/2b9815a0d13f3615a8dcd497068c60f6_normal.png",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/1665823832\/1395941556",
+	"profile_link_color": "1DA1F2",
+	"profile_sidebar_border_color": "C0DEED",
+	"profile_sidebar_fill_color": "DDEEF6",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": true,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 33474655,
+	"id_str": "33474655",
+	"name": "Cambridge University",
+	"screen_name": "Cambridge_Uni",
+	"location": "Cambridge, England",
+	"description": "News and events from the University of Cambridge",
+	"url": "http:\/\/t.co\/npSMZaWCAQ",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/npSMZaWCAQ",
+				"expanded_url": "http:\/\/www.cam.ac.uk\/",
+				"display_url": "cam.ac.uk",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 449711,
+	"friends_count": 1097,
+	"listed_count": 4204,
+	"created_at": "Mon Apr 20 10:14:14 +0000 2009",
+	"favourites_count": 2192,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 9854,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 11:19:00 +0000 2019",
+		"id": 1100354539314659328,
+		"id_str": "1100354539314659328",
+		"text": "Plug and play havoc! Published today at @NDSSSymposium, our work with @RiceUniversity shows that most laptops are a\u2026 https:\/\/t.co\/1YUqs93vaz",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "NDSSSymposium",
+				"name": "NDSS Symposium",
+				"id": 1133377507,
+				"id_str": "1133377507",
+				"indices": [40, 54]
+			}, {
+				"screen_name": "RiceUniversity",
+				"name": "Rice University",
+				"id": 19720630,
+				"id_str": "19720630",
+				"indices": [70, 85]
+			}],
+			"urls": [{
+				"url": "https:\/\/t.co\/1YUqs93vaz",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100354539314659328",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/sproutsocial.com\" rel=\"nofollow\"\u003eSprout Social\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 12,
+		"favorite_count": 23,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "016867",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875634893534904323\/Alz7fmFM_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875634893534904323\/Alz7fmFM_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/33474655\/1398249913",
+	"profile_link_color": "25A5D4",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "000000",
+	"profile_text_color": "5C5C5C",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 248795646,
+	"id_str": "248795646",
+	"name": "Columbia University",
+	"screen_name": "Columbia",
+	"location": "New York, New York",
+	"description": "\"The best education is one that prepares you for your own venture into the unknown.\" - Lee C. Bollinger, Columbia University President",
+	"url": "https:\/\/t.co\/1iBezzd2wd",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/1iBezzd2wd",
+				"expanded_url": "http:\/\/www.columbia.edu",
+				"display_url": "columbia.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 305118,
+	"friends_count": 538,
+	"listed_count": 2376,
+	"created_at": "Mon Feb 07 18:58:59 +0000 2011",
+	"favourites_count": 3192,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 22335,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:54:54 +0000 2019",
+		"id": 1100454169075433472,
+		"id_str": "1100454169075433472",
+		"text": "RT @Columbia_Biz: Tomorrow\u2019s business leaders are today\u2019s MBAs. This week on @ColumbiaBizcast: Why Dean Glenn Hubbard believes \"we\u2019re in ex\u2026",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "Columbia_Biz",
+				"name": "Columbia B-School",
+				"id": 18083786,
+				"id_str": "18083786",
+				"indices": [3, 16]
+			}, {
+				"screen_name": "columbiabizcast",
+				"name": "Columbia Bizcast",
+				"id": 1044401414418706433,
+				"id_str": "1044401414418706433",
+				"indices": [77, 93]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweeted_status": {
+			"created_at": "Tue Feb 26 13:35:00 +0000 2019",
+			"id": 1100388764617105408,
+			"id_str": "1100388764617105408",
+			"text": "Tomorrow\u2019s business leaders are today\u2019s MBAs. This week on @ColumbiaBizcast: Why Dean Glenn Hubbard believes \"we\u2019re\u2026 https:\/\/t.co\/NeWR8yhoC8",
+			"truncated": true,
+			"entities": {
+				"hashtags": [],
+				"symbols": [],
+				"user_mentions": [{
+					"screen_name": "columbiabizcast",
+					"name": "Columbia Bizcast",
+					"id": 1044401414418706433,
+					"id_str": "1044401414418706433",
+					"indices": [59, 75]
+				}],
+				"urls": [{
+					"url": "https:\/\/t.co\/NeWR8yhoC8",
+					"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100388764617105408",
+					"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+					"indices": [117, 140]
+				}]
+			},
+			"source": "\u003ca href=\"https:\/\/studio.twitter.com\" rel=\"nofollow\"\u003eTwitter Media Studio\u003c\/a\u003e",
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"geo": null,
+			"coordinates": null,
+			"place": null,
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 3,
+			"favorite_count": 6,
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"lang": "en"
+		},
+		"is_quote_status": false,
+		"retweet_count": 3,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "C0DEED",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1055269874598141952\/dg1t2acD_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1055269874598141952\/dg1t2acD_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/248795646\/1495482699",
+	"profile_link_color": "0084B4",
+	"profile_sidebar_border_color": "C0DEED",
+	"profile_sidebar_fill_color": "DDEEF6",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 18036441,
+	"id_str": "18036441",
+	"name": "Stanford University",
+	"screen_name": "Stanford",
+	"location": "Stanford, CA",
+	"description": "Stanford is one of the world's leading research and teaching institutions. Official Twitter feed by University Communications.",
+	"url": "https:\/\/t.co\/7oJaKddQMt",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/7oJaKddQMt",
+				"expanded_url": "http:\/\/stanford.edu\/",
+				"display_url": "stanford.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 657354,
+	"friends_count": 518,
+	"listed_count": 7090,
+	"created_at": "Thu Dec 11 01:06:56 +0000 2008",
+	"favourites_count": 61,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": false,
+	"verified": true,
+	"statuses_count": 18667,
+	"lang": "en",
+	"status": {
+		"created_at": "Mon Feb 25 20:33:01 +0000 2019",
+		"id": 1100131572710367233,
+		"id_str": "1100131572710367233",
+		"text": "Stanford professor Jeff Hancock found evidence of \"massive-scale emotional contagion\" in a study of nearly 700,000\u2026 https:\/\/t.co\/l4twDALeIf",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": [{
+				"url": "https:\/\/t.co\/l4twDALeIf",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100131572710367233",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [116, 139]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/www.sprinklr.com\" rel=\"nofollow\"\u003eSprinklr\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 34,
+		"favorite_count": 77,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "F6F3E5",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875395483128049664\/8z_jvdLB_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875395483128049664\/8z_jvdLB_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/18036441\/1403030942",
+	"profile_link_color": "820000",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "DDCF99",
+	"profile_text_color": "3F3C30",
+	"profile_use_background_image": false,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 39585367,
+	"id_str": "39585367",
+	"name": "Harvard University",
+	"screen_name": "Harvard",
+	"location": "Cambridge, MA",
+	"description": "Devoted to excellence in teaching, learning, and research, and to developing leaders who make a difference globally.",
+	"url": "http:\/\/t.co\/n5qU9llHb8",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/n5qU9llHb8",
+				"expanded_url": "http:\/\/www.harvard.edu",
+				"display_url": "harvard.edu",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 923678,
+	"friends_count": 768,
+	"listed_count": 9211,
+	"created_at": "Tue May 12 20:18:09 +0000 2009",
+	"favourites_count": 8446,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 40520,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 15:15:03 +0000 2019",
+		"id": 1100413943258857472,
+		"id_str": "1100413943258857472",
+		"text": "\"We were able to show that Griffin was working at the level of a 5-year-old, on a task at which even apes would not\u2026 https:\/\/t.co\/XoKJvCdJAk",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": [{
+				"url": "https:\/\/t.co\/XoKJvCdJAk",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100413943258857472",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/buffer.com\" rel=\"nofollow\"\u003eBuffer\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 24,
+		"favorite_count": 81,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "A41034",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme14\/bg.gif",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme14\/bg.gif",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875797335342817282\/JO5OsmxU_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875797335342817282\/JO5OsmxU_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/39585367\/1547992380",
+	"profile_link_color": "A51C30",
+	"profile_sidebar_border_color": "000000",
+	"profile_sidebar_fill_color": "EFEFEF",
+	"profile_text_color": "333333",
+	"profile_use_background_image": false,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 48289662,
+	"id_str": "48289662",
+	"name": "Oxford University",
+	"screen_name": "UniofOxford",
+	"location": "Oxford, UK",
+	"description": "Official Twitter account for the University of Oxford, one of the world's leading universities.",
+	"url": "http:\/\/t.co\/JI4HOdo6ce",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/JI4HOdo6ce",
+				"expanded_url": "http:\/\/www.ox.ac.uk",
+				"display_url": "ox.ac.uk",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 499708,
+	"friends_count": 989,
+	"listed_count": 4617,
+	"created_at": "Thu Jun 18 08:28:28 +0000 2009",
+	"favourites_count": 7954,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": false,
+	"verified": true,
+	"statuses_count": 14778,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:02:03 +0000 2019",
+		"id": 1100440873035280386,
+		"id_str": "1100440873035280386",
+		"text": "Jeff Koons has been called the world\u2019s most famous, controversial and subversive living artist, and his artwork is\u2026 https:\/\/t.co\/uzMMJMg8AJ",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": [{
+				"url": "https:\/\/t.co\/uzMMJMg8AJ",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100440873035280386",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [116, 139]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/www.hootsuite.com\" rel=\"nofollow\"\u003eHootsuite Inc.\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 2,
+		"favorite_count": 22,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "C0DEED",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1055770897091649536\/1qDq-m41_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1055770897091649536\/1qDq-m41_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/48289662\/1506755132",
+	"profile_link_color": "1DA1F2",
+	"profile_sidebar_border_color": "C0DEED",
+	"profile_sidebar_fill_color": "DDEEF6",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": true,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 17237540,
+	"id_str": "17237540",
+	"name": "Texas A&M University",
+	"screen_name": "TAMU",
+	"location": "College Station, TX",
+	"description": "The official Twitter account for Texas A&M University! #tamu #12thMan #BeFearless",
+	"url": "https:\/\/t.co\/e6ON839q1A",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/e6ON839q1A",
+				"expanded_url": "http:\/\/www.fearlessfront.com",
+				"display_url": "fearlessfront.com",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 264682,
+	"friends_count": 1825,
+	"listed_count": 1738,
+	"created_at": "Fri Nov 07 20:03:27 +0000 2008",
+	"favourites_count": 14502,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 21832,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:05:15 +0000 2019",
+		"id": 1100441678123597825,
+		"id_str": "1100441678123597825",
+		"text": "Beginning March 1st, the @Bush41Library will host renowned American photographer @MarkBurns77's exhibit celebrating\u2026 https:\/\/t.co\/xs3OBR6b0e",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "Bush41Library",
+				"name": "Bush Library",
+				"id": 133456403,
+				"id_str": "133456403",
+				"indices": [25, 39]
+			}, {
+				"screen_name": "MarkBurns77",
+				"name": "Mark Burns",
+				"id": 84001170,
+				"id_str": "84001170",
+				"indices": [81, 93]
+			}],
+			"urls": [{
+				"url": "https:\/\/t.co\/xs3OBR6b0e",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100441678123597825",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/www.hootsuite.com\" rel=\"nofollow\"\u003eHootsuite Inc.\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 1,
+		"favorite_count": 27,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "500000",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1060174830895423493\/Htui25sk_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1060174830895423493\/Htui25sk_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/17237540\/1544283718",
+	"profile_link_color": "500000",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "BDBDBD",
+	"profile_text_color": "500000",
+	"profile_use_background_image": true,
+	"has_extended_profile": true,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 24894213,
+	"id_str": "24894213",
+	"name": "Penn",
+	"screen_name": "Penn",
+	"location": "Philadelphia, PA",
+	"description": "Official page for news, events and interesting updates from the University of Pennsylvania. Account managed by University Communications.",
+	"url": "http:\/\/t.co\/WXPbeTAL8D",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/WXPbeTAL8D",
+				"expanded_url": "http:\/\/www.upenn.edu",
+				"display_url": "upenn.edu",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 135458,
+	"friends_count": 1188,
+	"listed_count": 1729,
+	"created_at": "Tue Mar 17 15:03:50 +0000 2009",
+	"favourites_count": 8691,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 30358,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 16:53:13 +0000 2019",
+		"id": 1100438649018159107,
+		"id_str": "1100438649018159107",
+		"text": "A major public-lands package passed the U.S. Senate with massive bipartisan support and is expected to pass the Hou\u2026 https:\/\/t.co\/ef213zQMMy",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": [{
+				"url": "https:\/\/t.co\/ef213zQMMy",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100438649018159107",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/sproutsocial.com\" rel=\"nofollow\"\u003eSprout Social\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 0,
+		"favorite_count": 4,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "9AE4E8",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": true,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875383884862570496\/TN7FoDDx_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875383884862570496\/TN7FoDDx_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/24894213\/1545510813",
+	"profile_link_color": "011F5B",
+	"profile_sidebar_border_color": "BDDCAD",
+	"profile_sidebar_fill_color": "A0B7E0",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 5694822,
+	"id_str": "5694822",
+	"name": "Princeton University",
+	"screen_name": "Princeton",
+	"location": "Princeton, NJ",
+	"description": "The official Twitter account of Princeton University. Use #PrincetonU to join the conversation.",
+	"url": "https:\/\/t.co\/c3nTglNSOW",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/c3nTglNSOW",
+				"expanded_url": "http:\/\/www.princeton.edu",
+				"display_url": "princeton.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 341007,
+	"friends_count": 1789,
+	"listed_count": 3587,
+	"created_at": "Tue May 01 21:04:01 +0000 2007",
+	"favourites_count": 7999,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 32270,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:21:52 +0000 2019",
+		"id": 1100445859181940742,
+		"id_str": "1100445859181940742",
+		"text": "RT @PrincetonAAS: Tickets are now available for Princeton University Faculty, Students, and Staff. Visit the University Ticketing Office lo\u2026",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "PrincetonAAS",
+				"name": "Princeton African American Studies",
+				"id": 122101964,
+				"id_str": "122101964",
+				"indices": [3, 16]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweeted_status": {
+			"created_at": "Tue Feb 26 17:20:17 +0000 2019",
+			"id": 1100445461482295297,
+			"id_str": "1100445461482295297",
+			"text": "Tickets are now available for Princeton University Faculty, Students, and Staff. Visit the University Ticketing Off\u2026 https:\/\/t.co\/rhXYmfgfa2",
+			"truncated": true,
+			"entities": {
+				"hashtags": [],
+				"symbols": [],
+				"user_mentions": [],
+				"urls": [{
+					"url": "https:\/\/t.co\/rhXYmfgfa2",
+					"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100445461482295297",
+					"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+					"indices": [117, 140]
+				}]
+			},
+			"source": "\u003ca href=\"https:\/\/www.hootsuite.com\" rel=\"nofollow\"\u003eHootsuite Inc.\u003c\/a\u003e",
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"geo": null,
+			"coordinates": null,
+			"place": null,
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 1,
+			"favorite_count": 2,
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"lang": "en"
+		},
+		"is_quote_status": false,
+		"retweet_count": 1,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "171717",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1049283969806753792\/s8XkiRTM_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1049283969806753792\/s8XkiRTM_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/5694822\/1544812756",
+	"profile_link_color": "D86303",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "E8E6E3",
+	"profile_text_color": "000000",
+	"profile_use_background_image": false,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 28421825,
+	"id_str": "28421825",
+	"name": "New York University",
+	"screen_name": "nyuniversity",
+	"location": "New York",
+	"description": "The official Twitter account of New York University\u2014in and of the city; in and of the world. Who's tweeting? https:\/\/t.co\/TU1gZZ3eXC",
+	"url": "http:\/\/t.co\/MHz0rn5ibI",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/MHz0rn5ibI",
+				"expanded_url": "http:\/\/www.nyu.edu",
+				"display_url": "nyu.edu",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": [{
+				"url": "https:\/\/t.co\/TU1gZZ3eXC",
+				"expanded_url": "http:\/\/bit.ly\/nyusocialteam",
+				"display_url": "bit.ly\/nyusocialteam",
+				"indices": [109, 132]
+			}]
+		}
+	},
+	"protected": false,
+	"followers_count": 117456,
+	"friends_count": 1044,
+	"listed_count": 1018,
+	"created_at": "Thu Apr 02 21:14:48 +0000 2009",
+	"favourites_count": 6789,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 16390,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 16:53:00 +0000 2019",
+		"id": 1100438592902627328,
+		"id_str": "1100438592902627328",
+		"text": "\u201cI feel thrilled that little girls are going to come to @FrozenBroadway and know that they can be a princess and th\u2026 https:\/\/t.co\/mgNLjJYa5F",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "FrozenBroadway",
+				"name": "Frozen the Musical",
+				"id": 4634832515,
+				"id_str": "4634832515",
+				"indices": [56, 71]
+			}],
+			"urls": [{
+				"url": "https:\/\/t.co\/mgNLjJYa5F",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100438592902627328",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/buffer.com\" rel=\"nofollow\"\u003eBuffer\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 0,
+		"favorite_count": 8,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "FFFFFF",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1013778988588830721\/e51DpjSt_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1013778988588830721\/e51DpjSt_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/28421825\/1549992983",
+	"profile_link_color": "D11255",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "DDEEF6",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 176932593,
+	"id_str": "176932593",
+	"name": "UC Berkeley",
+	"screen_name": "UCBerkeley",
+	"location": "Berkeley, California",
+	"description": "Official account of the University of California, Berkeley, the premier public institution of higher education. #GoBears #Berkeley150",
+	"url": "https:\/\/t.co\/LFo29QjGsZ",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/LFo29QjGsZ",
+				"expanded_url": "http:\/\/berkeley.edu",
+				"display_url": "berkeley.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 162231,
+	"friends_count": 343,
+	"listed_count": 1815,
+	"created_at": "Tue Aug 10 20:40:13 +0000 2010",
+	"favourites_count": 15221,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 15970,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:19:34 +0000 2019",
+		"id": 1100445277469605888,
+		"id_str": "1100445277469605888",
+		"text": "RT @Cal: Celebrating James A. Harris (1932-2000), Berkeley Lab scientist. He began working as a scientist during the Jim Crow era, and help\u2026",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "Cal",
+				"name": "Cal:150 yrs of light\ud83c\udf1f",
+				"id": 17445752,
+				"id_str": "17445752",
+				"indices": [3, 7]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweeted_status": {
+			"created_at": "Mon Feb 25 17:53:24 +0000 2019",
+			"id": 1100091406482194432,
+			"id_str": "1100091406482194432",
+			"text": "Celebrating James A. Harris (1932-2000), Berkeley Lab scientist. He began working as a scientist during the Jim Cro\u2026 https:\/\/t.co\/WNDPfrisWa",
+			"truncated": true,
+			"entities": {
+				"hashtags": [],
+				"symbols": [],
+				"user_mentions": [],
+				"urls": [{
+					"url": "https:\/\/t.co\/WNDPfrisWa",
+					"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100091406482194432",
+					"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+					"indices": [117, 140]
+				}]
+			},
+			"source": "\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e",
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"geo": null,
+			"coordinates": null,
+			"place": null,
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 27,
+			"favorite_count": 60,
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"lang": "en"
+		},
+		"is_quote_status": false,
+		"retweet_count": 27,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "FCFCFC",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/667569099300405248\/ba6dE8pg_normal.png",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/667569099300405248\/ba6dE8pg_normal.png",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/176932593\/1398457126",
+	"profile_link_color": "9D7D0A",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "F9EFC8",
+	"profile_text_color": "152C9D",
+	"profile_use_background_image": true,
+	"has_extended_profile": true,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "regular"
+}, {
+	"id": 56879674,
+	"id_str": "56879674",
+	"name": "Stanford Medicine",
+	"screen_name": "StanfordMed",
+	"location": "Stanford, CA",
+	"description": "Stanford University School of Medicine integrates research, education, patient care & community service. Banner photo by Julie Greicius.",
+	"url": "http:\/\/t.co\/CVAaRTPVnp",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/CVAaRTPVnp",
+				"expanded_url": "http:\/\/med.stanford.edu",
+				"display_url": "med.stanford.edu",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 240064,
+	"friends_count": 538,
+	"listed_count": 2854,
+	"created_at": "Wed Jul 15 01:14:03 +0000 2009",
+	"favourites_count": 81,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": false,
+	"verified": true,
+	"statuses_count": 18048,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:50:04 +0000 2019",
+		"id": 1100452953041850369,
+		"id_str": "1100452953041850369",
+		"text": "Brain response to mom\u2019s voice differs in kids with autism, according to fMRI brain scan study of 42 children ages 7\u2026 https:\/\/t.co\/8UIKuRBlAQ",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": [{
+				"url": "https:\/\/t.co\/8UIKuRBlAQ",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100452953041850369",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/www.sprinklr.com\" rel=\"nofollow\"\u003eSprinklr\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 9,
+		"favorite_count": 7,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "F9F9F9",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/875422995254095872\/7DZAdiKc_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/875422995254095872\/7DZAdiKc_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/56879674\/1535400880",
+	"profile_link_color": "0F5FA1",
+	"profile_sidebar_border_color": "6E6E6E",
+	"profile_sidebar_fill_color": "C1C1C1",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 18458348,
+	"id_str": "18458348",
+	"name": "Indiana University Bloomington",
+	"screen_name": "IUBloomington",
+	"location": "Bloomington, IN",
+	"description": "The official Twitter feed from the Bloomington campus of Indiana University. Go Hoosiers!",
+	"url": "https:\/\/t.co\/F8qP9Ivay6",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/F8qP9Ivay6",
+				"expanded_url": "http:\/\/www.indiana.edu\/",
+				"display_url": "indiana.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 213650,
+	"friends_count": 670,
+	"listed_count": 1716,
+	"created_at": "Mon Dec 29 20:18:36 +0000 2008",
+	"favourites_count": 24599,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 45076,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:16:34 +0000 2019",
+		"id": 1100444523669475339,
+		"id_str": "1100444523669475339",
+		"text": "Sitting in class and @zfouzik421's flexing \ud83d\udcaa\ud83d\udcaa\ud83d\udcaa his Excel muscles like...\n#OneDayOneHoosier https:\/\/t.co\/EMpHbY2Wb5",
+		"truncated": false,
+		"entities": {
+			"hashtags": [{
+				"text": "OneDayOneHoosier",
+				"indices": [73, 90]
+			}],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "zfouzik421",
+				"name": "Zaid Fouzi",
+				"id": 1202793092,
+				"id_str": "1202793092",
+				"indices": [21, 32]
+			}],
+			"urls": [],
+			"media": [{
+				"id": 1100444487686516736,
+				"id_str": "1100444487686516736",
+				"indices": [91, 114],
+				"media_url": "http:\/\/pbs.twimg.com\/ext_tw_video_thumb\/1100444487686516736\/pu\/img\/py6iWAG_GokB0EI5.jpg",
+				"media_url_https": "https:\/\/pbs.twimg.com\/ext_tw_video_thumb\/1100444487686516736\/pu\/img\/py6iWAG_GokB0EI5.jpg",
+				"url": "https:\/\/t.co\/EMpHbY2Wb5",
+				"display_url": "pic.twitter.com\/EMpHbY2Wb5",
+				"expanded_url": "https:\/\/twitter.com\/IUBloomington\/status\/1100444523669475339\/video\/1",
+				"type": "photo",
+				"sizes": {
+					"thumb": {
+						"w": 150,
+						"h": 150,
+						"resize": "crop"
+					},
+					"small": {
+						"w": 383,
+						"h": 680,
+						"resize": "fit"
+					},
+					"large": {
+						"w": 720,
+						"h": 1280,
+						"resize": "fit"
+					},
+					"medium": {
+						"w": 675,
+						"h": 1200,
+						"resize": "fit"
+					}
+				}
+			}]
+		},
+		"extended_entities": {
+			"media": [{
+				"id": 1100444487686516736,
+				"id_str": "1100444487686516736",
+				"indices": [91, 114],
+				"media_url": "http:\/\/pbs.twimg.com\/ext_tw_video_thumb\/1100444487686516736\/pu\/img\/py6iWAG_GokB0EI5.jpg",
+				"media_url_https": "https:\/\/pbs.twimg.com\/ext_tw_video_thumb\/1100444487686516736\/pu\/img\/py6iWAG_GokB0EI5.jpg",
+				"url": "https:\/\/t.co\/EMpHbY2Wb5",
+				"display_url": "pic.twitter.com\/EMpHbY2Wb5",
+				"expanded_url": "https:\/\/twitter.com\/IUBloomington\/status\/1100444523669475339\/video\/1",
+				"type": "video",
+				"sizes": {
+					"thumb": {
+						"w": 150,
+						"h": 150,
+						"resize": "crop"
+					},
+					"small": {
+						"w": 383,
+						"h": 680,
+						"resize": "fit"
+					},
+					"large": {
+						"w": 720,
+						"h": 1280,
+						"resize": "fit"
+					},
+					"medium": {
+						"w": 675,
+						"h": 1200,
+						"resize": "fit"
+					}
+				},
+				"video_info": {
+					"aspect_ratio": [9, 16],
+					"duration_millis": 8167,
+					"variants": [{
+						"bitrate": 832000,
+						"content_type": "video\/mp4",
+						"url": "https:\/\/video.twimg.com\/ext_tw_video\/1100444487686516736\/pu\/vid\/360x640\/W9ct_o5jvFNWXUqH.mp4?tag=6"
+					}, {
+						"bitrate": 632000,
+						"content_type": "video\/mp4",
+						"url": "https:\/\/video.twimg.com\/ext_tw_video\/1100444487686516736\/pu\/vid\/320x568\/9wbLe4QRPSY3RMSm.mp4?tag=6"
+					}, {
+						"bitrate": 2176000,
+						"content_type": "video\/mp4",
+						"url": "https:\/\/video.twimg.com\/ext_tw_video\/1100444487686516736\/pu\/vid\/720x1280\/u00ccdQSXzV7n3tZ.mp4?tag=6"
+					}, {
+						"content_type": "application\/x-mpegURL",
+						"url": "https:\/\/video.twimg.com\/ext_tw_video\/1100444487686516736\/pu\/pl\/TNHC99dyKwQYQROU.m3u8?tag=6"
+					}]
+				},
+				"additional_media_info": {
+					"monetizable": false
+				}
+			}]
+		},
+		"source": "\u003ca href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 1,
+		"favorite_count": 5,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "79010D",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/451102362581487616\/Lcw0Ckk2_normal.png",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/451102362581487616\/Lcw0Ckk2_normal.png",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/18458348\/1531414599",
+	"profile_link_color": "990000",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "FFFFFF",
+	"profile_text_color": "000000",
+	"profile_use_background_image": false,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 7717612,
+	"id_str": "7717612",
+	"name": "Wharton School",
+	"screen_name": "Wharton",
+	"location": "Philadelphia, PA",
+	"description": "Wharton School of @Penn, the world's first collegiate #business school. Advancing ideas & leaders for 135 years (tweeting for 11). #Philadelphia #SanFrancisco",
+	"url": "https:\/\/t.co\/ip2RfXAXRr",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/ip2RfXAXRr",
+				"expanded_url": "http:\/\/www.wharton.upenn.edu",
+				"display_url": "wharton.upenn.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 271867,
+	"friends_count": 84,
+	"listed_count": 3800,
+	"created_at": "Wed Jul 25 18:12:27 +0000 2007",
+	"favourites_count": 5625,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 27022,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 16:39:00 +0000 2019",
+		"id": 1100435071914467330,
+		"id_str": "1100435071914467330",
+		"text": "Wharton Passion Projects give students a chance to explore their personal interests \u2014 with plenty of room to fail. https:\/\/t.co\/N13i3Bvkun",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": [{
+				"url": "https:\/\/t.co\/N13i3Bvkun",
+				"expanded_url": "https:\/\/whr.tn\/2tnEAlG",
+				"display_url": "whr.tn\/2tnEAlG",
+				"indices": [115, 138]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/sproutsocial.com\" rel=\"nofollow\"\u003eSprout Social\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 1,
+		"favorite_count": 5,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "F7FAE5",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/738029739953229824\/RpvygzFf_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/738029739953229824\/RpvygzFf_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/7717612\/1496262879",
+	"profile_link_color": "003366",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "A3BFD9",
+	"profile_text_color": "000000",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 18846918,
+	"id_str": "18846918",
+	"name": "Ohio State",
+	"screen_name": "OhioState",
+	"location": "Columbus, Ohio",
+	"description": "The Ohio State University, the highest ranked public university in Ohio, is home to world-class faculty, passionate students & innovative researchers. \u2b55\ud83d\ude4c",
+	"url": "http:\/\/t.co\/ljaeybI0gY",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/ljaeybI0gY",
+				"expanded_url": "http:\/\/www.osu.edu",
+				"display_url": "osu.edu",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 319817,
+	"friends_count": 695,
+	"listed_count": 1714,
+	"created_at": "Sat Jan 10 21:20:41 +0000 2009",
+	"favourites_count": 10965,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 21195,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 14:10:13 +0000 2019",
+		"id": 1100397625893883905,
+		"id_str": "1100397625893883905",
+		"text": "Mapping the \u2764\ufe0f: Ohio State\u2019s Davis Heart and Lung Research Institute has developed a ground-breaking way to treat irregular heart rates.",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [],
+			"urls": []
+		},
+		"source": "\u003ca href=\"https:\/\/ads-api.twitter.com\" rel=\"nofollow\"\u003eTwitter Ads Composer\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 4,
+		"favorite_count": 25,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "E3E3E3",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/3433597373\/0a80bbe598692a73112d6df2ddca6fa9_normal.png",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/3433597373\/0a80bbe598692a73112d6df2ddca6fa9_normal.png",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/18846918\/1550240522",
+	"profile_link_color": "990000",
+	"profile_sidebar_border_color": "E6E6E6",
+	"profile_sidebar_fill_color": "CFCFCF",
+	"profile_text_color": "333333",
+	"profile_use_background_image": false,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 28161251,
+	"id_str": "28161251",
+	"name": "University of South Carolina",
+	"screen_name": "UofSC",
+	"location": "Columbia, South Carolina",
+	"description": "The flagship university of the state of South Carolina. Home of the South Carolina Gamecocks. #UofSC",
+	"url": "https:\/\/t.co\/9tvlNF4aAq",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/9tvlNF4aAq",
+				"expanded_url": "http:\/\/www.sc.edu",
+				"display_url": "sc.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 184175,
+	"friends_count": 3311,
+	"listed_count": 932,
+	"created_at": "Wed Apr 01 18:26:06 +0000 2009",
+	"favourites_count": 23511,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 20246,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 16:14:42 +0000 2019",
+		"id": 1100428954727604224,
+		"id_str": "1100428954727604224",
+		"text": "@Michaela_Baker @HarrisPastides Extra in all the right ways.",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "Michaela_Baker",
+				"name": "Michaela Baker",
+				"id": 41188389,
+				"id_str": "41188389",
+				"indices": [0, 15]
+			}, {
+				"screen_name": "HarrisPastides",
+				"name": "Harris Pastides",
+				"id": 494051685,
+				"id_str": "494051685",
+				"indices": [16, 31]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e",
+		"in_reply_to_status_id": 1100425709938491394,
+		"in_reply_to_status_id_str": "1100425709938491394",
+		"in_reply_to_user_id": 41188389,
+		"in_reply_to_user_id_str": "41188389",
+		"in_reply_to_screen_name": "Michaela_Baker",
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 0,
+		"favorite_count": 8,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "131516",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme14\/bg.gif",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme14\/bg.gif",
+	"profile_background_tile": true,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1083454003059609600\/Tkc_QZGi_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1083454003059609600\/Tkc_QZGi_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/28161251\/1547163545",
+	"profile_link_color": "73000A",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "EFEFEF",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 19179395,
+	"id_str": "19179395",
+	"name": "University of Bath",
+	"screen_name": "UniofBath",
+	"location": "Bath, England",
+	"description": "A University with a global reputation for research and teaching. 6th in the Guardian University Guide 2019. Sports University of the Year 2018.\n\n#BelongatBath\ud83d\udccd",
+	"url": "https:\/\/t.co\/M89iNjIwMO",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/M89iNjIwMO",
+				"expanded_url": "http:\/\/www.bath.ac.uk",
+				"display_url": "bath.ac.uk",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 64980,
+	"friends_count": 840,
+	"listed_count": 1032,
+	"created_at": "Mon Jan 19 10:39:19 +0000 2009",
+	"favourites_count": 5837,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 19898,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 14:36:02 +0000 2019",
+		"id": 1100404125274173440,
+		"id_str": "1100404125274173440",
+		"text": "How does Government listen to scientists? Join Claire Craig, Director of Science Policy @royalsociety and previousl\u2026 https:\/\/t.co\/cUeqa57PMS",
+		"truncated": true,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "royalsociety",
+				"name": "The Royal Society \ud83c\udff3\ufe0f\u200d\ud83c\udf08",
+				"id": 28567809,
+				"id_str": "28567809",
+				"indices": [88, 101]
+			}],
+			"urls": [{
+				"url": "https:\/\/t.co\/cUeqa57PMS",
+				"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100404125274173440",
+				"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+				"indices": [117, 140]
+			}]
+		},
+		"source": "\u003ca href=\"https:\/\/sproutsocial.com\" rel=\"nofollow\"\u003eSprout Social\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 0,
+		"favorite_count": 1,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "404040",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme2\/bg.gif",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme2\/bg.gif",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/892362726441451520\/L4BR1R8O_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/892362726441451520\/L4BR1R8O_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/19179395\/1546427937",
+	"profile_link_color": "1F98C7",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "DAECF4",
+	"profile_text_color": "663B12",
+	"profile_use_background_image": true,
+	"has_extended_profile": true,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 17369110,
+	"id_str": "17369110",
+	"name": "Cornell University",
+	"screen_name": "Cornell",
+	"location": "Ithaca, New York",
+	"description": "Learning. Discovery. Engagement. Join the #Cornell conversation.",
+	"url": "https:\/\/t.co\/eMmB7cAoNC",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/eMmB7cAoNC",
+				"expanded_url": "http:\/\/www.cornell.edu",
+				"display_url": "cornell.edu",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 256797,
+	"friends_count": 536,
+	"listed_count": 2410,
+	"created_at": "Thu Nov 13 17:12:07 +0000 2008",
+	"favourites_count": 11135,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 16375,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:07:32 +0000 2019",
+		"id": 1100442251258462208,
+		"id_str": "1100442251258462208",
+		"text": "RT @cornellvet: In recognition of the cumulative and consistent impact of her veterinary and volunteer work in and around her hometown of H\u2026",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "cornellvet",
+				"name": "Cornell College of Veterinary Medicine",
+				"id": 23834257,
+				"id_str": "23834257",
+				"indices": [3, 14]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweeted_status": {
+			"created_at": "Tue Feb 26 17:00:54 +0000 2019",
+			"id": 1100440581048881152,
+			"id_str": "1100440581048881152",
+			"text": "In recognition of the cumulative and consistent impact of her veterinary and volunteer work in and around her homet\u2026 https:\/\/t.co\/cwRWpRIIXW",
+			"truncated": true,
+			"entities": {
+				"hashtags": [],
+				"symbols": [],
+				"user_mentions": [],
+				"urls": [{
+					"url": "https:\/\/t.co\/cwRWpRIIXW",
+					"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100440581048881152",
+					"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+					"indices": [117, 140]
+				}]
+			},
+			"source": "\u003ca href=\"https:\/\/sproutsocial.com\" rel=\"nofollow\"\u003eSprout Social\u003c\/a\u003e",
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"geo": null,
+			"coordinates": null,
+			"place": {
+				"id": "ae76bffcaf2bf545",
+				"url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/ae76bffcaf2bf545.json",
+				"place_type": "city",
+				"name": "Ithaca",
+				"full_name": "Ithaca, NY",
+				"country_code": "US",
+				"country": "United States",
+				"contained_within": [],
+				"bounding_box": {
+					"type": "Polygon",
+					"coordinates": [
+						[
+							[-76.547738, 42.41815],
+							[-76.469987, 42.41815],
+							[-76.469987, 42.480827],
+							[-76.547738, 42.480827]
+						]
+					]
+				},
+				"attributes": {}
+			},
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 1,
+			"favorite_count": 7,
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"lang": "en"
+		},
+		"is_quote_status": false,
+		"retweet_count": 1,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "B31B1B",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme13\/bg.gif",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme13\/bg.gif",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/979430337557204993\/bfvigBfC_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/979430337557204993\/bfvigBfC_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/17369110\/1547502085",
+	"profile_link_color": "3787C0",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "FFFFFF",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 156714051,
+	"id_str": "156714051",
+	"name": "VCU",
+	"screen_name": "VCU",
+	"location": "Richmond, Virginia",
+	"description": "Virginia Commonwealth University is an urban public research university with a leading medical center & top programs in arts, sciences & humanities  #MakeitReal",
+	"url": "http:\/\/t.co\/a3In7QjvfX",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "http:\/\/t.co\/a3In7QjvfX",
+				"expanded_url": "http:\/\/vcu.edu",
+				"display_url": "vcu.edu",
+				"indices": [0, 22]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 66933,
+	"friends_count": 11810,
+	"listed_count": 481,
+	"created_at": "Thu Jun 17 18:08:09 +0000 2010",
+	"favourites_count": 14592,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 22320,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 14:23:15 +0000 2019",
+		"id": 1100400908188426240,
+		"id_str": "1100400908188426240",
+		"text": "@TallwoodGifted Welcome to the #VCURamily! \ud83c\udf89\ud83d\udc0f\ud83d\udc9b",
+		"truncated": false,
+		"entities": {
+			"hashtags": [{
+				"text": "VCURamily",
+				"indices": [31, 41]
+			}],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "TallwoodGifted",
+				"name": "Keisha O'Neal",
+				"id": 2964924981,
+				"id_str": "2964924981",
+				"indices": [0, 15]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e",
+		"in_reply_to_status_id": 1100221772467761153,
+		"in_reply_to_status_id_str": "1100221772467761153",
+		"in_reply_to_user_id": 2964924981,
+		"in_reply_to_user_id_str": "2964924981",
+		"in_reply_to_screen_name": "TallwoodGifted",
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 0,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "262626",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/885245528576999424\/ATAl4x3O_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/885245528576999424\/ATAl4x3O_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/156714051\/1544546518",
+	"profile_link_color": "FDB912",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "FFC508",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "none"
+}, {
+	"id": 821814254,
+	"id_str": "821814254",
+	"name": "University of Toronto",
+	"screen_name": "UofT",
+	"location": "Toronto, Ontario, Canada",
+	"description": "Connect with Canada's top university and one of the world\u2019s strongest academic and research powerhouses. Find the latest news & events @uoftnews. #UofT",
+	"url": "https:\/\/t.co\/2V2e7ErAT2",
+	"entities": {
+		"url": {
+			"urls": [{
+				"url": "https:\/\/t.co\/2V2e7ErAT2",
+				"expanded_url": "http:\/\/www.utoronto.ca",
+				"display_url": "utoronto.ca",
+				"indices": [0, 23]
+			}]
+		},
+		"description": {
+			"urls": []
+		}
+	},
+	"protected": false,
+	"followers_count": 55824,
+	"friends_count": 901,
+	"listed_count": 536,
+	"created_at": "Thu Sep 13 16:37:23 +0000 2012",
+	"favourites_count": 12476,
+	"utc_offset": null,
+	"time_zone": null,
+	"geo_enabled": true,
+	"verified": true,
+	"statuses_count": 11606,
+	"lang": "en",
+	"status": {
+		"created_at": "Tue Feb 26 17:51:07 +0000 2019",
+		"id": 1100453220390969346,
+		"id_str": "1100453220390969346",
+		"text": "RT @ITSUofT: Student #phishing alert: malicious \u2018refund\u2019 email was sent Feb. 23 to #UofT students. Find out next steps and action required:\u2026",
+		"truncated": false,
+		"entities": {
+			"hashtags": [{
+				"text": "phishing",
+				"indices": [21, 30]
+			}, {
+				"text": "UofT",
+				"indices": [83, 88]
+			}],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "ITSUofT",
+				"name": "ITS at UofT",
+				"id": 180835403,
+				"id_str": "180835403",
+				"indices": [3, 11]
+			}],
+			"urls": []
+		},
+		"source": "\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweeted_status": {
+			"created_at": "Tue Feb 26 17:30:19 +0000 2019",
+			"id": 1100447984838500352,
+			"id_str": "1100447984838500352",
+			"text": "Student #phishing alert: malicious \u2018refund\u2019 email was sent Feb. 23 to #UofT students. Find out next steps and actio\u2026 https:\/\/t.co\/ryVPntfZS9",
+			"truncated": true,
+			"entities": {
+				"hashtags": [{
+					"text": "phishing",
+					"indices": [8, 17]
+				}, {
+					"text": "UofT",
+					"indices": [70, 75]
+				}],
+				"symbols": [],
+				"user_mentions": [],
+				"urls": [{
+					"url": "https:\/\/t.co\/ryVPntfZS9",
+					"expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1100447984838500352",
+					"display_url": "twitter.com\/i\/web\/status\/1\u2026",
+					"indices": [117, 140]
+				}]
+			},
+			"source": "\u003ca href=\"https:\/\/www.hootsuite.com\" rel=\"nofollow\"\u003eHootsuite Inc.\u003c\/a\u003e",
+			"in_reply_to_status_id": null,
+			"in_reply_to_status_id_str": null,
+			"in_reply_to_user_id": null,
+			"in_reply_to_user_id_str": null,
+			"in_reply_to_screen_name": null,
+			"geo": null,
+			"coordinates": null,
+			"place": null,
+			"contributors": null,
+			"is_quote_status": false,
+			"retweet_count": 4,
+			"favorite_count": 1,
+			"favorited": false,
+			"retweeted": false,
+			"possibly_sensitive": false,
+			"lang": "en"
+		},
+		"is_quote_status": false,
+		"retweet_count": 4,
+		"favorite_count": 0,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"contributors_enabled": false,
+	"is_translator": false,
+	"is_translation_enabled": false,
+	"profile_background_color": "00295C",
+	"profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+	"profile_background_tile": false,
+	"profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1014942894778650626\/NyjWU7Fp_normal.jpg",
+	"profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1014942894778650626\/NyjWU7Fp_normal.jpg",
+	"profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/821814254\/1548714916",
+	"profile_link_color": "00295C",
+	"profile_sidebar_border_color": "FFFFFF",
+	"profile_sidebar_fill_color": "DDEEF6",
+	"profile_text_color": "333333",
+	"profile_use_background_image": true,
+	"has_extended_profile": false,
+	"default_profile": false,
+	"default_profile_image": false,
+	"following": false,
+	"follow_request_sent": false,
+	"notifications": false,
+	"translator_type": "regular"
+}]
