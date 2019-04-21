@@ -28,9 +28,9 @@ class Grid extends Component {
 
         <GridLayout className="layout" layout={layout} cols={24} rowHeight={30} width={1300}>
           {/*sets the size of the grid*/}
-          <div key="a" class="BarBar"><BarBar/></div>
-          <div key="b" class="Info"><Info/></div>
-          <div key="c" class="Info2"><Info2/></div>
+          <div key="a" className="BarBar"><BarBar/></div>
+          <div key="b" className="Info"><Info/></div>
+          <div key="c" className="Info2"><Info2/></div>
         </GridLayout>
       </div>
     );

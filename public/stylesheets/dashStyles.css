@@ -1,0 +1,24 @@
+.navbar-inner {
+  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+}
+
+.navbar.home {
+  height: 50px;
+  background-color: white;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
+
+    #overview {
+      visibility: visible;
+    }
+
+}
+
+#navbarBrand {
+  position: relative;
+  max-height: 50px;
+  background-size: contain;
+}

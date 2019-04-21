@@ -132,18 +132,40 @@ class App extends React.Component {
           //account creation
           packet = {id: 10, uname: this.state.uname, pword: this.state.pword};
       //});
-      fetch('/db/create',{
-          method: 'put',
-          body : JSON.stringify(packet),
-          headers:{
-              'Content-Type': 'application/json'
-          }
-      })
-      .then(res => res.json())
-      .then(response => console.log('Success:', JSON.stringify(response)))
-      .catch(error => console.error('Error:', error));
-      //window.location.href = "http://team5-pigeonhole.s3-website-us-east-1.amazonaws.com/";
-      this.setState({loggedIn: true});
+
+      //Check to make sure the form is filled out.
+      if(this.state.uname !== undefined && this.state.name !== undefined && this.state.surname !== undefined && this.state.email !== undefined && this.state.pword !== undefined && this.state.pword == this.state.vpword){
+          //Check to see if the username is already taken.
+          fetch('/db/searchUsers',{
+              method: 'get',
+              body :
+          })
+          .then(function(response) {
+              if (response.status !== 200) {
+                  console.log('Problem with database server.  Status Code: ' + response.status);
+                  return;
+              }
+
+              response.json().then(function(data){
+                  console.log(data);
+              });
+          })
+          .catch(error => console.error('Error:', error));
+      }
+      else{
+          fetch('/db/create',{
+              method: 'put',
+              body : JSON.stringify(packet),
+              headers:{
+                  'Content-Type': 'application/json'
+              }
+          })
+          .then(res => res.json())
+          .then(response => console.log('Success:', JSON.stringify(response)))
+          .catch(error => console.error('Error:', error));
+          this.setState({loggedIn: true});
+      }
+
 
       // store password as it is taken in from the LOGIN/CREATION page here.
       //THIS METHOD IS ACCOUNT CREATION. (do not forget username as well for storing in DB)
@@ -287,42 +309,42 @@ class App extends React.Component {
     }
     else{
         header = (
-            <header class="navbar navbar-default fixed-top navbar-inner home">
-                <nav class="hidden-ms navbar-light navbar-expand-lg navbar-header" ng-controller="ViewController">
-                    <ul class="nav navbar-nav">
-                        <a href="#top" role="button" class="navbar-brand">
+            <header className="navbar navbar-default fixed-top navbar-inner home">
+                <nav className="hidden-ms navbar-light navbar-expand-lg navbar-header" ng-controller="ViewController">
+                    <ul className="nav navbar-nav">
+                        <a href="#top" role="button" className="navbar-brand">
                             <img id="navbarBrand" src="resources/drawing.svg"/>
                         </a>
-                        <div class="navbar navbar-default navbar-header" id="navbarDesktop">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div className="navbar navbar-default navbar-header" id="navbarDesktop">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Widgets
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#chart">Chart</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#toptweet">Top Tweet</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#map">Map</a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" href="#chart">Chart</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" href="#toptweet">Top Tweet</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" href="#map">Map</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" role="button" class="nav-link">
+                            <li className="nav-item">
+                                <a href="#" role="button" className="nav-link">
                                     <li>Beep</li>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#about" role="button" class="nav-link">
+                            <li className="nav-item">
+                                <a href="#about" role="button" className="nav-link">
                                     <li>Boop</li>
                                 </a>
                             </li>
                         </div>
                     </ul>
                 </nav>
-                <nav class="hidden-ms navbar-light navbar-expand-lg ml-auto">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a href="/" role="button" class="nav-link">
+                <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
+                    <ul className="nav navbar-nav">
+                        <li className="nav-item">
+                            <a href="/" role="button" className="nav-link">
                                 <li>Log Out</li>
                             </a>
                         </li>
