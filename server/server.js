@@ -1,17 +1,19 @@
+/*
+* Database server interface for Pigeon Hole Twitter Dashboard
+* MySQL Interface by Austin Kee <austinjkee@ufl.edu>
+* Twitter Interface by Ganna Voytseshko <gvoytseshko@ufl.edu>
+*/
+
 const express = require('express'),
         mysql = require('mysql'),
         fetch = require('node-fetch');
+        config = require('./config/config.js');
+        Twitter = require('twitter-lite');
+
 const mariadb = express();
-const Twitter = require('twitter-lite');
+const PORT = process.env.PORT || config.port;
 
-const T = new Twitter({
-    consumer_key: 'Ayl6GGBwJ4m8fhZ7CXWljsgvF',
-    consumer_secret: 'PkVV4LGTKTw1eegLi9DoiJvQ60M9ozdRy2kSrGeYDZupfPACrc',
-    access_token_key: '1105912383346757634-U7nyH07Ajiz3bFyixsIWwaUEa5dX4f',
-    access_token_secret: 'HZHk3jTGzdrHsuqMptfUXgr5T701xLiuztpfh2AQqLcNL'
-});
-
-const PORT = process.env.PORT || 3001;
+const T = new Twitter(config.twit);
 
 const connection = mysql.createConnection({
     host: 'localhost', //HOSTNAME (localhost)
