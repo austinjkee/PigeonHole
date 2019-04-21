@@ -53,6 +53,7 @@ class Auth extends React.Component {
             alert('Bad username or password.');
         }
     }
+    /*
     //now to "compare" when pulling from the database. First, match username in the database and pull down the hashed password.
     //store the hashed password corresponding to the username's that match into the "hash" variable.
     //THIS WILL BE THE PASSWORD OF WHATEVER IS STORED IN THE DB AFTER MATCHING USERNAMES.
@@ -66,6 +67,7 @@ class Auth extends React.Component {
             //clear fields, start over.
         }
     });
+    */
     event.preventDefault();
   }
 
