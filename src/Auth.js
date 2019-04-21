@@ -53,6 +53,19 @@ class Auth extends React.Component {
             alert('Bad username or password.');
         }
     }
+    //now to "compare" when pulling from the database. First, match username in the database and pull down the hashed password.
+    //store the hashed password corresponding to the username's that match into the "hash" variable.
+    //THIS WILL BE THE PASSWORD OF WHATEVER IS STORED IN THE DB AFTER MATCHING USERNAMES.
+    bcrypt.compare(this.state.pword, hash, function(err, res) {
+        if(res) {
+            //If passwords match, we are in!
+            //route user into the site.
+        }
+        else {
+            //print out some sort of error, invalid password
+            //clear fields, start over.
+        }
+    });
     event.preventDefault();
   }
 
@@ -80,6 +93,11 @@ class Auth extends React.Component {
         window.location.pathname = "/dash/";
 
     }
+    // store password as it is taken in from the LOGIN/CREATION page here.
+    //THIS METHOD IS ACCOUNT CREATION. (do not forget username as well for storing in DB)
+    bcrypt.hash(this.state.pword, 0, function(err, hash){
+        //store the "hash" into the database along with the username.
+    });
     event.preventDefault();
   }
 
