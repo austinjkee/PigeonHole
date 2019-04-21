@@ -1,13 +1,19 @@
 .LoginPage {
     height:100%;
     background-color: LightSlateGrey;
-    overflow:hidden;
 }
 
 #text-fields {
+    margin-top: 10px;
     position: relative;
     width: 250px;
     object-fit: contain;
+}
+
+.divider{
+    width: 15px;
+    height: auto;
+    display:inline-block;
 }
 
 #logo {
@@ -16,22 +22,16 @@
     object-fit: contain;
 }
 
-@media (max-height: 350px) {
-    #text-fields {
-        position: relative;
-        float: left;
-        margin-left: 5%;
-        margin-right: auto;
-    }
-    #buttons {
-        position: relative;
-        float: right;
-        margin-right: 5%;
-        margin-left: auto;
+@media (max-height: 1000px) {
+    .LoginPage {
+        overflow:visible;
     }
 }
 
-@media (min-height: 350px){
+@media (min-height: 1000px){
+    .LoginPage {
+        overflow:hidden;
+    }
     #text-fields {
         position: relative;
     }
@@ -40,11 +40,10 @@
     }
 }
 
-.navbar.login {
+.login {
     height: 25%;
     background-color: DarkSlateGrey;
     border: none;
-
 
     font: Arial;
     font-weight: bold;
@@ -56,10 +55,6 @@
       #overview {
         visibility: visible;
       }
-}
-
-.header-placeholder {
-  height: 30%;
 }
 
 /*add some cool colors*/
