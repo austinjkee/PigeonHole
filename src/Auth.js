@@ -33,7 +33,7 @@ class Auth extends React.Component {
         //bcrypt.hash(this.state.pword, 10, function(err, hash) {
             packet = {uname: this.state.uname, pword: this.state.pword};
         //});
-        var dat = fetch('/db/check',{
+        var dat = fetch('http://localhost:3001/check',{
             method: 'post',
             body : JSON.stringify(packet),
             headers:{
@@ -81,7 +81,7 @@ class Auth extends React.Component {
             //account creation
             packet = {id: 10, uname: this.state.uname, pword: this.state.pword};
         //});
-        fetch('/db/create',{
+        fetch('http://localhost:3001/create',{
             method: 'put',
             body : JSON.stringify(packet),
             headers:{
