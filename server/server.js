@@ -2,7 +2,6 @@ const express = require('express'),
         mysql = require('mysql'),
         fetch = require('node-fetch');
 const mariadb = express();
-
 const Twitter = require('twitter-lite');
 
 const T = new Twitter({
@@ -13,8 +12,6 @@ const T = new Twitter({
 });
 
 const PORT = process.env.PORT || 3001;
-
-
 
 const connection = mysql.createConnection({
     host: 'localhost', //HOSTNAME (localhost)
@@ -30,25 +27,8 @@ connection.connect(function(err){
     }
 }); //creates connection
 
-require('./routes/html-routes')(mariadb, connection);
+require('./routes/html-routes')(mariadb, connection, T);
 
 mariadb.listen(PORT, () => {
     console.log("App is running on: " + PORT);
-});
-
-mariadb.get('/twitter', (req, res) => {
-
-console.log("twitter has been called");
-
-const twitterData = T
-.get("statuses/show", {
-  id: "1016078154497048576"
-})
-  .then(results => {
-    console.log("results", results);
-    //res.send({ express: results.id });
-    res.json({express: results});
-  })
-  .catch(console.error);
-
 });

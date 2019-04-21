@@ -1,4 +1,4 @@
-module.exports = function(app, connection) {
+module.exports = function(app, connection, twitterApi) {
     app.post('/check', function(req,res) {
         var sql = "SELECT id FROM LOGIN_DATA WHERE Username=" + connection.escape(req.uname) + " && Password= " + connection.escape(req.pword) + ';';
         connection.query(sql, function(err, data) {
@@ -15,5 +15,17 @@ module.exports = function(app, connection) {
         connection.query("CREATE TABLE IF NOT EXISTS LOGIN_DATA ( id int, Username varchar(255), Password varchar(255) );", function(err) {
             (err)?res.send(err):res.send("Success");
         });
+    });
+    app.get('/twitter', function(req, res){
+        console.log("twitter has been called");
+        const twitterData = twitterApi.get("statuses/show", {
+            id: "1016078154497048576"
+        })
+        .then(results => {
+            console.log("results", results);
+            //res.send({ express: results.id });
+            res.json({express: results});
+        })
+        .catch(console.error);
     });
 }
