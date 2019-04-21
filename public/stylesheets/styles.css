@@ -9,7 +9,7 @@
     overflow:hidden;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 0px) {
     #logo {
         position: relative;
         float: left;
