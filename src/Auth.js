@@ -87,12 +87,16 @@ class Auth extends React.Component {
     return (
         <form onSubmit={this.handleSubmit}>
         <div id="text-fields">
-            <br />
-                <input className="login-text" type="text" name="username" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
-            <br />
-            <br />
-                <input className="login-text" type="password" name="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
-            <br />
+            <Form>
+                <Form.Group controlId="formBasicUsername">
+                    <Form.Control type="text" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPassword">
+                    <Form.Control type="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
+                </Form.Group>
+
+            </Form>;
         </div>
         <div id="buttons">
             <br />
