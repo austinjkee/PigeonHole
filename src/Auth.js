@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 const bcrypt = require('bcryptjs'),
     fetch = require('node-fetch');
@@ -95,8 +95,7 @@ class Auth extends React.Component {
                 <Form.Group controlId="formBasicPassword">
                     <Form.Control type="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
                 </Form.Group>
-
-            </Form>;
+            </Form>
         </div>
         <div id="buttons">
             <br />
