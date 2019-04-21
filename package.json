@@ -7,6 +7,7 @@
     "@nivo/bar": "^0.55.0",
     "@nivo/generators": "^0.55.0",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mysql": "^2.17.1",
     "node": "^11.13.0",

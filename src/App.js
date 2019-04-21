@@ -18,7 +18,18 @@ const bcrypt = require('bcryptjs'),
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {uname: '', pword: '', name: '', surname: '', email: '', vpword: '', agree: false, creatingAccount: false, loggedIn: false};
+    this.state = {
+        uname: '',
+        pword: '',
+        name: '',
+        surname: '',
+        email: '',
+        vpword: '',
+        agree: false,
+        creatingAccount: false,
+        loggedIn: false,
+        data: null
+    };
 
     this.handleUnameChange = this.handleUnameChange.bind(this);
     this.handlePwordChange = this.handlePwordChange.bind(this);
@@ -32,6 +43,8 @@ class App extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleAddSubmit = this.handleAddSubmit.bind(this);
+
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   handleUnameChange(event) {
@@ -141,6 +154,28 @@ class App extends React.Component {
 
   }
 
+  componentDidMount() {
+    this.callBackendAPI()
+      .then(res => {
+          console.log("aasdfasdf:", res.express);
+          this.setState(
+          { data: res.express.id })})
+
+      .catch(err => console.log(err));
+  }
+
+  callBackendAPI = async () => {
+    const response = await fetch('/twitter');
+    console.log(response);
+    const body = await response.json();
+    console.log(body);
+
+    if (response.status !== 200) {
+      throw Error(body.message)
+    }
+    return body;
+  };
+
   render() {
     const creatingAccount = this.state.creatingAccount;
     const loggedIn = this.state.loggedIn;
@@ -158,30 +193,36 @@ class App extends React.Component {
         );
         if(!creatingAccount){
             display = (
-                <Form onSubmit={this.handleSubmit}>
-                    <h2 style={{color: `rgb(255, 255, 255)`}}> L O G I N </h2>
-                    <Form.Group controlId="formBasicUsername">
-                        <Form.Control type="text" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
-                    </Form.Group>
+                <div align="center">
+                    <div id="text-fields" align="center">
+                    <Form onSubmit={this.handleSubmit}>
+                        <h2 style={{color: `rgb(255, 255, 255)`}}> L O G I N </h2>
+                        <Form.Group controlId="formBasicUsername">
+                            <Form.Control type="text" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
-                    </Form.Group>
+                        <Form.Group controlId="formBasicPassword">
+                            <Form.Control type="password" placeholder="P A S S W O R D" value={this.state.pword} onChange={this.handlePwordChange} />
+                        </Form.Group>
 
-                    <Button variant="outline-light" type="Submit">
-                    Sign In
-                    </Button>
+                        <Button variant="outline-light" type="Submit">
+                        Sign In
+                        </Button>
 
-                    <div className="divider"/>
+                        <div className="divider"/>
 
-                    <Button variant="outline-light" onClick={this.handleAdd}>
-                    Create Account
-                    </Button>
-                </Form>
+                        <Button variant="outline-light" onClick={this.handleAdd}>
+                        Create Account
+                        </Button>
+                    </Form>
+                    </div>
+                </div>
             );
         }
         else{
             display = (
+                <div align="center">
+                    <div id="text-fields" align="center">
                     <Form  onSubmit={this.handleAddSubmit}>
                         <h2 style={{color: `rgb(255, 255, 255)`}}> S I G N - U P </h2>
                         <Form.Group controlId="formBasicUsername">
@@ -239,6 +280,8 @@ class App extends React.Component {
                         </Form.Text>
 
                     </Form>
+                    </div>
+                </div>
             );
         }
     }
@@ -296,17 +339,12 @@ class App extends React.Component {
               <p className="App-intro">{this.state.data}</p>
             </div>
         );
-
     }
 
     return (
         <>
         {header}
-        <div align="center">
-            <div id="text-fields" align="center">
-                {display}
-            </div>
-        </div>
+        {display}
         </>
     );
   }
