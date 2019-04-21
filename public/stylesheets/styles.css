@@ -6,7 +6,7 @@
 
 #text-fields {
     position: relative;
-    max-width: 25%;
+    width: 250px;
     object-fit: contain;
 }
 
