@@ -4,11 +4,16 @@
     overflow:hidden;
 }
 
+#text-fields {
+    position: relative;
+    max-width: 25%;
+    object-fit: contain;
+}
+
 #logo {
     position: relative;
     max-height: 100%;
     object-fit: contain;
-    visibility: visible;
 }
 
 @media (max-height: 350px) {
@@ -54,7 +59,7 @@
 }
 
 .header-placeholder {
-  height: 25%;
+  height: 30%;
 }
 
 /*add some cool colors*/

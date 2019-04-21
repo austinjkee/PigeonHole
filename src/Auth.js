@@ -86,7 +86,7 @@ class Auth extends React.Component {
   render() {
     return (
         <form onSubmit={this.handleSubmit}>
-        <div id="text-fields">
+        <div id="text-fields" align="center">
             <Form>
                 <Form.Group controlId="formBasicUsername">
                     <Form.Control type="text" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
