@@ -1,42 +1,60 @@
 import React, {Component} from "react";
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
 
-const Info = () => (
+//const Info = () => (
+class Info extends Component {
+    constructor() {
+        super()
+        this.state = {
+            data: null
+        }
+    }
+
+    render() {
+      var w = this.props.info
+      var z = JSON.parse(w);
+      let qwerty = "";
+      console.log("object", z);
+      if (z != null)
+      {
+          console.log("z is not null");
+          //this.setState({data: z});
+
+        if (z.trends[0].trends != null)
+        {
+          qwerty = z.trends[0].trends.map((item, i) => {
+              console.log(item.name);
+                return (
+                    <tr>
+                        <td>{item.name}</td>
+                        <td>{item.tweet_volume}</td>
+                    </tr>
+
+                );
+              });
+          }
+
+      }
+    return (
+
     <div>
         <div className="Info">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Trend</th>
+                        <th scope="col">Tweet Volume</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {qwerty}
                 </tbody>
             </table>
 
     </div>
 </div>
-)
+);
+}
+}
 
 export default Info;
