@@ -11,11 +11,11 @@ class TrendBar extends React.Component{
     }
 
     componentDidMount(){
-      let {clientHeight, clientWidth} = this.refs.BarBar;
+      let {clientHeight, clientWidth} = this.refs.Bar;
       console.log(clientHeight, clientWidth);
     }
     render(){
-        var w = this.props.info
+      var w = this.props.info
       var z = JSON.parse(w);
       let qwerty = "";
       //console.log("object", z);
