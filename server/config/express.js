@@ -1,14 +1,16 @@
 /*
 * Database server interface for Pigeon Hole Twitter Dashboard
-* MySQL Interface by Austin Kee <austinjkee@ufl.edu>
-* Twitter Interface by Ganna Voytseshko <gvoytseshko@ufl.edu>
+* MySQL Interface by Austin Kee <austinjkee-at-ufl-dot-edu>
+* Twitter Interface by Ganna Voytseshko <gvoytseshko-at-ufl-dot-edu>
 */
 
 const express = require('express'),
         mysql = require('mysql'),
-        fetch = require('node-fetch');
-        bodyParser = require('body-parser');
-        config = require('./config');
+        fetch = require('node-fetch'),
+        bodyParser = require('body-parser'),
+        bcrypt = require('bcryptjs'),
+        cookieParser = require('cookie-parser')
+        config = require('./config'),
         Twitter = require('twitter-lite');
 
 module.exports.init = function() {
@@ -30,10 +32,15 @@ module.exports.init = function() {
     //initialize app
     var mariadb = express();
 
+    mariadb.use(bodyParser.urlencoded({ extended: true }));
+
     //body parsing middleware
     mariadb.use(bodyParser.json());
 
-    require('../routes/html-routes')(mariadb, connection, T);
+    //cookie parsing middleware
+    mariadb.use(cookieParser());
+
+    require('../routes/html-routes')(mariadb, connection, T, bcrypt, config.clientkey);
 
     /*
     mariadb.listen(PORT, () => {

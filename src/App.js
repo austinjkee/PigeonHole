@@ -1,19 +1,19 @@
 /*
 *   Front End of the Pigeon Hole Twitter Dashboard.
-*   Authentication by Austin Kee <austinjkee@ufl.edu> and Tyler Maiello <tmaiello@ufl.edu>
-*   Dashboard by Teresa Cheung <tcheung15@ufl.edu> and Austin Kee <austinjkee@ufl.edu>
+*   Authentication by Austin Kee <austinjkee-at-ufl-dot-edu> and Tyler Maiello <tmaiello-at-ufl-dot-edu>
+*   Dashboard by Teresa Cheung <tcheung15-at-ufl-dot-edu>, Ganna Voytseshko <gvoytseshko-at-ufl-dot-edu> and Austin Kee <austinjkee-at-ufl-dot-edu>
 */
 
 import React from 'react';
+import Cookies from 'js-cookie';
 import ReactDOM from 'react-dom';
 import { Form, Button, Col, ButtonToolbar, Table } from 'react-bootstrap';
 import Bar from './containers/Bar';
 import Grid from './containers/Grid';
 import Info from './containers/Info';
 
-
 const bcrypt = require('bcryptjs'),
-    fetch = require('node-fetch');
+     fetch = require('node-fetch');
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class App extends React.Component {
         agree: false,
         creatingAccount: false,
         loggedIn: false,
-        data: null
+        data: null,
     };
 
     this.handleUnameChange = this.handleUnameChange.bind(this);
@@ -80,44 +80,37 @@ class App extends React.Component {
         alert('Missing fields!');
     }
     else{
-        var packet;
-        //bcrypt.hash(this.state.pword, 10, function(err, hash) {
-            packet = {uname: this.state.uname, pword: this.state.pword};
-        //});
-        var dat = fetch('/db/check',{
-            method: 'post',
-            body : JSON.stringify(packet),
+        const packet ={
+            uname: this.state.uname,
+            pword: this.state.pword,
+        };
+        fetch('http://localhost:3001/verif', {
+            method: 'POST',
             headers:{
-                'Content-Type': 'application/json'
-            }
+                "Content-Type": "application/json",
+            },
+            credentials: 'same-origin',
+            body: JSON.stringify(packet),
         })
-        .then(res => res.json())
-        .then(response => console.log('Success:', JSON.stringify(response)))
-        .catch(error => console.error('Error:', error));
-
-        if(dat !== undefined && dat.id !== undefined){
-            //Passed the test!  Go to dash!
-            this.setState({loggedIn: true});
-        }
-        else{
-            alert('Bad username or password.');
-        }
+        .then(res => {return res;})
+        .then(res => {
+            var dat = res.statusText;
+            if (dat === "BAD"){
+                alert("Bad username or password.  Please try again.");
+            }
+            else if (dat === "GOOD"){
+                this.setState({loggedIn: true});
+            }
+            else{
+                alert("ah");
+            }
+            console.log('Success:', res);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Error: There was a problem contacting the database.  Please try again later.");
+        });
     }
-    /*
-    //now to "compare" when pulling from the database. First, match username in the database and pull down the hashed password.
-    //store the hashed password corresponding to the username's that match into the "hash" variable.
-    //THIS WILL BE THE PASSWORD OF WHATEVER IS STORED IN THE DB AFTER MATCHING USERNAMES.
-    bcrypt.compare(this.state.pword, hash, function(err, res) {
-        if(res) {
-            //If passwords match, we are in!
-            //route user into the site.
-        }
-        else {
-            //print out some sort of error, invalid password
-            //clear fields, start over.
-        }
-    });
-    */
     event.preventDefault();
   }
 
@@ -127,53 +120,68 @@ class App extends React.Component {
   }
 
   handleAddSubmit(event){
-      var packet;
-      //bcrypt.hash(this.state.pword, 10, function(err, hash) {
-          //account creation
-          packet = {id: 10, uname: this.state.uname, pword: this.state.pword};
-      //});
-
+      const packet = {
+          uname: this.state.uname,
+          pword: this.state.pword,
+          name: this.state.name,
+          surname: this.state.surname,
+          email: this.state.email,
+      }
       //Check to make sure the form is filled out.
-      if(this.state.uname !== undefined && this.state.name !== undefined && this.state.surname !== undefined && this.state.email !== undefined && this.state.pword !== undefined && this.state.pword == this.state.vpword){
-          //Check to see if the username is already taken.
-          /*
-          fetch('/db/searchUsers',{
-              method: 'get',
-              body :
-          })
-          .then(function(response) {
-              if (response.status !== 200) {
-                  console.log('Problem with database server.  Status Code: ' + response.status);
-                  return;
-              }
-
-              response.json().then(function(data){
-                  console.log(data);
+      if(packet.uname !== '' && packet.name !== '' && packet.surname !== '' && packet.email !== '' && packet.pword !== ''){
+          //Check to make sure the password meets the requirements
+          if(packet.pword !== this.state.vpword){
+              alert("Your passwords don't match.");
+          }
+          else if(packet.pword.length < 8){
+              alert("Your password must be at least 8 characters long.");
+          }
+          else if (packet.pword.length > 71){
+              alert("Your password must be shorter than 71 characters long.");
+          }
+          else{
+              var hashedPacket = packet;
+              var context = this;
+              // store password as it is taken in from the LOGIN/CREATION page here.
+              //THIS METHOD IS ACCOUNT CREATION. (do not forget username as well for storing in DB)
+              bcrypt.hash(packet.pword, 10, function(err, hash){
+                  //store the "hash" into the database along with the username.
+                  if(err){
+                      console.error("Error:", err);
+                  }
+                  else{
+                      hashedPacket.pword = hash;
+                      console.log(hashedPacket);
+                      fetch('http://localhost:3001/create',{
+                            method: 'POST',
+                            body : JSON.stringify(hashedPacket),
+                            headers:{
+                                'Content-Type': 'application/json',
+                            },
+                      })
+                      .then(res => {return res})
+                      .then(res => {
+                          var dat = res.statusText;
+                          if(dat === "SUCCESS"){
+                                context.setState({loggedIn: true});
+                          }
+                          else if(dat === "FAIL"){
+                                alert("This username is already taken.");
+                          }
+                          else{
+                                alert("Error: There was a problem contacting the database.  Please try again later.");
+                          }
+                          console.log('Success:', res);
+                       })
+                       .catch(error => console.error('Error:', error));
+                  }
               });
-          })
-          .catch(error => console.error('Error:', error));
-          */
+          }
       }
       else{
-          fetch('/db/create',{
-              method: 'put',
-              body : JSON.stringify(packet),
-              headers:{
-                  'Content-Type': 'application/json'
-              }
-          })
-          .then(res => res.json())
-          .then(response => console.log('Success:', JSON.stringify(response)))
-          .catch(error => console.error('Error:', error));
-          this.setState({loggedIn: true});
+          alert("Please fill out all required fields.");
       }
 
-
-      // store password as it is taken in from the LOGIN/CREATION page here.
-      //THIS METHOD IS ACCOUNT CREATION. (do not forget username as well for storing in DB)
-      bcrypt.hash(this.state.pword, 0, function(err, hash){
-          //store the "hash" into the database along with the username.
-      });
       event.preventDefault();
 
   }
@@ -181,7 +189,7 @@ class App extends React.Component {
   componentDidMount() {
     this.callBackendAPI()
       .then(res => {
-          console.log("aasdfasdf:", res.express);
+          console.log("Success:", res.express);
           this.setState(
           { data: res.express.id })})
 
@@ -288,7 +296,7 @@ class App extends React.Component {
                             <Form.Check type="checkbox" label="I agree to not abuse this service in any way." style={{color: `rgb(255, 255, 255)`, left: '20px'}} value={this.state.agree} onChange={this.handleAgreeChange}/>
                         </Form.Group>
 
-                        <Button variant="outline-light" type="Submit" className={agree ? "collapse.show" : "collapse"}>
+                        <Button variant="outline-light" type="Submit" className={agree ? "visible" : "collapse"}>
                         Sign In
                         </Button>
 
@@ -312,13 +320,13 @@ class App extends React.Component {
     else{
         header = (
             <header className="navbar navbar-default fixed-top navbar-inner home">
-                <nav className="hidden-ms navbar-light navbar-expand-lg navbar-header" ng-controller="ViewController">
+                <nav className="hidden-xs navbar-light navbar-expand-lg navbar-header">
                     <ul className="nav navbar-nav">
                         <a href="#top" role="button" className="navbar-brand">
                             <img id="navbarBrand" src="resources/drawing.svg"/>
                         </a>
                         <div className="navbar navbar-default navbar-header" id="navbarDesktop">
-                            <li className="nav-item dropdown">
+                            <Col className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Widgets
                                 </a>
@@ -329,27 +337,27 @@ class App extends React.Component {
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="#map">Map</a>
                                 </div>
-                            </li>
-                            <li className="nav-item">
+                            </Col>
+                            <Col className="nav-item">
                                 <a href="#" role="button" className="nav-link">
                                     <li>Beep</li>
                                 </a>
-                            </li>
-                            <li className="nav-item">
+                            </Col>
+                            <Col className="nav-item">
                                 <a href="#about" role="button" className="nav-link">
                                     <li>Boop</li>
                                 </a>
-                            </li>
+                            </Col>
                         </div>
                     </ul>
                 </nav>
                 <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
                     <ul className="nav navbar-nav">
-                        <li className="nav-item">
+                        <Col className="nav-item">
                             <a href="/" role="button" className="nav-link">
                                 <li>Log Out</li>
                             </a>
-                        </li>
+                        </Col>
                     </ul>
                 </nav>
             </header>

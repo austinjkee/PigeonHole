@@ -4,7 +4,8 @@
 }
 
 .navbar.home {
-  height: 50px;
+  height: 5%;
+  margin-bottom: 5px;
   background-color: white;
   border: none;
   color: white;
@@ -21,4 +22,12 @@
   position: relative;
   max-height: 50px;
   background-size: contain;
+}
+
+#navbarDesktop {
+    position: relative;
+    margin-top: 5px;
+    left: 120px;
+    margin-bottom: 5px;
+    visibility: visible;
 }
