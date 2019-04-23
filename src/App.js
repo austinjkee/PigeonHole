@@ -443,7 +443,7 @@ class App extends React.Component {
     else{
         header = (
 
-            <div class="container">
+            <div class="navbar container home">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
