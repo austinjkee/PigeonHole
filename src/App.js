@@ -14,6 +14,7 @@ import Bar from './containers/Bar';
 import Grid from './containers/Grid';
 import Info from './containers/Info';
 import WTable from './containers/Table';
+import Search from './containers/Search';
 
 const bcrypt = require('bcryptjs'),
      fetch = require('node-fetch');
@@ -32,7 +33,7 @@ class App extends React.Component {
         vpword: '',
         agree: false,
         creatingAccount: false,
-        loggedIn: false,
+        loggedIn: true,
         data: null,
     };
 
@@ -89,7 +90,7 @@ class App extends React.Component {
             uname: this.state.uname,
             pword: this.state.pword,
         };
-        fetch('db/verif', {
+        fetch('http://localhost:3001/verif', {
             method: 'POST',
             mode: 'same-origin',
             redirect: 'follow',
@@ -109,7 +110,7 @@ class App extends React.Component {
                 this.setState({loggedIn: true});
             }
             else{
-                alert("ah");
+                alert("Error: There was a problem contacting the database.  Please try again later.");
             }
             console.log('Success:', res);
         })
@@ -207,7 +208,7 @@ class App extends React.Component {
   }
 
   callBackendAPI = async () => {
-    const response = await fetch('/twitter');
+    const response = await fetch('http://localhost:3001/twitter');
     console.log(response);
     const body = await response.json();
     console.log(body);
@@ -370,6 +371,9 @@ class App extends React.Component {
                                     <a className="dropdown-item" onClick={Grid.handleClickUpdateTrending}>Update Table</a>
                                 </DropdownMenu>
                             </Col>
+                            <Col className="nav-item">
+                                <Search/>
+                            </Col>
                         </Container>
                     </ul>
                 </nav>
@@ -384,18 +388,8 @@ class App extends React.Component {
                 </nav>
             </header>
         );
-        const layout = [
-             {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
-             {i: 'b', x: 9.5, y: 0, w: 13, h: 7.5, minW: 13, minH: 7.5 /*restrict the size of the item with min/max*/},
-             {i: 'c', x: 9.5, y: 12.5, w: 13, h: 7.5, minW: 13, minH: 7.5 /*does whatever it wants*/}
-        ];
         display = (
-            <ReactGridLayout className="layout grid-bounds" layout={layout} cols={24} rowHeight={30} width={1300}>
-              {/*sets the size of the grid*/}
-              <div key="a" className="Bar" id = "barChart"><Bar/></div>
-              <div key="b" className="Info" id= "trendingChart"><Info/></div>
-              <div key="c" className="Table" id = "tableChart"><WTable/></div>
-            </ReactGridLayout>
+            <Grid/>
         );
     }
 

@@ -13,14 +13,6 @@
 
 }
 
-.grid-bounds {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    max-height: 80%;
-    position: relative;
-    object-fit: contain;
-}
-
 #navbarBrand {
   position: relative;
   max-height: 50px;

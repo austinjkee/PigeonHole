@@ -18,7 +18,7 @@ module.exports.init = function() {
     var connection = mysql.createConnection({
         host: 'localhost', //HOSTNAME (localhost)
         user: 'root',
-        password: 'root',
+        password: '',
         database: 'userstor', //TODO: name.
         debug: false,
     });

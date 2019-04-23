@@ -110,6 +110,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
             }
         });
     });
+
     app.get('/twitter', function(req, res){
         bcrypt.compare(clientkey, req.key, function(err, response) {
             if(response) {
@@ -129,6 +130,58 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
                 res.send("NOAUTH");
             }
         });
+    });
+
+    app.get('/twitter/:user', (req, res) => {
+        console.log(req.params);
+        const q = req.params.user;
+        console.log("Statuses");
+
+        const z = twitterApi
+            .get("statuses/show", {
+                id: q
+            })
+            .then(results => {
+                res.json({express: results});
+            })
+            .catch(console.error);
+    });
+
+    app.get('/trends/:woeid', (req, res) => {
+        console.log(req.params);
+        const q = req.params.woeid;
+        console.log("trends");
+
+        const z = twitterApi
+            .get("trends/place", {
+                id: q
+            })
+            .then(results => {
+                console.log("results", results);
+                res.json({trends: results});
+            })
+            .catch(console.error);
+    });
+
+    app.get('/search/:keyword', (req, res) => {
+        console.log(req.params);
+        const q = req.params.keyword;
+        console.log("search by keyword");
+
+        const z = twitterApi
+        // .get("statuses/show", {
+        //   id: q
+        // })
+            .get("search/tweets", {
+                q: q,
+                result_type: "popular",
+                tweet_mode: "extended"
+            })
+            .then(results => {
+                console.log("results", results);
+                res.json({trends: results});
+            })
+            .catch(console.error);
     });
 
 }
