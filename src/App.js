@@ -347,14 +347,9 @@ class App extends React.Component {
                                 </div>
                             </Col>
                             <Col className="nav-item">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a className="nav-link" id="navbarDropdown" role="button"   onClick={Grid.handleClickTable} aria-haspopup="true" aria-expanded="false">
                                 Table
                                 </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" onClick={Grid.handleClickTable}>Toggle Table View</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateTable}>Update Table</a>
-                                </div>
                             </Col>
                             <Col className="nav-item">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
