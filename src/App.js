@@ -114,7 +114,7 @@ class App extends React.Component {
                 this.setState({loggedIn: true});
             }
             else{
-                alert("ah");
+                alert("Error: There was a problem contacting the database.  Please try again later.");
             }
             console.log('Success:', res);
         })
