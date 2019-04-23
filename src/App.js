@@ -375,7 +375,7 @@ class App extends React.Component {
                                 Chart
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" onClick={handleClickBar}>Toggle Chart View</a>
+                                    <a className="dropdown-item" onClick={this.handleClickBar}>Toggle Chart View</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" onClick={Grid.handleClickUpdateChart}>Update Chart</a>
                                 </div>
@@ -385,7 +385,7 @@ class App extends React.Component {
                                 Table
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" onClick={handleClickTable}>Toggle Table View</a>
+                                    <a className="dropdown-item" onClick={this.handleClickTable}>Toggle Table View</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" onClick={Grid.handleClickUpdateTable}>Update Table</a>
                                 </div>
@@ -396,7 +396,7 @@ class App extends React.Component {
                                 </a>
                                 <DropdownMenu>
                                     <DropdownItem>
-                                        <div onClick={handleClickTrending}>
+                                        <div onClick={this.handleClickTrending}>
                                             Toggle Trending View
                                         </div>
                                     </DropdownItem>
