@@ -3,15 +3,15 @@ import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
 class TrendBar extends React.Component{
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             data: null
         }
     }
 
     componentDidMount(){
-      let {clientHeight, clientWidth} = this.refs.Bar;
+      let {clientHeight, clientWidth} = this.refs.BarBar;
       console.log(clientHeight, clientWidth);
     }
     render(){
