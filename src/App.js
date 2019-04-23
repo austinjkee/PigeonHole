@@ -49,6 +49,10 @@ class App extends React.Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleAddSubmit = this.handleAddSubmit.bind(this);
 
+    this.handleClickBar = this.handleClickBar.bind(this);
+    this.handleClickTable = this.handleClickTable.bind(this);
+    this.handleClickTrending = this.handleClickTrending.bind(this);
+
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
@@ -196,6 +200,36 @@ class App extends React.Component {
 
   }
 
+  handleClickBar() {
+    //alert("An element should be added.");
+    var x = document.getElementById("barChart");
+    if(x.style.display === "none"){
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  handleClickTable() {
+    //alert("An element should be added.");
+    var x = document.getElementById("tableChart");
+    if(x.style.display === "none"){
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  handleClickTrending() {
+    //alert("An element should be added.");
+    var x = document.getElementById("trendingChart");
+    if(x.style.display === "none"){
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
   componentDidMount() {
     this.callBackendAPI()
       .then(res => {
@@ -341,15 +375,20 @@ class App extends React.Component {
                                 Chart
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" onClick={Grid.handleClickBar}>Toggle Chart View</a>
+                                    <a className="dropdown-item" onClick={handleClickBar}>Toggle Chart View</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" onClick={Grid.handleClickUpdateChart}>Update Chart</a>
                                 </div>
                             </Col>
-                            <Col className="nav-item">
-                                <a className="nav-link" id="navbarDropdown" role="button"   onClick={Grid.handleClickTable} aria-haspopup="true" aria-expanded="false">
+                            <Col className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Table
                                 </a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" onClick={handleClickTable}>Toggle Table View</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateTable}>Update Table</a>
+                                </div>
                             </Col>
                             <Col className="nav-item">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -357,7 +396,7 @@ class App extends React.Component {
                                 </a>
                                 <DropdownMenu>
                                     <DropdownItem>
-                                        <div onClick={Grid.handleClickTrending}>
+                                        <div onClick={handleClickTrending}>
                                             Toggle Trending View
                                         </div>
                                     </DropdownItem>
