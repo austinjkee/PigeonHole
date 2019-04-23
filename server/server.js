@@ -72,3 +72,28 @@ const z = T
   .catch(console.error);
 
 });
+
+app.get('/search/:keyword', (req, res) => {
+
+console.log(req.params);
+const q = req.params.keyword;
+console.log("search by keyword");
+
+const z = T
+// .get("statuses/show", {
+//   id: q
+// })
+.get("search/tweets", {
+  q: q,
+  result_type: "popular",
+  tweet_mode: "extended"
+})
+  .then(results => {
+      console.log("results", results);
+
+    res.json({trends: results});
+
+  })
+  .catch(console.error);
+
+});
