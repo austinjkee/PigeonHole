@@ -248,6 +248,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+      var user = Cookies.get('uname');
+      if(user !== ''){
+          this.setState({loggedIn: true});
+      }
      // Call our fetch function below once the component mounts
    this.callBackendAPI()
      .then(res => {
@@ -439,24 +443,28 @@ class App extends React.Component {
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Col>
                             <Col className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Chart
                                 </a>
+                                <ul>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a className="dropdown-item" onClick={this.handleClickBar}>Toggle Chart View</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" onClick={this.handleClickUpdateChart}>Update Chart</a>
                                 </div>
+                                </ul>
                             </Col>
                             <Col className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Table
                                 </a>
+                                <ul>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a className="dropdown-item" onClick={this.handleClickTable}>Toggle Table View</a>
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" onClick={this.handleClickUpdateTable}>Update Table</a>
                                 </div>
+                                </ul>
                             </Col>
                             <Col className="nav-item">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
