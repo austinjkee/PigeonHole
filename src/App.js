@@ -111,7 +111,7 @@ class App extends React.Component {
                 alert("Bad username or password.  Please try again.");
             }
             else if (dat === "GOOD"){
-                window.open("http://35.227.94.70/dash");
+                window.location.href = "/dash";
                 //this.setState({loggedIn: true});
             }
             else{
@@ -179,7 +179,7 @@ class App extends React.Component {
                       .then(res => {
                           var dat = res.statusText;
                           if(dat === "SUCCESS"){
-                               window.open("http://35.227.94.70/dash");
+                               window.location.href = "/dash";
                                 //context.setState({loggedIn: true});
                           }
                           else if(dat === "FAIL"){
