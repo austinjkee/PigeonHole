@@ -444,8 +444,6 @@ class App extends React.Component {
         header = (
 
             <div class="container">
-
-  <!-- Static navbar -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -484,8 +482,8 @@ class App extends React.Component {
           <li><a href="../navbar-static-top/">Static top</a></li>
           <li><a href="../navbar-fixed-top/">Fixed top</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
+      </div>
+    </div>
   </nav>
         );
         const layout = [
