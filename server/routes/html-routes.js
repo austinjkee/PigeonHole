@@ -132,4 +132,84 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         });
     });
 
+    app.get('/twitter/:user', (req, res) => {
+        var cookieData = req.cookies;
+        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+            if(response) {
+        console.log(req.params);
+        const q = req.params.user;
+        console.log("Statuses");
+
+        const z = twitterApi
+        .get("statuses/show", {
+            id: q
+        })
+        .then(results => {
+            res.json({express: results});
+
+        })
+        .catch(console.error);
+    }
+    else {
+        res.statusMessage = "NOAUTH";
+        res.send("NOAUTH");
+    }
+});
+    });
+
+    app.get('/trends/:woeid', (req, res) => {
+        var cookieData = req.cookies;
+        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+            if(response) {
+        console.log(req.params);
+        const q = req.params.woeid;
+        console.log("trends");
+
+        const z = twitterApi
+        .get("trends/place", {
+            id: q
+        })
+        .then(results => {
+            console.log("results", results);
+            res.json({trends: results});
+        })
+        .catch(console.error);
+    }
+    else {
+        res.statusMessage = "NOAUTH";
+        res.send("NOAUTH");
+    }
+});
+    });
+
+    app.get('/search/:keyword', (req, res) => {
+        var cookieData = req.cookies;
+        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+            if(response) {
+        console.log(req.params);
+        const q = req.params.keyword;
+        console.log("search by keyword");
+
+        const z = twitterApi
+        // .get("statuses/show", {
+        //   id: q
+        // })
+        .get("search/tweets", {
+            q: q,
+            result_type: "popular",
+            tweet_mode: "extended"
+        })
+        .then(results => {
+            console.log("results", results);
+            res.json({trends: results});
+        })
+        .catch(console.error);
+    }
+    else {
+        res.statusMessage = "NOAUTH";
+        res.send("NOAUTH");
+    }
+});
+    });
+
 }
