@@ -207,7 +207,7 @@ class App extends React.Component {
   }
 
   callBackendAPI = async () => {
-    const response = await fetch('/twitter');
+    const response = await fetch('db/twitter');
     console.log(response);
     const body = await response.json();
     console.log(body);
