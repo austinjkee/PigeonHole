@@ -54,6 +54,10 @@ class App extends React.Component {
     this.handleClickTable = this.handleClickTable.bind(this);
     this.handleClickTrending = this.handleClickTrending.bind(this);
 
+    this.handleClickUpdateBar = this.handleClickUpdateBar.bind(this);
+    this.handleClickUpdateTable = this.handleClickUpdateTable.bind(this);
+    this.handleClickUpdateTrending = this.handleClickUpdateTrending.bind(this);
+
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
@@ -229,6 +233,18 @@ class App extends React.Component {
     } else {
       x.style.display = "none";
     }
+  }
+
+  handleClickUpdateBar() {
+
+  }
+
+  handleClickUpdateTable() {
+
+  }
+
+  handleClickUpdateTrending() {
+
   }
 
   componentDidMount() {
@@ -429,7 +445,7 @@ class App extends React.Component {
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a className="dropdown-item" onClick={this.handleClickBar}>Toggle Chart View</a>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateChart}>Update Chart</a>
+                                    <a className="dropdown-item" onClick={this.handleClickUpdateChart}>Update Chart</a>
                                 </div>
                             </Col>
                             <Col className="nav-item dropdown">
@@ -439,7 +455,7 @@ class App extends React.Component {
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a className="dropdown-item" onClick={this.handleClickTable}>Toggle Table View</a>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateTable}>Update Table</a>
+                                    <a className="dropdown-item" onClick={this.handleClickUpdateTable}>Update Table</a>
                                 </div>
                             </Col>
                             <Col className="nav-item">
@@ -453,7 +469,7 @@ class App extends React.Component {
                                         </div>
                                     </DropdownItem>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateTrending}>Update Table</a>
+                                    <a className="dropdown-item" onClick={this.handleClickUpdateTrending}>Update Table</a>
                                 </DropdownMenu>
                             </Col>
                         </Container>

@@ -19,25 +19,14 @@ class Grid extends Component {
     constructor(props) {
       super(props);
 
-      
 
-      this.handleClickUpdateBar = this.handleClickUpdateBar.bind(this);
-      this.handleClickUpdateTable = this.handleClickUpdateTable.bind(this);
-      this.handleClickUpdateTrending = this.handleClickUpdateTrending.bind(this);
+
+
     };
 
 
 
-    handleClickUpdateBar() {
-
-    }
-
-    handleClickUpdateTable() {
-
-    }
-
-    handleClickUpdateTrending() {
-
+    
     }
 
   render() {
