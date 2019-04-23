@@ -73,7 +73,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
                 res.header("Access-Control-Allow-Origin", "*");
                 res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
                 res.statusMessage = "BAD";
-                //res.send("BAD");
+                res.send("BAD");
             }
             else{
                 bcrypt.compare(req.body.pword, data[0].Password, function(err, response) {
@@ -92,7 +92,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
                                 res.header("Access-Control-Allow-Origin", "*");
                                 res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
                                 res.statusMessage = "GOOD";
-                                //res.send("GOOD");
+                                res.send("GOOD");
                             }
                         });
                     }
@@ -104,7 +104,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
                         res.header("Access-Control-Allow-Origin", "*");
                         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
                         res.statusMessage = "BAD";
-                        //res.send("BAD");
+                        res.send("BAD");
                     }
                 });
             }
