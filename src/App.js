@@ -111,8 +111,7 @@ class App extends React.Component {
                 alert("Bad username or password.  Please try again.");
             }
             else if (dat === "GOOD"){
-                window.location.href = "/dash";
-                //this.setState({loggedIn: true});
+                this.setState({loggedIn: true});
             }
             else{
                 alert("Error: There was a problem contacting the database.  Please try again later.");
@@ -179,8 +178,7 @@ class App extends React.Component {
                       .then(res => {
                           var dat = res.statusText;
                           if(dat === "SUCCESS"){
-                               window.location.href = "/dash";
-                                //context.setState({loggedIn: true});
+                               context.setState({loggedIn: true});
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
