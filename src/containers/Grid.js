@@ -28,6 +28,14 @@ class Grid extends Component {
             { trends: res.trends[0].trends })})
 
         .catch(err => console.log(err));
+
+        this.callBackendAPI3()
+          .then(res => {
+              console.log("qwerdtf:", res.trends);
+              this.setState(
+              { search: res })})
+
+          .catch(err => console.log(err));
   }
     // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
   callBackendAPI = async () => {
@@ -58,6 +66,23 @@ class Grid extends Component {
     }
     return body;
   };
+
+  callBackendAPI3 = async () => {
+   const respo = await fetch('/search/nasa');
+   console.log("3 has been called");
+
+   //console.log(respo);
+   const body = await respo.json();
+   console.log(body);
+   //console.log(body.trends[0]);
+   var b = JSON.stringify(body);
+   //console.log(body[0].as_of);
+
+   if (respo.status !== 200) {
+     throw Error(body.message)
+   }
+   return b;
+ };
 
   render() {
     //https://github.com/STRML/react-grid-layout
