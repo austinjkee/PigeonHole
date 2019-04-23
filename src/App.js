@@ -58,6 +58,8 @@ class App extends React.Component {
     this.handleClickUpdateTable = this.handleClickUpdateTable.bind(this);
     this.handleClickUpdateTrending = this.handleClickUpdateTrending.bind(this);
 
+    this.handleLogout = this.handleLogout.bind(this);
+
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
@@ -203,6 +205,10 @@ class App extends React.Component {
 
       event.preventDefault();
 
+  }
+
+  handleLogout(){
+      
   }
 
   handleClickBar() {
@@ -486,7 +492,7 @@ class App extends React.Component {
                 <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
                     <Container className="nav navbar-nav">
                         <Col className="nav-item">
-                            <a href="/" role="button" className="nav-link">
+                            <a role="button" className="nav-link" onClick={this.handleLogout}>
                                 <li>Log Out</li>
                             </a>
                         </Col>
