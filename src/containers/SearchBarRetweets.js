@@ -2,7 +2,7 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
-class TrendBar extends React.Component{
+class SearchBarRetweets extends React.Component{
     constructor() {
         super()
         this.state = {
@@ -20,6 +20,8 @@ class TrendBar extends React.Component{
       let qwerty = "";
       //console.log("object", z);
 
+      let data2=[];
+      let name=[];
       let data=[];
 
 
@@ -28,17 +30,28 @@ class TrendBar extends React.Component{
           console.log("z is not null");
           //this.setState({data: z});
 
-        if (z.trends[0].trends != null)
+        if (z.trends.statuses != null)
         {
-            console.log("qwert");
+            console.log("search bar favorites");
             //qwerty = z.trends[0].trends;
-            qwerty = JSON.stringify(z.trends[0].trends);
-            data = z.trends[0].trends;
+            qwerty = JSON.stringify(z.trends.statuses);
+            data2 = z.trends.statuses;
             //data.sort("tweet_volume");
-            data.sort((a, b) => a.tweet_volume < b.tweet_volume);
-            data = data.slice(0, 10);
+            data2.sort((a, b) => a.retweet_count < b.retweet_count);
+            data2 = data2.slice(0, 20);
 
-            //console.log(qwerty);
+
+            qwerty = z.trends.statuses.map((item, i) => {
+                var obj = new Object();
+                obj.name = item.user.name;
+                obj.retweet_count = item.retweet_count;
+                data.push(obj);
+                });
+
+                console.log("data1", data);
+
+            console.log("data", data2);
+            //name = data.user;
           // qwerty = z.trends[0].trends.map((item, i) => {
           //     console.log(item.name);
           //       return (
@@ -60,7 +73,7 @@ class TrendBar extends React.Component{
     <ResponsiveBar
     data={data}
     keys={[
-        "tweet_volume"
+        "retweet_count"
     ]}
     indexBy="name"
     margin={{
@@ -127,4 +140,4 @@ class TrendBar extends React.Component{
 }
 }
 
-export default TrendBar
+export default SearchBarRetweets
