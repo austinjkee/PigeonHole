@@ -219,11 +219,6 @@ class App extends React.Component {
   };
 
   render() {
-
-    if(Cookies.get("uname") !== ''){
-        this.setState({loggedIn: true});
-    }
-
     const creatingAccount = this.state.creatingAccount;
     const loggedIn = this.state.loggedIn;
     const agree = this.state.agree;
