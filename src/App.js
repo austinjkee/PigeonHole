@@ -34,6 +34,7 @@ class App extends React.Component {
         creatingAccount: false,
         loggedIn: false,
         data: null,
+        trends: null,
     };
 
     this.handleUnameChange = this.handleUnameChange.bind(this);
@@ -231,26 +232,77 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.callBackendAPI()
-      .then(res => {
-          console.log("Success:", res.express);
-          this.setState(
-          { data: res.express.id })})
+     // Call our fetch function below once the component mounts
+   this.callBackendAPI()
+     .then(res => {
+         //console.log("aasdfasdf:", res.express);
+         this.setState(
+         { data: res.express.id })})
 
-      .catch(err => console.log(err));
+     .catch(err => console.log(err));
+
+     this.callBackendAPI2()
+       .then(res => {
+           //console.log("qwerdtf:", res.trends);
+           this.setState(
+           { trends: res.trends[0].trends })})
+
+       .catch(err => console.log(err));
+
+       this.callBackendAPI3()
+         .then(res => {
+             console.log("qwerdtf:", res.trends);
+             this.setState(
+             { search: res })})
+
+         .catch(err => console.log(err));
+ }
+   // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+ callBackendAPI = async () => {
+   const response = await fetch('db/twitter/1016078154497048576');
+
+   //console.log(response);
+   const body = await response.json();
+   //console.log(body);
+
+   if (response.status !== 200) {
+     throw Error(body.message)
+   }
+   return body;
+ };
+
+ callBackendAPI2 = async () => {
+   const respo = await fetch('db/trends/638242');
+
+   //console.log(respo);
+   const body = await respo.json();
+   console.log(body);
+   console.log(body.trends[0]);
+   var b = JSON.stringify(body);
+   console.log(body[0].as_of);
+
+   if (respo.status !== 200) {
+     throw Error(body.message)
+   }
+   return b;
+ };
+
+ callBackendAPI3 = async () => {
+  const respo = await fetch('db/search/nasa');
+  console.log("3 has been called");
+
+  //console.log(respo);
+  const body = await respo.json();
+  console.log(body);
+  //console.log(body.trends[0]);
+  var b = JSON.stringify(body);
+  //console.log(body[0].as_of);
+
+  if (respo.status !== 200) {
+    throw Error(body.message)
   }
-
-  callBackendAPI = async () => {
-    const response = await fetch('db/twitter');
-    console.log(response);
-    const body = await response.json();
-    console.log(body);
-
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  };
+  return b;
+};
 
   render() {
     const creatingAccount = this.state.creatingAccount;
@@ -426,7 +478,7 @@ class App extends React.Component {
         display = (
             <ReactGridLayout className="layout grid-bounds" layout={layout} cols={24} rowHeight={30} width={1300}>
               {/*sets the size of the grid*/}
-              <div key="a" className="Bar" id = "barChart"><Bar/></div>
+              <div key="a" className="Bar" id = "barChart"><Bar info={this.state.trends}/></div>
               <div key="b" className="Info" id= "trendingChart"><Info/></div>
               <div key="c" className="Table" id = "tableChart"><WTable/></div>
             </ReactGridLayout>

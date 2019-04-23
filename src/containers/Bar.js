@@ -121,7 +121,6 @@ class TrendBar extends React.Component{
     motionDamping={15}
 
 />
-        <div className="Title">BAR</div>
     </div>
   );
 }
