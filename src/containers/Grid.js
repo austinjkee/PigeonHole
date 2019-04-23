@@ -25,10 +25,6 @@ class Grid extends Component {
     };
 
 
-
-    
-    }
-
   render() {
 
 
