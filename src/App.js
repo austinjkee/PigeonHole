@@ -136,6 +136,7 @@ class App extends React.Component {
       //Check to make sure the form is filled out.
       if(this.state.uname !== undefined && this.state.name !== undefined && this.state.surname !== undefined && this.state.email !== undefined && this.state.pword !== undefined && this.state.pword == this.state.vpword){
           //Check to see if the username is already taken.
+          /*
           fetch('/db/searchUsers',{
               method: 'get',
               body :
@@ -151,6 +152,7 @@ class App extends React.Component {
               });
           })
           .catch(error => console.error('Error:', error));
+          */
       }
       else{
           fetch('/db/create',{
