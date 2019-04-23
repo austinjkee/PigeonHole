@@ -493,7 +493,7 @@ class App extends React.Component {
                 <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
                     <Container className="nav navbar-nav">
                         <Col className="nav-item">
-                            <a role="button" className="nav-link" onClick={this.handleLogout}>
+                            <a role="button" onClick={this.handleLogout}>
                                 <li>Log Out</li>
                             </a>
                         </Col>
