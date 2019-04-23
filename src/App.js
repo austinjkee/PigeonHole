@@ -208,7 +208,8 @@ class App extends React.Component {
   }
 
   handleLogout(){
-      
+      Cookies.remove('uname', { path: '' });
+      Cookies.remove('clientkey', { path: '' });
   }
 
   handleClickBar() {
