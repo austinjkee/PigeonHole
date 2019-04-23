@@ -78,7 +78,7 @@ class Grid extends Component {
 
         <GridLayout className="layout" layout={layout} cols={20} rowHeight={30} width={1200}>
           {/*sets the size of the grid*/}
-          <div key="a" class="BarBar"><BarBar /></div>
+          <div key="a" class="BarBar"><BarBar info={this.state.trends}/></div>
           <div key="b" class="Info"><Info info={this.state.trends}/></div>
           <div key="c">c</div>
         </GridLayout>
