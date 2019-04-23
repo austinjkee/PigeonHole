@@ -15,8 +15,8 @@ class Info extends Component{
     return(
       <div className="Info">
           <div>
-              <Table class="table">
-                  <thead class="thead-dark">
+              <Table className="table">
+                  <thead className="thead-dark">
                   <tr>
                       <th scope="col">Name</th>
                       <th scope="col">Location</th>

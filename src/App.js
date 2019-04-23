@@ -6,14 +6,19 @@
 
 import React from 'react';
 import Cookies from 'js-cookie';
+import RGL, {WidthProvider} from 'react-grid-layout';
 import ReactDOM from 'react-dom';
-import { Form, Button, Col, ButtonToolbar, Table } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, ButtonToolbar, Table} from 'react-bootstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import Bar from './containers/Bar';
 import Grid from './containers/Grid';
 import Info from './containers/Info';
+import WTable from './containers/Table';
 
 const bcrypt = require('bcryptjs'),
      fetch = require('node-fetch');
+
+const ReactGridLayout = WidthProvider(RGL);
 
 class App extends React.Component {
   constructor(props) {
@@ -84,12 +89,12 @@ class App extends React.Component {
             uname: this.state.uname,
             pword: this.state.pword,
         };
-        fetch('http://localhost:3001/verif', {
+        fetch('db/verif', {
             method: 'POST',
+            credentials: 'include',
             headers:{
                 "Content-Type": "application/json",
             },
-            credentials: 'same-origin',
             body: JSON.stringify(packet),
         })
         .then(res => {return res;})
@@ -152,8 +157,9 @@ class App extends React.Component {
                   else{
                       hashedPacket.pword = hash;
                       console.log(hashedPacket);
-                      fetch('http://localhost:3001/create',{
+                      fetch('db/create',{
                             method: 'POST',
+                            credentials: 'include',
                             body : JSON.stringify(hashedPacket),
                             headers:{
                                 'Content-Type': 'application/json',
@@ -322,54 +328,70 @@ class App extends React.Component {
             <header className="navbar navbar-default fixed-top navbar-inner home">
                 <nav className="hidden-xs navbar-light navbar-expand-lg navbar-header">
                     <ul className="nav navbar-nav">
-                        <a href="#top" role="button" className="navbar-brand">
-                            <img id="navbarBrand" src="resources/drawing.svg"/>
-                        </a>
-                        <div className="navbar navbar-default navbar-header" id="navbarDesktop">
+                        <Container className="navbar navbar-default navbar-header">
+                            <Col href="#top" role="button" className="navbar-brand">
+                                <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
+                            </Col>
                             <Col className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Widgets
+                                Chart
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#chart">Chart</a>
+                                    <a className="dropdown-item" onClick={Grid.handleClickBar}>Toggle Chart View</a>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#toptweet">Top Tweet</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#map">Map</a>
+                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateChart}>Update Chart</a>
                                 </div>
                             </Col>
                             <Col className="nav-item">
-                                <a href="#" role="button" className="nav-link">
-                                    <li>Beep</li>
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Table
                                 </a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" onClick={Grid.handleClickTable}>Toggle Table View</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateTable}>Update Table</a>
+                                </div>
                             </Col>
                             <Col className="nav-item">
-                                <a href="#about" role="button" className="nav-link">
-                                    <li>Boop</li>
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Trending
                                 </a>
+                                <DropdownMenu>
+                                    <DropdownItem>
+                                        <div onClick={Grid.handleClickTrending}>
+                                            Toggle Trending View
+                                        </div>
+                                    </DropdownItem>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" onClick={Grid.handleClickUpdateTrending}>Update Table</a>
+                                </DropdownMenu>
                             </Col>
-                        </div>
+                        </Container>
                     </ul>
                 </nav>
                 <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
-                    <ul className="nav navbar-nav">
+                    <Container className="nav navbar-nav">
                         <Col className="nav-item">
                             <a href="/" role="button" className="nav-link">
                                 <li>Log Out</li>
                             </a>
                         </Col>
-                    </ul>
+                    </Container>
                 </nav>
             </header>
         );
+        const layout = [
+             {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
+             {i: 'b', x: 9.5, y: 0, w: 13, h: 7.5, minW: 13, minH: 7.5 /*restrict the size of the item with min/max*/},
+             {i: 'c', x: 9.5, y: 12.5, w: 13, h: 7.5, minW: 13, minH: 7.5 /*does whatever it wants*/}
+        ];
         display = (
-            <div className="App">
-              <h1>Widget Dashboard</h1>
-
-              <Grid/>
-
-              <p className="App-intro">{this.state.data}</p>
-            </div>
+            <ReactGridLayout className="layout grid-bounds" layout={layout} cols={24} rowHeight={30} width={1300}>
+              {/*sets the size of the grid*/}
+              <div key="a" className="Bar" id = "barChart"><Bar/></div>
+              <div key="b" className="Info" id= "trendingChart"><Info/></div>
+              <div key="c" className="Table" id = "tableChart"><WTable/></div>
+            </ReactGridLayout>
         );
     }
 

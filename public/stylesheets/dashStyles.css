@@ -1,13 +1,8 @@
-.navbar-inner {
-  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.175);
-  box-shadow: 0 3px 3px rgba(0,0,0,0.175);
-}
-
 .navbar.home {
-  height: 5%;
-  margin-bottom: 5px;
+  height: 10%;
   background-color: white;
   border: none;
+
   color: white;
   z-index: 100;
   transition: background-color 1s ease 0s;
@@ -18,16 +13,16 @@
 
 }
 
+.grid-bounds {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    max-height: 80%;
+    position: relative;
+    object-fit: contain;
+}
+
 #navbarBrand {
   position: relative;
   max-height: 50px;
   background-size: contain;
-}
-
-#navbarDesktop {
-    position: relative;
-    margin-top: 5px;
-    left: 120px;
-    margin-bottom: 5px;
-    visibility: visible;
 }

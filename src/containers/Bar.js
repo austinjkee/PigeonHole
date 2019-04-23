@@ -218,7 +218,6 @@ const Bar = () => (
         }
     ]}
 />
-        <div className="Title">BAR</div>
     </div>
 )
 
