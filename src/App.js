@@ -91,6 +91,8 @@ class App extends React.Component {
         };
         fetch('db/verif', {
             method: 'POST',
+            mode: 'same-origin',
+            redirect: 'follow',
             credentials: 'include',
             headers:{
                 "Content-Type": "application/json",
@@ -159,6 +161,8 @@ class App extends React.Component {
                       console.log(hashedPacket);
                       fetch('db/create',{
                             method: 'POST',
+                            redirect: 'follow',
+                            mode: 'same-origin',
                             credentials: 'include',
                             body : JSON.stringify(hashedPacket),
                             headers:{
