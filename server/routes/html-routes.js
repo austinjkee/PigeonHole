@@ -111,7 +111,8 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         });
     });
     app.get('/twitter', function(req, res){
-        bcrypt.compare(clientkey, req.key, function(err, response) {
+        var cookieData = req.cookies;
+        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
             if(response) {
                 console.log("twitter has been called");
                 const twitterData = twitterApi.get("statuses/show", {
