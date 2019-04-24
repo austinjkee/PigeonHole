@@ -462,7 +462,7 @@ class App extends React.Component {
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
 
-                    <Nav.Item className="nav navbar-nav navbar-expand-lg ml-auto">
+                    <Nav.Item className="navbar-expand-lg ml-auto">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
