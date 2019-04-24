@@ -442,8 +442,8 @@ class App extends React.Component {
     }
     else{
         header = (
-                <Nav variant="pills" activeKey="1">
-                            <Nav.Item className="navbar-brand">
+                <Nav variant="pills">
+                            <Nav.Item>
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Nav.Item>
                             <NavDropdown title="Chart">
@@ -461,7 +461,7 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                
+
                     <Nav.Item className="nav navbar-nav navbar-expand-lg ml-auto">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
