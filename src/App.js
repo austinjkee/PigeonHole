@@ -444,9 +444,9 @@ class App extends React.Component {
         header = (
             <header className="navbar navbar-default fixed-top navbar-inner home">
                 <Nav>
-                            <Col className="navbar-brand">
+                            <Nav.Item className="navbar-brand">
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
-                            </Col>
+                            </Nav.Item>
                             <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
