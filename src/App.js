@@ -276,9 +276,9 @@ class App extends React.Component {
 
      this.callBackendAPI2()
        .then(res => {
-           //console.log("qwerdtf:", res.trends);
-           this.setState(
-           { trends: res.trends[0].trends })})
+           console.log("qwerdtf:", res.trends);
+           this.setState({ trends: res.trends[0].trends });
+       })
 
        .catch(err => console.log(err));
 
