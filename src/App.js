@@ -449,17 +449,12 @@ class App extends React.Component {
                             <Col href="#top" role="button" className="navbar-brand">
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Col>
-                            <Col className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Chart
-                                </a>
-                                <ul>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" onClick={this.handleClickBar}>Toggle Chart View</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={this.handleClickUpdateChart}>Update Chart</a>
-                                </div>
-                                </ul>
+                            <Nav.Item className="nav-item dropdown">
+                                <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                                    <NavDropdown.Divider/>
+                                    <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
+                                </NavDropdown>
                             </Col>
                             <Col className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -489,16 +484,16 @@ class App extends React.Component {
                             </Col>
                         </Container>
                     </ul>
-                </nav>
-                <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
+                </Nav>
+                <Nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
                     <Container className="nav navbar-nav">
                         <Col className="nav-item">
-                            <Button  href='/' onClick={this.handleLogout}>
+                            <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
                         </Col>
                     </Container>
-                </nav>
+                </Nav>
             </header>
         );
         const layout = [
