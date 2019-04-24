@@ -461,7 +461,7 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                    <Nav.Item className="ml-auto dashbar">
+                    <Nav.Item className="ml-auto logout">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
