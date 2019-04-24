@@ -442,55 +442,69 @@ class App extends React.Component {
     }
     else{
         header = (
-
-            <div class="navbar container home">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Project name</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <script>
-              var a="abc";
-              var b=2;
-            </script>
-            <ul class="dropdown-menu">
-              <li><a href="#" onclick='test(a,b)'>Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-          <li><a href="../navbar-static-top/">Static top</a></li>
-          <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  </div>
+            <header className="navbar navbar-default fixed-top navbar-inner home">
+                <nav className="hidden-xs navbar-light navbar-expand-lg navbar-header">
+                    <ul className="nav navbar-nav">
+                        <Container className="navbar navbar-default navbar-header">
+                            <Col href="#top" role="button" className="navbar-brand">
+                                <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
+                            </Col>
+                            <Col className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Chart
+                                </a>
+                                <ul>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" onClick={this.handleClickBar}>Toggle Chart View</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" onClick={this.handleClickUpdateChart}>Update Chart</a>
+                                </div>
+                                </ul>
+                            </Col>
+                            <Col className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Table
+                                </a>
+                                <ul>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" onClick={this.handleClickTable}>Toggle Table View</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" onClick={this.handleClickUpdateTable}>Update Table</a>
+                                </div>
+                                </ul>
+                            </Col>
+                            <Col className="nav-item">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Trending
+                                </a>
+                                <DropdownMenu>
+                                    <DropdownItem>
+                                        <div onClick={this.handleClickTrending}>
+                                            Toggle Trending View
+                                        </div>
+                                    </DropdownItem>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" onClick={this.handleClickUpdateTrending}>Update Table</a>
+                                </DropdownMenu>
+                            </Col>
+                        </Container>
+                    </ul>
+                </nav>
+                <nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
+                    <Container className="nav navbar-nav">
+                        <Col className="nav-item">
+                            <Button onClick={this.handleLogout}>
+                                Log Out
+                            </Button>
+                        </Col>
+                    </Container>
+                </nav>
+            </header>
         );
         const layout = [
-            {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
-            {i: 'b', x: 9.5, y: 0, w: 13, h: 7.5, minW: 13, minH: 7.5 /*restrict the size of the item with min/max*/},
-            {i: 'c', x: 9.5, y: 12.5, w: 13, h: 7.5, minW: 13, minH: 7.5 /*does whatever it wants*/}
+             {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
+             {i: 'b', x: 9.5, y: 0, w: 13, h: 7.5, minW: 13, minH: 7.5 /*restrict the size of the item with min/max*/},
+             {i: 'c', x: 9.5, y: 12.5, w: 13, h: 7.5, minW: 13, minH: 7.5 /*does whatever it wants*/}
         ];
         display = (
             <ReactGridLayout className="layout grid-bounds" layout={layout} cols={24} rowHeight={30} width={1300}>
