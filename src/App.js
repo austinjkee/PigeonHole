@@ -443,47 +443,26 @@ class App extends React.Component {
     else{
         header = (
             <header className="navbar navbar-default fixed-top navbar-inner home">
-                <nav className="hidden-xs navbar-light navbar-expand-lg navbar-header">
-                    <ul className="nav navbar-nav">
-                        <Container className="navbar navbar-default navbar-header">
-                            <Col href="#top" role="button" className="navbar-brand">
+                <Nav>
+                            <Col className="navbar-brand">
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Col>
-
-                                <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
-                                    <NavDropdown.Divider/>
-                                    <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
-                                </NavDropdown>
-                            
-                            <Col className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Table
-                                </a>
-                                <ul>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" onClick={this.handleClickTable}>Toggle Table View</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={this.handleClickUpdateTable}>Update Table</a>
-                                </div>
-                                </ul>
-                            </Col>
-                            <Col className="nav-item">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Trending
-                                </a>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        <div onClick={this.handleClickTrending}>
-                                            Toggle Trending View
-                                        </div>
-                                    </DropdownItem>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" onClick={this.handleClickUpdateTrending}>Update Table</a>
-                                </DropdownMenu>
-                            </Col>
+                            <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                                <NavDropdown.Divider/>
+                                <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                                <NavDropdown.Divider/>
+                                <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                                <NavDropdown.Divider/>
+                                <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
+                            </NavDropdown>
                         </Container>
-                    </ul>
                 </Nav>
                 <Nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
                     <Container className="nav navbar-nav">
