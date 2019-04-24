@@ -426,7 +426,7 @@ class App extends React.Component {
                         </Form.Group>
 
                         <Button variant="outline-light" type="Submit" className={agree ? "visible" : "collapse"}>
-                        Sign In
+                        Sign Up
                         </Button>
 
                         <Button variant="outline-light" onClick={this.handleCancel} className={agree ? "collapse" : "visible"}>
