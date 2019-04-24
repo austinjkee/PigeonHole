@@ -17,7 +17,7 @@ class TrendBar extends React.Component{
     render(){
       var w = this.props.info
       var z = JSON.parse(w);
-      console.log(z);
+      console.log("The Data Passed To Bar",z);
       let qwerty = "";
       //console.log("object", z);
 
