@@ -1,5 +1,5 @@
 #navbar {
-  height: 70px;
+  height: 60px;
   background-color: DarkSlateGrey;
   border: none;
 
@@ -14,12 +14,12 @@
 }
 
 .dashbar {
-    margin-top:10px;
+    margin-top:7px;
     margin-left:10px;
 }
 
 .logout {
-    margin-top:10px;
+    margin-top:7px;
     margin-right:10px;
 }
 
@@ -33,7 +33,7 @@
 
 #navbarBrand {
   position: relative;
-  max-height: 50px;
+  max-height:60px;
   margin-left:5px;
   background-size: contain;
 }
