@@ -6,10 +6,23 @@ import BarBar from './Bar.js';
 import Info from './Info.js';
 
 class Grid extends Component {
-    state = {
-    data: null,
-    trends: null
-  };
+    constructor(props) {
+       super(props);
+       this.state = {
+           value: '',
+           keyword: '',
+           trendSearch: '',
+           data: null,
+           trends: null,
+           search: null
+       };
+
+       this.handleChangeSearch = this.handleChangeSearch.bind(this);
+       this.handleSubmitSearch = this.handleSubmitSearch.bind(this);
+       this.handleChangeTrend = this.handleChangeTrend.bind(this);
+       this.handleSubmitTrend = this.handleSubmitTrend.bind(this);
+     }
+
 
     componentDidMount() {
       // Call our fetch function below once the component mounts
@@ -21,7 +34,7 @@ class Grid extends Component {
 
       .catch(err => console.log(err));
 
-      this.callBackendAPI2()
+      this.callBackendAPI2(this.state.trendSearch)
         .then(res => {
             //console.log("qwerdtf:", res.trends);
             this.setState(
@@ -29,7 +42,7 @@ class Grid extends Component {
 
         .catch(err => console.log(err));
 
-        this.callBackendAPI3()
+        this.callBackendAPI3(this.state.keyword)
           .then(res => {
               console.log("qwerdtf:", res.trends);
               this.setState(
@@ -51,24 +64,24 @@ class Grid extends Component {
     return body;
   };
 
-  callBackendAPI2 = async () => {
-    const respo = await fetch('/trends/638242');
+  callBackendAPI2 = async (w) => {
+    const respo = await fetch('/trends/' + w);
 
     //console.log(respo);
     const body = await respo.json();
     console.log(body);
     console.log(body.trends[0]);
-    //var b = JSON.stringify(body);
+    var b = JSON.stringify(body);
     //console.log(body[0].as_of);
 
     if (respo.status !== 200) {
       throw Error(body.message)
     }
-    return body;
+    return b;
   };
 
-  callBackendAPI3 = async () => {
-   const respo = await fetch('/search/nasa');
+  callBackendAPI3 = async (q) => {
+   const respo = await fetch('/search/' + q);
    console.log("3 has been called");
 
    //console.log(respo);
@@ -84,6 +97,29 @@ class Grid extends Component {
    return b;
  };
 
+ handleChangeSearch(event) {
+   this.setState({keyword: event.target.value});
+ }
+
+ handleSubmitSearch(event) {
+   //alert('Akeyword: ' + this.state.keyword);
+   this.componentDidMount();
+   event.preventDefault();
+ }
+
+ handleChangeTrend(event) {
+   this.setState({trendSearch: event.target.value});
+ }
+
+ handleSubmitTrend(event) {
+     console.log("submit trend", this.state.trendSearch);
+   //alert('trend: ' + this.state.trendSearch);
+   this.componentDidMount();
+   //callBackendAPI3("qwerttr");
+   event.preventDefault();
+ }
+
+
   render() {
     //https://github.com/STRML/react-grid-layout
     var layout = [
@@ -97,6 +133,20 @@ class Grid extends Component {
 
     return (
       <div>
+      <form onSubmit={this.handleSubmitSearch}>
+        <label>
+          Keyword:
+          <input type="text" value={this.state.keyword} onChange={this.handleChangeSearch} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      <form onSubmit={this.handleSubmitTrend}>
+        <label>
+          Trend:
+          <input type="text" value={this.state.trendSearch} onChange={this.handleChangeTrend} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
         <button onClick={handleClick}>Add Graph</button>
         <button onClick={handleClick}>Add Table</button>
         <button onClick={handleClick}>Add Map</button>
