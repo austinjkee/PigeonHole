@@ -51,6 +51,12 @@ class App extends React.Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleAddSubmit = this.handleAddSubmit.bind(this);
 
+    this.callBackendAPI = this.callBackendAPI.bind(this);
+    this.callBackendAPI2 = this.callBackendAPI2.bind(this);
+    this.callBackendAPI3 = this.callBackendAPI3.bind(this):
+
+        break;
+
     this.handleClickBar = this.handleClickBar.bind(this);
     this.handleClickTable = this.handleClickTable.bind(this);
     this.handleClickTrending = this.handleClickTrending.bind(this);
@@ -268,9 +274,9 @@ class App extends React.Component {
      // Call our fetch function below once the component mounts
    this.callBackendAPI()
      .then(res => {
-         //console.log("aasdfasdf:", res.express);
-         this.setState(
-         { data: res.express.id })})
+         console.log("aasdfasdf:", res.express);
+         this.setState({ data: res.express.id });
+     })
 
      .catch(err => console.log(err));
 
