@@ -442,7 +442,7 @@ class App extends React.Component {
     }
     else{
         header = (
-            <header className="navbar navbar-default fixed-top navbar-inner home">
+            <header>
                 <Nav>
                             <Nav.Item className="navbar-brand">
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
