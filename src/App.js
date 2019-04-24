@@ -53,7 +53,7 @@ class App extends React.Component {
 
     this.callBackendAPI = this.callBackendAPI.bind(this);
     this.callBackendAPI2 = this.callBackendAPI2.bind(this);
-    this.callBackendAPI3 = this.callBackendAPI3.bind(this):
+    this.callBackendAPI3 = this.callBackendAPI3.bind(this);
 
         break;
 
