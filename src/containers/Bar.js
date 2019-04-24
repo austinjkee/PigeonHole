@@ -3,7 +3,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
 class TrendBar extends React.Component{
-    constructor() {
+    constructor(props) {
         this.state = {
             data: null
         }
