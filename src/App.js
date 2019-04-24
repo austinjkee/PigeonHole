@@ -442,37 +442,32 @@ class App extends React.Component {
     }
     else{
         header = (
-            <header>
-                <Nav>
+                <Nav variant="pills" activeKey="1">
                             <Nav.Item className="navbar-brand">
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Nav.Item>
-                            <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <NavDropdown title="Chart">
                                 <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                            <NavDropdown title="Table">
+                                <NavDropdown.Item onClick={this.handleClickTable}>Toggle Table View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
-                                <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleClickUpdateTable}>Update Table</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                            <NavDropdown title="Trending">
+                                <NavDropdown.Item onClick={this.handleClickTrending}>Toggle Trending View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
-                                <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                </Nav>
-                <Nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
-                    <Container className="nav navbar-nav">
-                        <Col className="nav-item">
+                
+                    <Nav.Item className="nav navbar-nav navbar-expand-lg ml-auto">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
-                        </Col>
-                    </Container>
+                    </Nav.Item>
                 </Nav>
-            </header>
         );
         const layout = [
              {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
