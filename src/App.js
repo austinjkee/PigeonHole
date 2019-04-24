@@ -462,7 +462,7 @@ class App extends React.Component {
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
 
-                    <Nav.Item className="navbar-expand-lg ml-auto">
+                    <Nav.Item className="justify-content-end">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
@@ -475,7 +475,7 @@ class App extends React.Component {
              {i: 'c', x: 9.5, y: 12.5, w: 13, h: 7.5, minW: 13, minH: 7.5 /*does whatever it wants*/}
         ];
         display = (
-            <ReactGridLayout className="layout grid-bounds" layout={layout} cols={24} rowHeight={30} width={1300}>
+            <ReactGridLayout className="layout" layout={layout} cols={24} rowHeight={30} width={1300}>
               {/*sets the size of the grid*/}
               <div key="a" className="BarBar" id = "barChart"><Bar info={this.state.trends}/></div>
               <div key="b" className="Info" id= "trendingChart"><Info/></div>
