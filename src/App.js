@@ -449,13 +449,13 @@ class App extends React.Component {
                             <Col href="#top" role="button" className="navbar-brand">
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Col>
-                            <Nav.Item className="nav-item dropdown">
+
                                 <NavDropdown title="Chart" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
                                     <NavDropdown.Divider/>
                                     <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
                                 </NavDropdown>
-                            </Col>
+                            
                             <Col className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Table
