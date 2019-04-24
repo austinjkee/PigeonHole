@@ -112,6 +112,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
     });
     app.get('/twitter', function(req, res){
         var cookieData = req.cookies;
+        console.log(clientkey);
         bcrypt.compare(clientkey, req.clientkey, function(err, response) {
             if(response) {
                 console.log("twitter has been called");
@@ -126,7 +127,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
                 .catch(console.error);
             }
             else {
-                res.send("NOAUTH");
+                console.log("NOAUTH");
                 res.statusMessage = "NOAUTH";
                 res.send("NOAUTH");
             }
@@ -135,6 +136,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 
     app.get('/twitter/:user', (req, res) => {
         var cookieData = req.cookies;
+        console.log(clientkey);
         bcrypt.compare(clientkey, req.clientkey, function(err, response) {
             if(response) {
         console.log(req.params);
@@ -161,6 +163,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 
     app.get('/trends/:woeid', (req, res) => {
         var cookieData = req.cookies;
+        console.log(clientkey);
         bcrypt.compare(clientkey, req.clientkey, function(err, response) {
             if(response) {
         console.log(req.params);
@@ -187,6 +190,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 
     app.get('/search/:keyword', (req, res) => {
         var cookieData = req.cookies;
+        console.log(clientkey);
         bcrypt.compare(clientkey, req.clientkey, function(err, response) {
             if(response) {
         console.log(req.params);
