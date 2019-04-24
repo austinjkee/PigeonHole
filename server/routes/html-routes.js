@@ -112,8 +112,8 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
     });
     app.get('/twitter', function(req, res){
         var cookieData = req.cookies;
-        console.log(req.clientkey);
-        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+        console.log(cookieData.clientkey);
+        bcrypt.compare(clientkey, cookieData.clientkey, function(err, response) {
             if(response) {
                 console.log("twitter has been called");
                 const twitterData = twitterApi.get("statuses/show", {
@@ -136,8 +136,8 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 
     app.get('/twitter/:user', (req, res) => {
         var cookieData = req.cookies;
-        console.log(req.clientkey);
-        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+        console.log(cookieData.clientkey);
+        bcrypt.compare(clientkey, cookieData.clientkey, function(err, response) {
             if(response) {
         console.log(req.params);
         const q = req.params.user;
@@ -163,8 +163,8 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 
     app.get('/trends/:woeid', (req, res) => {
         var cookieData = req.cookies;
-        console.log(req.clientkey);
-        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+        console.log(cookieData.clientkey);
+        bcrypt.compare(clientkey, cookieData.clientkey, function(err, response) {
             if(response) {
         console.log(req.params);
         const q = req.params.woeid;
@@ -190,8 +190,8 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 
     app.get('/search/:keyword', (req, res) => {
         var cookieData = req.cookies;
-        console.log(req.clientkey);
-        bcrypt.compare(clientkey, req.clientkey, function(err, response) {
+        console.log(cookieData.clientkey);
+        bcrypt.compare(clientkey, cookieData.clientkey, function(err, response) {
             if(response) {
         console.log(req.params);
         const q = req.params.keyword;
