@@ -126,6 +126,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
                 .catch(console.error);
             }
             else {
+                res.send("NOAUTH");
                 res.statusMessage = "NOAUTH";
                 res.send("NOAUTH");
             }
@@ -151,6 +152,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         .catch(console.error);
     }
     else {
+        console.log("NOAUTH");
         res.statusMessage = "NOAUTH";
         res.send("NOAUTH");
     }
@@ -176,6 +178,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         .catch(console.error);
     }
     else {
+        console.log("NOAUTH");
         res.statusMessage = "NOAUTH";
         res.send("NOAUTH");
     }
@@ -206,6 +209,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         .catch(console.error);
     }
     else {
+        console.log("NOAUTH");
         res.statusMessage = "NOAUTH";
         res.send("NOAUTH");
     }
