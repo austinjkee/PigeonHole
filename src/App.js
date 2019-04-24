@@ -442,7 +442,7 @@ class App extends React.Component {
     }
     else{
         header = (
-                <Nav variant="pills">
+                <Nav variant="pills" id="navbar">
                             <Nav.Item>
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Nav.Item>
