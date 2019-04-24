@@ -1,5 +1,5 @@
 #navbar {
-  height: 100px;
+  height: 70px;
   background-color: DarkSlateGrey;
   border: none;
 
@@ -14,13 +14,13 @@
 }
 
 .dashbar {
-    margin-top:5px;
-    margin-left:5px;
+    margin-top:10px;
+    margin-left:10px;
 }
 
 .logout {
-    margin-top:5px;
-    margin-right:5px;
+    margin-top:10px;
+    margin-right:10px;
 }
 
 .grid-bounds {
