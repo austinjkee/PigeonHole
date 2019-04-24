@@ -292,7 +292,7 @@ class App extends React.Component {
          .catch(err => console.log(err));
  }
    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
- callBackendAPI() {
+ async callBackendAPI() {
    const response = await fetch('db/twitter/1016078154497048576');
 
    //console.log(response);
@@ -305,7 +305,7 @@ class App extends React.Component {
    return body;
  };
 
- callBackendAPI2() {
+ async callBackendAPI2() {
    const respo = await fetch('db/trends/638242');
 
    //console.log(respo);
@@ -321,7 +321,7 @@ class App extends React.Component {
    return b;
  };
 
- callBackendAPI3() {
+ async callBackendAPI3() {
   const respo = await fetch('db/search/nasa');
   console.log("3 has been called");
 
