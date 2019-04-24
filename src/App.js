@@ -446,22 +446,22 @@ class App extends React.Component {
                             <Nav.Item>
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Nav.Item>
-                            <NavDropdown title="Chart">
+                            <NavDropdown className="dashbar" title="Chart">
                                 <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title="Table">
+                            <NavDropdown className="dashbar" title="Table">
                                 <NavDropdown.Item onClick={this.handleClickTable}>Toggle Table View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTable}>Update Table</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title="Trending">
+                            <NavDropdown className="dashbar" title="Trending">
                                 <NavDropdown.Item onClick={this.handleClickTrending}>Toggle Trending View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                    <Nav.Item className="ml-auto logout">
+                    <Nav.Item className="ml-auto dashbar">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
