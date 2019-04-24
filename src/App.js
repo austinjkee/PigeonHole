@@ -47,6 +47,7 @@ class App extends React.Component {
     this.handleAgreeChange = this.handleAgreeChange.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleAddSubmit = this.handleAddSubmit.bind(this);
 
@@ -130,6 +131,11 @@ class App extends React.Component {
         });
     }
     event.preventDefault();
+  }
+
+  handleCancel(event) {
+      this.setState({creatingAccount: false});
+      event.preventDefault();
   }
 
   handleAdd(event) {
@@ -421,6 +427,10 @@ class App extends React.Component {
 
                         <Button variant="outline-light" type="Submit" className={agree ? "visible" : "collapse"}>
                         Sign In
+                        </Button>
+
+                        <Button variant="outline-light" onClick={this.handleCancel} className={agree ? "collapse" : "visible"}>
+                        Cancel
                         </Button>
 
                         <Form.Text className="text-muted">
