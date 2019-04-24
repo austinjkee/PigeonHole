@@ -1,5 +1,5 @@
 #navbar {
-  height: 60px;
+  height:60px;
   background-color: DarkSlateGrey;
   border: none;
 
@@ -14,12 +14,12 @@
 }
 
 .dashbar {
-    margin-top:7px;
+    margin-top:10px;
     margin-left:10px;
 }
 
 .logout {
-    margin-top:7px;
+    margin-top:10px;
     margin-right:10px;
 }
 
