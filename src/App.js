@@ -442,7 +442,6 @@ class App extends React.Component {
     }
     else{
         header = (
-            <>
                 <Nav variant="pills" id="navbar">
                             <Nav.Item>
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
@@ -462,15 +461,12 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                </Nav>
-                <Nav variant="pills" id="navbar">
-                    <Nav.Item className="justify-content-end logout">
+                    <Nav.Item className="ml-auto">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
                             </Button>
                     </Nav.Item>
                 </Nav>
-            </>
         );
         const layout = [
              {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
