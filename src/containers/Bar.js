@@ -4,6 +4,7 @@ import { generateCountriesData } from '@nivo/generators'
 
 class TrendBar extends React.Component{
     constructor(props) {
+        super(props);
         this.state = {
             data: null
         }
