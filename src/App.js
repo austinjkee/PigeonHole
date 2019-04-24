@@ -462,7 +462,6 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
                             </NavDropdown>
-                        </Container>
                 </Nav>
                 <Nav className="hidden-ms navbar-light navbar-expand-lg ml-auto">
                     <Container className="nav navbar-nav">
