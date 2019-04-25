@@ -135,7 +135,7 @@ class App extends React.Component {
                 this.setState({loggedIn: true});
                 // Call our fetch functions
                 this.handleClickUpdateChart();
-                this.handleClickUpdateTable();
+                //this.handleClickUpdateTable();
                 this.handleClickUpdateTrending();
             }
             else{
@@ -211,7 +211,7 @@ class App extends React.Component {
                                context.setState({loggedIn: true});
                                // Call our fetch functions
                                this.handleClickUpdateChart();
-                               this.handleClickUpdateTable();
+                               //this.handleClickUpdateTable();
                                this.handleClickUpdateTrending();
                           }
                           else if(dat === "FAIL"){
