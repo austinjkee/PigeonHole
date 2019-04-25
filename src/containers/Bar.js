@@ -113,7 +113,7 @@ class Bar extends React.Component{
         "tickSize": 5,
         "tickPadding": 5,
         "tickRotation": -50,
-        "legend": "country",
+        "legend": "hashtag",
         "legendPosition": "middle",
         "legendOffset": 80
     }}
