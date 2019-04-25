@@ -76,7 +76,7 @@ class Bar extends React.Component{
     render(){
 
         var dispdat = [];
-        dispdat = this.state.data;
+        dispdat = this.state.data.toArray();
 
       return(
     <ResponsiveBar
