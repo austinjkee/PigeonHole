@@ -195,6 +195,27 @@ class App extends React.Component {
                           var dat = res.statusText;
                           if(dat === "SUCCESS"){
                                context.setState({loggedIn: true});
+                               // Call our fetch function below once the component mounts
+                             this.callBackendAPI()
+                               .then(res => {
+                                   console.log("aasdfasdf:", res.express);
+                                   this.setState({ data: res.express.id });
+                               })
+                               .catch(err => console.log(err));
+
+                               this.callBackendAPI2()
+                                 .then(res => {
+                                     console.log("qwerdtf:", res.trends);
+                                     this.setState({ trends: res.trends[0].trends });
+                                 })
+                                 .catch(err => console.log(err));
+
+                                 this.callBackendAPI3()
+                                   .then(res => {
+                                       console.log("qwerdtf:", res.trends);
+                                       this.setState({ search: res });
+                                   })
+                                   .catch(err => console.log(err));
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
@@ -269,27 +290,6 @@ class App extends React.Component {
       if(user !== undefined && user !== ''){
           this.setState({loggedIn: true});
       }
-      // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-      .then(res => {
-          console.log("aasdfasdf:", res.express);
-          this.setState({ data: res.express.id });
-      })
-      .catch(err => console.log(err));
-
-      this.callBackendAPI2()
-        .then(res => {
-            console.log("qwerdtf:", res.trends);
-            this.setState({ trends: res.trends[0].trends });
-        })
-        .catch(err => console.log(err));
-
-        this.callBackendAPI3()
-          .then(res => {
-              console.log("qwerdtf:", res.trends);
-              this.setState({ search: res });
-          })
-          .catch(err => console.log(err));
   }
 
    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
