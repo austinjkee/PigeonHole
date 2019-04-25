@@ -13,8 +13,8 @@ import { } from 'reactstrap';
 import Bar from './containers/Bar';
 import Info from './containers/Info';
 import WTable from './containers/Table';
-import 'css/gridLayoutStyle.css';
-import 'css/resizeableStyle.css';
+import './css/gridLayoutStyle.css';
+import './css/resizeableStyle.css';
 
 const bcrypt = require('bcryptjs'),
      fetch = require('node-fetch');
