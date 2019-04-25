@@ -34,9 +34,6 @@ class Bar extends React.Component{
       let qwerty = "";
       //console.log("object", z);
 
-      let data=[];
-
-
       if (z != null)
       {
           console.log("z is not null");
@@ -45,13 +42,17 @@ class Bar extends React.Component{
         {
             console.log("qwert");
             //qwerty = z.trends[0].trends;
-            qwerty = JSON.stringify(z);
-            data = z;
+            qwerty = JSON.stringify(z, function(){
+                this.setState({data: z});
+            });
             //data.sort("tweet_volume");
-            data.sort((a, b) => a.tweet_volume < b.tweet_volume);
-            data = data.slice(0, 10);
+            this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
+                var data = this.state.data.slice(0, 10);
+                this.setState({data: data}, function(){
+                    Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                });
+            });
 
-            Cookies.set('tcache', data, { maxAge: 90000 });
             //console.log(qwerty);
           // qwerty = z.trends[0].trends.map((item, i) => {
           //     console.log(item.name);
