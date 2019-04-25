@@ -487,12 +487,16 @@ class App extends React.Component {
                             </NavDropdown>
                             <Nav.Item className="dashbar">
                                 <Form onSubmit={this.handleSubmit}>
+                                <Col>
                                     <Form.Group controlId="formBasicSearch">
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
-                                        <Button variant="outline-primary" style={{display:"inline-block"}} type="Submit">
-                                        Search
-                                        </Button>
                                     </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Button variant="outline-primary" type="Submit">
+                                    Search
+                                    </Button>
+                                </Col>
                                 </Form>
                             </Nav.Item>
                     <Nav.Item className="ml-auto logout">
