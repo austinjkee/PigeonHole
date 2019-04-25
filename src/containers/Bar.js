@@ -43,10 +43,9 @@ class Bar extends React.Component{
           {
               console.log("qwert");
               //qwerty = z.trends[0].trends;
-              var w = z.toArray();
               //data.sort("tweet_volume");
-              w.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
-                  var data = w.slice(0, 10);
+              z.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
+                  var data = z.slice(0, 10);
                   this.setState({data: data.toArray()}, function(){
                       Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                   });
