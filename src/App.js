@@ -264,9 +264,7 @@ class App extends React.Component {
   handleClickUpdateChart() {
       //if(Cookies.get('tcache') === undefined){
       this.callBackendAPI2()
-        .then(function(res) {
-            this.setState({ trends: res.trends[0].trends });
-        })
+        .then(res => this.setState({ trends: res.trends[0].trends }))
         .catch(err => console.log(err));
     //}
   }
