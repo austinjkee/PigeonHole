@@ -36,7 +36,7 @@ class App extends React.Component {
         loggedIn: false,
         data: [],
         trends: [],
-        search: [],
+        statuses: [],
         query: '',
     };
 
@@ -295,7 +295,8 @@ class App extends React.Component {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
         .then(function(res) {
-            this.setState({ search: res.trends[0].statuses });
+            this.setState({ statuses: res.trends[0].statuses });
+            console.log(res.trends[0].statuses);
         })
         .catch(err => console.log(err));
     //}
