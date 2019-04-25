@@ -37,7 +37,6 @@ class Bar extends React.Component{
 
       if (z != null)
       {
-          this.setState({data: z});
           console.log("z is not null");
 
         if (z != null)
