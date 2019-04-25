@@ -23,9 +23,8 @@ class TrendBar extends React.Component{
     }
 
     render(){
-      var w = this.props.info;
+      var z = this.props.info;
       //var z = JSON.parse(w);
-      var z = w;
       console.log("The Data Passed To Bar",z);
       let qwerty = "";
       //console.log("object", z);
@@ -67,18 +66,19 @@ class TrendBar extends React.Component{
 
       return(
     <ResponsiveBar
-    height={300}
-    width={400}
+    position="absolute"
+    maxHeight={"100%"}
+    maxWidth={"400"}
     data={data}
     keys={[
         "tweet_volume"
     ]}
     indexBy="name"
     margin={{
-        "top": 50,
-        "right": 50,
+        "top": 10,
+        "right": 10,
         "bottom": 10,
-        "left": 130
+        "left": 10
     }}
     padding={0.3}
     colors="#38bcb2"
