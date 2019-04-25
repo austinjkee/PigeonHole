@@ -43,10 +43,10 @@ class Bar extends React.Component{
           {
               console.log("qwert");
               //qwerty = z.trends[0].trends;
-              this.setState({data: z.toArray()});
+              var w = z.toArray();
               //data.sort("tweet_volume");
-              this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
-                  var data = this.state.data.slice(0, 10);
+              w.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
+                  var data = w.slice(0, 10);
                   this.setState({data: data.toArray()}, function(){
                       Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                   });
@@ -76,7 +76,7 @@ class Bar extends React.Component{
     render(){
 
         var dispdat = [];
-        dispdat = this.state.data.toArray();
+        dispdat = this.state.data;
 
       return(
     <ResponsiveBar
