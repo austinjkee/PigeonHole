@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cookies from 'js-cookie';
 
 class SearchTable extends Component {
     constructor() {
@@ -12,8 +13,8 @@ class SearchTable extends Component {
     }
 
     componentDidMount(){
-        var tcache = Cookies.get('tcache');
-        this.setState({data: tcache});
+        var scache = Cookies.get('scache');
+        this.setState({data: scache});
     }
 
     shouldComponentUpdate(nextProps) {
@@ -22,12 +23,12 @@ class SearchTable extends Component {
     }
 
   render() {
-      var q = JSON.stringify(this.props.info);
-      var w = this.props.info
+      //var q = JSON.stringify(this.props.info);
+      var z = this.props.info
 //this.setState({data: w});
       //console.log("w", w);
       //console.log("Asda", w);
-      var z = JSON.parse(w);
+      //var z = JSON.parse(w);
       let qwerty = "";
       console.log("object", z);
       if (z != null)
@@ -35,7 +36,7 @@ class SearchTable extends Component {
           console.log("z is not null in search");
           console.log("object search", z);
           console.log("object within:", z.trends.statuses);
-          //this.setState({data: z});
+          this.setState({data: z});
 
         if (z.trends.statuses != null)
         {

@@ -502,7 +502,7 @@ class App extends React.Component {
               {/*sets the size of the grid*/}
               <div key="a" className="Bar" id="barChart"><Bar info={this.state.trends}/></div>
               <div key="b" className="Info" id="trendingChart"><Info info={this.state.trends}/></div>
-              <div key="c" className="Table" id="tableChart"><TweetTable/></div>
+              <div key="c" className="Table" id="tableChart"><TweetTable info={this.state.search}/></div>
             </ReactGridLayout>
         );
     }
