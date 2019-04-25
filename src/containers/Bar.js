@@ -39,12 +39,12 @@ class TrendBar extends React.Component{
           console.log("z is not null");
           //this.setState({data: z});
 
-        if (z.trends[0].trends != null)
+        if (z != null)
         {
             console.log("qwert");
             //qwerty = z.trends[0].trends;
-            qwerty = JSON.stringify(z.trends[0].trends);
-            data = z.trends[0].trends;
+            qwerty = JSON.stringify(z);
+            data = z;
             //data.sort("tweet_volume");
             data.sort((a, b) => a.tweet_volume < b.tweet_volume);
             data = data.slice(0, 10);
