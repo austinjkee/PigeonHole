@@ -35,22 +35,8 @@ class Info extends React.Component{
                 console.log("object345", z);
                 //this.setState({data: z});
 
-                if (z != null)
-                {
-                    qwerty = z.map((item, i) => {
-                        //console.log(item.name);
-                        return (
-                            <tr>
-                                <td>{item.name}</td>
-                                <td>{item.tweet_volume}</td>
-                            </tr>
-
-                        );
-                    });
-                    Cookies.set('dcache', JSON.stringify(qwerty), { maxAge: 90000 });
-                    console.log("Lots of Stuff", JSON.stringify(qwerty));
-
-                }
+                Cookies.set('dcache', JSON.stringify(z), { maxAge: 90000 });
+                console.log("Lots of Stuff", JSON.stringify(z));
 
                   //console.log(qwerty);
                 // qwerty = z.trends[0].trends.map((item, i) => {
@@ -78,26 +64,8 @@ class Info extends React.Component{
         if (z != null)
         {
             console.log("z is not null");
-          console.log("object345", z);
-          //this.setState({data: z});
-
-          if (z != null)
-          {
-              qwerty = z.map((item, i) => {
-              //console.log(item.name);
-                return (
-                    <tr>
-                        <td>{item.name}</td>
-                        <td>{item.tweet_volume}</td>
-                    </tr>
-
-                );
-              });
-          }
-
-
-            Cookies.set('dcache', JSON.stringify(qwerty), { maxAge: 90000 });
-            console.log("Lots of Stuff", JSON.stringify(qwerty));
+            console.log("object345", z);
+            Cookies.set('dcache', JSON.stringify(z), { maxAge: 90000 });
 
               //console.log(qwerty);
             // qwerty = z.trends[0].trends.map((item, i) => {
@@ -115,13 +83,30 @@ class Info extends React.Component{
 
     render(){
         var qwerty = [];
-        this.componentDidUpdate();
         var tcache = Cookies.get('dcache');
         if(tcache !== undefined){
-            qwerty = tcache;
+            qwerty = JSON.parse(tcache).map((item, i) => {
+            //console.log(item.name);
+              return (
+                  <tr>
+                      <td>{item.name}</td>
+                      <td>{item.tweet_volume}</td>
+                  </tr>
+
+              );
+            });
         }
         else{
-            qwerty = this.state.data;
+            qwerty = this.state.data.map((item, i) => {
+            //console.log(item.name);
+              return (
+                  <tr>
+                      <td>{item.name}</td>
+                      <td>{item.tweet_volume}</td>
+                  </tr>
+
+              );
+            });
         }
       return(
           <div>
