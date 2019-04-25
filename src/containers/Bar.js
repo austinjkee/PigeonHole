@@ -43,9 +43,8 @@ class Bar extends React.Component{
           {
               console.log("qwert");
               //qwerty = z.trends[0].trends;
-              qwerty = JSON.stringify(z, () =>
-                  this.setState({data: z})
-              );
+              qwerty = JSON.stringify(z);
+              this.setState({data: z})
               //data.sort("tweet_volume");
               this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
                   var data = this.state.data.slice(0, 10);
