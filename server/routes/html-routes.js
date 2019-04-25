@@ -218,6 +218,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         res.send("NOAUTH");
     }
 });
+}
 
     app.get('/getloc', (req, res) => {
         var cookieData = req.cookies;
@@ -248,7 +249,7 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         res.statusMessage = "NOAUTH";
         res.send("NOAUTH");
     }
-    }
-    });
+});
+}
 
 }
