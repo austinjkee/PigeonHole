@@ -1,6 +1,6 @@
-import React from 'react'
-import { ResponsiveBar } from '@nivo/bar'
-import { generateCountriesData } from '@nivo/generators'
+import React from 'react';
+import { ResponsiveBar } from '@nivo/bar';
+import { generateCountriesData } from '@nivo/generators';
 
 class Bar extends React.Component{
     constructor() {
@@ -131,7 +131,7 @@ class Bar extends React.Component{
     motionStiffness={90}
     motionDamping={15}
 
-></ResponsiveBar>
+/>
   );
 }
 }
