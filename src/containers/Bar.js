@@ -77,8 +77,8 @@ class TrendBar extends React.Component{
     margin={{
         "top": 50,
         "right": 130,
-        "bottom": 50,
-        "left": 60
+        "bottom": 100,
+        "left": 130
     }}
     padding={0.3}
     colors="#38bcb2"
@@ -113,13 +113,13 @@ class TrendBar extends React.Component{
         "tickRotation": -50,
         "legend": "country",
         "legendPosition": "middle",
-        "legendOffset": 50
+        "legendOffset": 70
     }}
     axisLeft={{
         "tickSize": 5,
         "tickPadding": 5,
         "tickRotation": 0,
-        "legend": "food",
+        "legend": "tweet volume",
         "legendPosition": "middle",
         "legendOffset": -70
     }}
