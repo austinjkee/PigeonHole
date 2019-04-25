@@ -41,7 +41,7 @@ class Bar extends React.Component{
                 console.log(w);
 
                 var data = w.slice(0, 10);
-                this.setState({data: data}, () => {
+                this.setState({data: data.toArray()}, () => {
                     Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                     console.log("Lots of Stuff",this.state.data);
                 });
@@ -81,7 +81,7 @@ class Bar extends React.Component{
             console.log(w);
 
             var data = w.slice(0, 10);
-            this.setState({data: data}, () => {
+            this.setState({data: data.toArray()}, () => {
                 Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                 console.log("Lots of Stuff",this.state.data);
             });
