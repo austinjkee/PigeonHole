@@ -81,10 +81,9 @@ class Bar extends React.Component{
             console.log(w);
 
             const data = w.slice(0, 10);
-            this.setState({data: data}, () => {
-                Cookies.set('tcache', this.state.data, { maxAge: 90000 });
-                console.log("Lots of Stuff",this.state.data);
-            });
+
+            Cookies.set('tcache', data, { maxAge: 90000 });
+            console.log("Lots of Stuff", data);
 
               //console.log(qwerty);
             // qwerty = z.trends[0].trends.map((item, i) => {
@@ -101,12 +100,23 @@ class Bar extends React.Component{
     }
 
     render(){
+        var dispdat = [];
+        var tcache = Cookies.get('tcache');
+        if(tcache !== undefined){
+            this.setState({data: JSON.parse(tcache)}, function(){
+                console.log("data", this.state.data);
+            });
+            dispdat = JSON.parse(tcache);
+        }
+        else{
+            dispdat = this.state.data
+        }
       return(
     <ResponsiveBar
     position="absolute"
     height={360}
     width={400}
-    data={this.state.data}
+    data={dispdat}
     keys={[
         "tweet_volume"
     ]}
