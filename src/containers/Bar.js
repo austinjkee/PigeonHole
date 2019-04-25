@@ -66,12 +66,15 @@ class Bar extends React.Component{
 
         }
 
+        var dispdat = [];
+        dispdat = this.state.data.toArray();
+
       return(
     <ResponsiveBar
     position="absolute"
     height={360}
     width={400}
-    data={this.state.data}
+    data={dispdat}
     keys={[
         "tweet_volume"
     ]}
