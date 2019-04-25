@@ -485,11 +485,14 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Item>
+                            <Nav.Item className="dashbar">
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group controlId="formBasicSearch">
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
                                     </Form.Group>
+                                    <Button variant="outline-light" type="Submit">
+                                    Search
+                                    </Button>
                                 </Form>
                             </Nav.Item>
                     <Nav.Item className="ml-auto logout">
