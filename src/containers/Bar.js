@@ -12,6 +12,7 @@ class Bar extends React.Component{
 
         this.componentDidMount = this.componentDidMount.bind(this);
         this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
 
     componentDidMount(){
@@ -21,14 +22,12 @@ class Bar extends React.Component{
                 console.log("data", this.state.data);
             });
         }
+        else{
+            this.componentDidUpdate();
+        }
     }
 
-    shouldComponentUpdate(nextProps) {
-        const differentTrends = this.data !== nextProps.info;
-        return differentTrends;
-    }
-
-    render(){
+    componentDidUpdate(){
         var z = this.props.info;
 
         //var z = JSON.parse(w);
@@ -67,6 +66,14 @@ class Bar extends React.Component{
              }
 
         }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const differentTrends = this.data !== nextProps.info;
+        return differentTrends;
+    }
+
+    render(){
 
         var dispdat = [];
         dispdat = this.state.data;
