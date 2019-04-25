@@ -14,7 +14,7 @@ class TrendBar extends React.Component{
     }
 
     componentDidMount(){
-      let {clientHeight, clientWidth} = this.refs.BarBar;
+      let {clientHeight, clientWidth} = this.refs.Bar;
       console.log(clientHeight, clientWidth);
     }
 
@@ -67,7 +67,7 @@ class TrendBar extends React.Component{
 
 
       return(
-    <div ref="BarBar" style={{height: '25em', width: '40em'}}>
+    <div ref="Bar" style={{height: '10%', width: '10%'}}>
     <ResponsiveBar
     data={data}
     keys={[
@@ -75,10 +75,10 @@ class TrendBar extends React.Component{
     ]}
     indexBy="name"
     margin={{
-        "top": 50,
-        "right": 130,
-        "bottom": 100,
-        "left": 130
+        "top": 40,
+        "right": 60,
+        "bottom": 90,
+        "left": 80
     }}
     padding={0.3}
     colors="#38bcb2"
