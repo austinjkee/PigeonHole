@@ -264,8 +264,7 @@ class App extends React.Component {
   handleClickUpdateChart() {
       //if(Cookies.get('tcache') === undefined){
       this.callBackendAPI2()
-        .then(res => {
-            console.log("qwerdtf:", res.trends);
+        .then(function(res) {
             this.setState({ trends: res.trends[0].trends });
         })
         .catch(err => console.log(err));
@@ -275,8 +274,7 @@ class App extends React.Component {
   handleClickUpdateTable() {
       //if(Cookies.get('dcache') === undefined){
       this.callBackendAPI()
-        .then(res => {
-            console.log("aasdfasdf:", res.express);
+        .then(function(res) {
             this.setState({ data: res.express.id });
             Cookies.set('dcache', res.express.id, { maxAge: 90000 });
         })
@@ -287,8 +285,7 @@ class App extends React.Component {
   handleClickUpdateTrending() {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
-        .then(res => {
-            console.log("qwerdtf:", res.trends);
+        .then(function(res) {
             this.setState({ search: res });
             Cookies.set('scache', JSON.stringify(res), { maxAge: 90000 });
         })
