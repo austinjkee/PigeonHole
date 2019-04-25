@@ -39,7 +39,7 @@ class Bar extends React.Component{
                   //data.sort("tweet_volume");
                   z.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
                       var data = z.slice(0, 10);
-                      this.setState({data: data.toArray()}, function(){
+                      this.setState({data: data}, function(){
                           Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                       });
                   });
@@ -81,7 +81,7 @@ class Bar extends React.Component{
               //data.sort("tweet_volume");
               z.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
                   var data = z.slice(0, 10);
-                  this.setState({data: data.toArray()}, function(){
+                  this.setState({data: data}, function(){
                       Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                   });
               });
