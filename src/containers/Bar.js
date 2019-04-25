@@ -75,10 +75,10 @@ class TrendBar extends React.Component{
     ]}
     indexBy="name"
     margin={{
-        "top": "5px",
-        "right": "5px",
-        "bottom": "5px",
-        "left": "5px"
+        "top": 50,
+        "right": 50,
+        "bottom": 50,
+        "left": 50
     }}
     padding={0.3}
     colors="#38bcb2"
