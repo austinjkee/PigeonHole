@@ -70,7 +70,7 @@ class TweetTable extends Component {
       if (scache !== undefined && scache !== null) {
           var smcache = JSON.parse(scache);
           qwerty = smcache.map((item, i) => {
-              //console.log(item.name);
+              console.log(item.name);
               return (
                   <tr>
                       <td>{item.user.name}</td>
