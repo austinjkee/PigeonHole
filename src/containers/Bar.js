@@ -67,7 +67,7 @@ class TrendBar extends React.Component{
 
 
       return(
-    <div ref="Bar" style={{height: '10%', width: '10%'}}>
+    <div ref="Bar" style={{height: '70%', width: '80%'}}>
     <ResponsiveBar
     data={data}
     keys={[
@@ -75,10 +75,10 @@ class TrendBar extends React.Component{
     ]}
     indexBy="name"
     margin={{
-        "top": 40,
-        "right": 60,
-        "bottom": 90,
-        "left": 80
+        "top": "5px",
+        "right": "5px",
+        "bottom": "5px",
+        "left": "5px"
     }}
     padding={0.3}
     colors="#38bcb2"
