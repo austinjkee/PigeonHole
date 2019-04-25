@@ -103,13 +103,10 @@ class Bar extends React.Component{
         var dispdat = [];
         var tcache = Cookies.get('tcache');
         if(tcache !== undefined){
-            this.setState({data: JSON.parse(tcache)}, function(){
-                console.log("data", this.state.data);
-            });
             dispdat = JSON.parse(tcache);
         }
         else{
-            dispdat = this.state.data
+            dispdat = this.state.data;
         }
       return(
     <ResponsiveBar
