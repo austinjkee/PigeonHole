@@ -2,7 +2,7 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
-class TrendBar extends React.Component{
+class Bar extends React.Component{
     constructor() {
         super();
         this.state = {
@@ -131,16 +131,9 @@ class TrendBar extends React.Component{
     motionStiffness={90}
     motionDamping={15}
 
-> <thead className="thead-dark">
-<tr>
-    <th scope="col">Name</th>
-    <th scope="col">Location</th>
-    <th scope="col">Followers</th>
-    <th scope="col">Friends</th>
-</tr>
-</thead></ResponsiveBar>
+></ResponsiveBar>
   );
 }
 }
 
-export default TrendBar
+export default Bar
