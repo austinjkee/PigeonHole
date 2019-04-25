@@ -315,13 +315,13 @@ class App extends React.Component {
    const body = await respo.json();
    console.log(body);
    console.log(body.trends[0]);
-   var b = JSON.stringify(body);
-   console.log(body[0].trends);
+   //var b = JSON.stringify(body);
+   //console.log(body.as_of);
 
    if (respo.status !== 200) {
      throw Error(body.message)
    }
-   return b;
+   return body;
  };
 
  async callBackendAPI3() {
@@ -490,7 +490,7 @@ class App extends React.Component {
         display = (
             <ReactGridLayout className="layout" layout={layout} cols={24} rowHeight={30} width={1300}>
               {/*sets the size of the grid*/}
-              <div key="a" className="BarBar" id = "barChart"><Bar info={this.state.trends}/></div>
+              <div key="a" className="BarBar" id = "barChart"><Bar props={this.state.trends}/></div>
               <div key="b" className="Info" id= "trendingChart"><Info/></div>
               <div key="c" className="Table" id = "tableChart"><WTable/></div>
             </ReactGridLayout>

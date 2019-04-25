@@ -3,8 +3,8 @@ import { ResponsiveBar } from '@nivo/bar'
 import { generateCountriesData } from '@nivo/generators'
 
 class TrendBar extends React.Component{
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             data: null,
         }
@@ -24,8 +24,9 @@ class TrendBar extends React.Component{
     }
 
     render(){
-      var w = this.props.info
-      var z = JSON.parse(w);
+      var w = this.props;
+      //var z = JSON.parse(w);
+      var z = w;
       console.log("The Data Passed To Bar",z);
       let qwerty = "";
       //console.log("object", z);
