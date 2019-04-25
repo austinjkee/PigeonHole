@@ -36,15 +36,15 @@ class Bar extends React.Component{
                 //data.sort("tweet_volume");
                 var w = z;
 
-                w.sort((a, b) => a.tweet_volume < b.tweet_volume, () => {
-                    var data = w.slice(0, 10);
-                    this.setState({data: data}, () => {
-                        Cookies.set('tcache', this.state.data, { maxAge: 90000 });
-                        console.log("Lots of Stuff",this.state.data);
-                    });
-                });
+                w.sort((a, b) => a.tweet_volume < b.tweet_volume);
 
                 console.log(w);
+
+                var data = w.slice(0, 10);
+                this.setState({data: data}, () => {
+                    Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                    console.log("Lots of Stuff",this.state.data);
+                });
 
                   //console.log(qwerty);
                 // qwerty = z.trends[0].trends.map((item, i) => {
