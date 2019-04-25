@@ -11,7 +11,6 @@ import ReactDOM from 'react-dom';
 import { Form, Button, Container, Row, Col, ButtonToolbar, Table, Nav, NavDropdown} from 'react-bootstrap';
 import { } from 'reactstrap';
 import Bar from './containers/Bar';
-import Grid from './containers/Grid';
 import Info from './containers/Info';
 import WTable from './containers/Table';
 

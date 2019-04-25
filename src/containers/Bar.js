@@ -77,8 +77,8 @@ class TrendBar extends React.Component{
     margin={{
         "top": 10,
         "right": 10,
-        "bottom": 80,
-        "left": 80
+        "bottom": 90,
+        "left": 90
     }}
     padding={0.3}
     colors="#38bcb2"
@@ -113,7 +113,7 @@ class TrendBar extends React.Component{
         "tickRotation": -50,
         "legend": "country",
         "legendPosition": "middle",
-        "legendOffset": 70
+        "legendOffset": 80
     }}
     axisLeft={{
         "tickSize": 5,
@@ -131,7 +131,14 @@ class TrendBar extends React.Component{
     motionStiffness={90}
     motionDamping={15}
 
-/>
+> <thead className="thead-dark">
+<tr>
+    <th scope="col">Name</th>
+    <th scope="col">Location</th>
+    <th scope="col">Followers</th>
+    <th scope="col">Friends</th>
+</tr>
+</thead></ResponsiveBar>
   );
 }
 }
