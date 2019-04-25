@@ -15,8 +15,8 @@ class Bar extends React.Component{
     }
 
     componentDidMount(){
-        //var tcache = Cookies.get('tcache');
-        //this.setState({data: tcache});
+        var tcache = Cookies.get('tcache');
+        this.setState({data: JSON.parse(tcache)});
     }
 
     shouldComponentUpdate(nextProps) {
