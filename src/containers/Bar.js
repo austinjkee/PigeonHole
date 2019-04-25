@@ -12,6 +12,7 @@ class Bar extends React.Component{
 
         this.componentDidMount = this.componentDidMount.bind(this);
         this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
 
     componentDidMount(){
@@ -26,50 +27,50 @@ class Bar extends React.Component{
         return differentTrends;
     }
 
-    render(){
-      var z = this.props.info;
+    componentDidUpdate(){
+        var z = this.props.info;
 
-      //var z = JSON.parse(w);
-      console.log("The Data Passed To Bar",z);
-      let qwerty = "";
-      //console.log("object", z);
-
-      if (z != null)
-      {
-          console.log("z is not null");
+        //var z = JSON.parse(w);
+        console.log("The Data Passed To Bar",z);
+        let qwerty = "";
+        //console.log("object", z);
 
         if (z != null)
         {
-            console.log("qwert");
-            //qwerty = z.trends[0].trends;
-            qwerty = JSON.stringify(z, function(){
-                this.setState({data: z});
-            });
-            //data.sort("tweet_volume");
-            this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
-                var data = this.state.data.slice(0, 10);
-                this.setState({data: data}, function(){
-                    Cookies.set('tcache', this.state.data, { maxAge: 90000 });
-                });
-            });
+            console.log("z is not null");
 
-            //console.log(qwerty);
-          // qwerty = z.trends[0].trends.map((item, i) => {
-          //     console.log(item.name);
-          //       return (
-          //           <tr>
-          //               <td>{item.name}</td>
-          //               <td>{item.tweet_volume}</td>
-          //           </tr>
-          //
-          //       );
-          //     });
-           }
+          if (z != null)
+          {
+              console.log("qwert");
+              //qwerty = z.trends[0].trends;
+              qwerty = JSON.stringify(z, function(){
+                  this.setState({data: z});
+              });
+              //data.sort("tweet_volume");
+              this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
+                  var data = this.state.data.slice(0, 10);
+                  this.setState({data: data}, function(){
+                      Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                  });
+              });
 
-      }
+              //console.log(qwerty);
+            // qwerty = z.trends[0].trends.map((item, i) => {
+            //     console.log(item.name);
+            //       return (
+            //           <tr>
+            //               <td>{item.name}</td>
+            //               <td>{item.tweet_volume}</td>
+            //           </tr>
+            //
+            //       );
+            //     });
+             }
 
+        }
+    }
 
-
+    render(){
       return(
     <ResponsiveBar
     position="absolute"
