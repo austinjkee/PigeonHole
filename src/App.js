@@ -55,7 +55,7 @@ class App extends React.Component {
     this.callBackendAPI2 = this.callBackendAPI2.bind(this);
     this.callBackendAPI3 = this.callBackendAPI3.bind(this);
 
-    this.handleClickChart = this.handleClickBar.bind(this);
+    this.handleClickChart = this.handleClickChart.bind(this);
     this.handleClickTable = this.handleClickTable.bind(this);
     this.handleClickTrending = this.handleClickTrending.bind(this);
 
