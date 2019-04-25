@@ -35,9 +35,9 @@ class Info extends Component {
 
         if (z != null)
         {
-          data.sort((a, b) => a.tweet_volume < b.tweet_volume);
-          data = data.slice(0, 10);
-          qwerty = data.map((item, i) => {
+          this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume);
+          this.state.data = this.state.data.slice(0, 10);
+          qwerty = this.state.data.map((item, i) => {
               console.log(item.name);
                 return (
                     <tr>

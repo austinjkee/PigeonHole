@@ -38,9 +38,9 @@ class SearchTable extends Component {
           console.log("object within:", z.trends.statuses);
           this.setState({data: z});
 
-        if (z.trends.statuses != null)
+        if (this.state.data.trends.statuses != null)
         {
-          qwerty = z.trends.statuses.map((item, i) => {
+          qwerty = this.state.data.trends.statuses.map((item, i) => {
               //console.log(item.name);
                 return (
                     <tr>
