@@ -75,7 +75,7 @@ class Bar extends React.Component{
     position="absolute"
     height={360}
     width={400}
-    data={data}
+    data={this.state.data}
     keys={[
         "tweet_volume"
     ]}
