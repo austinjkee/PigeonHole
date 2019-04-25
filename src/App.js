@@ -295,10 +295,10 @@ class App extends React.Component {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
         .then(function(res) {
-            this.setState({ statuses: res.trends[0].statuses });
-            console.log(res.trends[0].statuses);
+            this.setState({ statuses: res.trends.statuses });
         })
         .catch(err => console.log(err));
+        console.log(res.trends.statuses);
     //}
   }
 
