@@ -67,8 +67,8 @@ class TrendBar extends React.Component{
       return(
     <ResponsiveBar
     position="absolute"
-    height={"auto"}
-    width={"auto"}
+    height="80%"
+    width={400}
     data={data}
     keys={[
         "tweet_volume"
