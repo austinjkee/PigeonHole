@@ -78,7 +78,7 @@ class TrendBar extends React.Component{
         "top": 50,
         "right": 50,
         "bottom": 50,
-        "left": 50
+        "left": 130
     }}
     padding={0.3}
     colors="#38bcb2"
