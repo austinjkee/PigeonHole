@@ -262,39 +262,39 @@ class App extends React.Component {
   }
 
   handleClickUpdateChart() {
-      if(Cookies.get('tcache') === undefined){
+      //if(Cookies.get('tcache') === undefined){
       this.callBackendAPI2()
         .then(res => {
             console.log("qwerdtf:", res.trends);
             this.setState({ trends: res.trends[0].trends });
         })
         .catch(err => console.log(err));
-        Cookies.set('tcache', this.state.trends, { maxAge: 90000 });
+        //Cookies.set('tcache', this.state.trends, { maxAge: 90000 });
     }
   }
 
   handleClickUpdateTable() {
-      if(Cookies.get('dcache') === undefined){
+      //if(Cookies.get('dcache') === undefined){
       this.callBackendAPI()
         .then(res => {
             console.log("aasdfasdf:", res.express);
             this.setState({ data: res.express.id });
         })
         .catch(err => console.log(err));
-        Cookies.set('dcache', this.state.data, { maxAge: 90000 });
-    }
+        //Cookies.set('dcache', this.state.data, { maxAge: 90000 });
+    //}
   }
 
   handleClickUpdateTrending() {
-      if(Cookies.get('scache') === undefined){
+      //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
         .then(res => {
             console.log("qwerdtf:", res.trends);
             this.setState({ search: res });
         })
         .catch(err => console.log(err));
-        Cookies.set('scache', this.state.search, { maxAge: 90000 });
-    }
+        //Cookies.set('scache', this.state.search, { maxAge: 90000 });
+    //}
   }
 
   componentDidMount() {
