@@ -220,6 +220,10 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
 });
 });
 
+app.get('/search', (req, res) => {
+    res.send();
+});
+
     app.get('/getloc', (req, res) => {
         var cookieData = req.cookies;
         console.log(cookieData.clientkey);
