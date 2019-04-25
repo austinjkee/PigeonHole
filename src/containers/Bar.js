@@ -11,6 +11,7 @@ class Bar extends React.Component{
         }
 
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
 
     componentDidMount(){
@@ -30,15 +31,20 @@ class Bar extends React.Component{
 
             if (z != null)
             {
-                console.log("qwert");
+                console.log("The Data Passed To Bar",z);
                 //qwerty = z.trends[0].trends;
                 //data.sort("tweet_volume");
-                z.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
-                    var data = z.slice(0, 10);
+                var w = z;
+
+                w.sort((a, b) => a.tweet_volume < b.tweet_volume, () => {
+                    var data = w.slice(0, 10);
                     this.setState({data: data}, function(){
                         Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                        console.log("Lots of Stuff",this.state.data);
                     });
                 });
+
+                console.log(w);
 
                   //console.log(qwerty);
                 // qwerty = z.trends[0].trends.map((item, i) => {
@@ -55,8 +61,7 @@ class Bar extends React.Component{
         }
     }
 
-    render(){
-
+    componentDidUpdate(){
         var z = this.props.info;
 
         //var z = JSON.parse(w);
@@ -81,10 +86,6 @@ class Bar extends React.Component{
 
             console.log(w);
 
-
-
-
-
               //console.log(qwerty);
             // qwerty = z.trends[0].trends.map((item, i) => {
             //     console.log(item.name);
@@ -97,7 +98,9 @@ class Bar extends React.Component{
             //       );
             //     });
         }
+    }
 
+    render(){
       return(
     <ResponsiveBar
     position="absolute"
