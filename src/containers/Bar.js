@@ -30,19 +30,15 @@ class Bar extends React.Component{
 
             if (z != null)
             {
-                console.log("z is not null");
-
-              if (z != null)
-              {
-                  console.log("qwert");
-                  //qwerty = z.trends[0].trends;
-                  //data.sort("tweet_volume");
-                  z.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
-                      var data = z.slice(0, 10);
-                      this.setState({data: data}, function(){
-                          Cookies.set('tcache', this.state.data, { maxAge: 90000 });
-                      });
-                  });
+                console.log("qwert");
+                //qwerty = z.trends[0].trends;
+                //data.sort("tweet_volume");
+                z.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
+                    var data = z.slice(0, 10);
+                    this.setState({data: data}, function(){
+                        Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                    });
+                });
 
                   //console.log(qwerty);
                 // qwerty = z.trends[0].trends.map((item, i) => {
@@ -55,9 +51,7 @@ class Bar extends React.Component{
                 //
                 //       );
                 //     });
-                 }
-
-            };
+            }
         }
     }
 
@@ -72,17 +66,19 @@ class Bar extends React.Component{
 
         if (z != null)
         {
-            console.log("qwert");
+            console.log("Z has contents.");
             //qwerty = z.trends[0].trends;
             //data.sort("tweet_volume");
             var w = z;
 
-            w.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
-                var data = w.slice(0, 10);
-                this.setState({data: data}, function(){
-                    Cookies.set('tcache', this.state.data, { maxAge: 90000 });
-                    console.log("Lots of Stuff",this.state.data);
-                });
+            w.sort((a, b) => a.tweet_volume < b.tweet_volume);
+
+            console.log(w);
+
+            var data = w.slice(0, 10);
+            this.setState({data: data}, function(){
+                Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                console.log("Lots of Stuff",this.state.data);
             });
 
 
