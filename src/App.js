@@ -36,7 +36,7 @@ class App extends React.Component {
         loggedIn: false,
         data: null,
         trends: null,
-        query: '';
+        query: '',
     };
 
     this.handleUnameChange = this.handleUnameChange.bind(this);
