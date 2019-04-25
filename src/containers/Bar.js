@@ -38,7 +38,7 @@ class Bar extends React.Component{
 
                 w.sort((a, b) => a.tweet_volume < b.tweet_volume, () => {
                     var data = w.slice(0, 10);
-                    this.setState({data: data}, function(){
+                    this.setState({data: data}, () => {
                         Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                         console.log("Lots of Stuff",this.state.data);
                     });
@@ -78,7 +78,7 @@ class Bar extends React.Component{
 
             w.sort((a, b) => a.tweet_volume < b.tweet_volume, () => {
                 var data = w.slice(0, 10);
-                this.setState({data: data}, function(){
+                this.setState({data: data}, () => {
                     Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                     console.log("Lots of Stuff",this.state.data);
                 });
