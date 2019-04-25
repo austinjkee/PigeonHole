@@ -25,7 +25,6 @@ class SearchTable extends Component {
   render() {
       //var q = JSON.stringify(this.props.info);
       var z = this.props.info
-      this.setState({data: z});
 //this.setState({data: w});
       //console.log("w", w);
       //console.log("Asda", w);
@@ -34,6 +33,7 @@ class SearchTable extends Component {
       console.log("object", z);
       if (z != null)
       {
+          this.setState({data: this.props.info});
           console.log("z is not null in search");
           console.log("object search", z);
           console.log("object within:", z.trends.statuses);

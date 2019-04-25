@@ -26,7 +26,7 @@ class Bar extends React.Component{
 
     render(){
       var z = this.props.info;
-      this.setState({data: z});
+
       //var z = JSON.parse(w);
       console.log("The Data Passed To Bar",z);
       let qwerty = "";
@@ -37,6 +37,7 @@ class Bar extends React.Component{
 
       if (z != null)
       {
+          this.setState({data: this.props.info});
           console.log("z is not null");
 
         if (z != null)
