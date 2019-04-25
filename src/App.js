@@ -123,6 +123,10 @@ class App extends React.Component {
             }
             else if (dat === "GOOD"){
                 this.setState({loggedIn: true});
+                // Call our fetch functions
+                handleClickUpdateBar();
+                handleClickUpdateChar();
+                handleClickUpdateTrending();
             }
             else{
                 alert("Error: There was a problem contacting the database.  Please try again later.");
@@ -195,27 +199,10 @@ class App extends React.Component {
                           var dat = res.statusText;
                           if(dat === "SUCCESS"){
                                context.setState({loggedIn: true});
-                               // Call our fetch function below once the component mounts
-                             this.callBackendAPI()
-                               .then(res => {
-                                   console.log("aasdfasdf:", res.express);
-                                   this.setState({ data: res.express.id });
-                               })
-                               .catch(err => console.log(err));
-
-                               this.callBackendAPI2()
-                                 .then(res => {
-                                     console.log("qwerdtf:", res.trends);
-                                     this.setState({ trends: res.trends[0].trends });
-                                 })
-                                 .catch(err => console.log(err));
-
-                                 this.callBackendAPI3()
-                                   .then(res => {
-                                       console.log("qwerdtf:", res.trends);
-                                       this.setState({ search: res });
-                                   })
-                                   .catch(err => console.log(err));
+                               // Call our fetch functions
+                               handleClickUpdateBar();
+                               handleClickUpdateChar();
+                               handleClickUpdateTrending();
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
@@ -274,15 +261,30 @@ class App extends React.Component {
   }
 
   handleClickUpdateBar() {
-
+      this.callBackendAPI2()
+        .then(res => {
+            console.log("qwerdtf:", res.trends);
+            this.setState({ trends: res.trends[0].trends });
+        })
+        .catch(err => console.log(err));
   }
 
   handleClickUpdateTable() {
-
+      this.callBackendAPI()
+        .then(res => {
+            console.log("aasdfasdf:", res.express);
+            this.setState({ data: res.express.id });
+        })
+        .catch(err => console.log(err));
   }
 
   handleClickUpdateTrending() {
-
+      this.callBackendAPI3()
+        .then(res => {
+            console.log("qwerdtf:", res.trends);
+            this.setState({ search: res });
+        })
+        .catch(err => console.log(err));
   }
 
   componentDidMount() {
