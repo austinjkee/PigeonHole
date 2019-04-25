@@ -100,7 +100,7 @@ class App extends React.Component {
 
   handleQueryChange(event) {
     this.setState({query: event.target.value});
-    console.log(this.state.query);
+    console.log("Search", this.state.query);
     this.handleClickUpdateTrending();
   }
 
