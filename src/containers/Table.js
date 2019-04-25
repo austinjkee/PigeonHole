@@ -26,7 +26,9 @@ class TweetTable extends Component {
                 console.log("object within:", z);
                 this.setState({data: z});
 
-                Cookies.set('scache', JSON.stringify(z), { maxAge: 90000 });
+                const data = z.slice(0, 10);
+
+                Cookies.set('scache', data, { maxAge: 90000 });
             }
 
             //console.log("object2", JSON.stringify(z));
@@ -51,7 +53,8 @@ class TweetTable extends Component {
             console.log("object search", z);
             console.log("object within:", z);
             //this.setState({data: z});
-            Cookies.set('scache', JSON.stringify(z), { maxAge: 90000 });
+            const data = z.slice(0, 10);
+            Cookies.set('scache', data, { maxAge: 90000 });
 
         }
         //console.log("object2", JSON.stringify(z));
@@ -67,7 +70,7 @@ class TweetTable extends Component {
       let qwerty = "";
 
       var scache = Cookies.get('scache');
-      if (scache !== undefined && scache !== null) {
+
           var smcache = JSON.parse(scache);
           qwerty = smcache.map((item, i) => {
               console.log(item.name);
@@ -80,10 +83,6 @@ class TweetTable extends Component {
                   </tr>
               );
           });
-      }
-      else{
-          qwerty = () => {return (<></>)};
-      }
 
     return (
 
