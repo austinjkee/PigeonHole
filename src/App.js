@@ -124,9 +124,9 @@ class App extends React.Component {
             else if (dat === "GOOD"){
                 this.setState({loggedIn: true});
                 // Call our fetch functions
-                handleClickUpdateBar();
-                handleClickUpdateChar();
-                handleClickUpdateTrending();
+                this.handleClickUpdateBar();
+                this.handleClickUpdateChar();
+                this.handleClickUpdateTrending();
             }
             else{
                 alert("Error: There was a problem contacting the database.  Please try again later.");
@@ -200,9 +200,9 @@ class App extends React.Component {
                           if(dat === "SUCCESS"){
                                context.setState({loggedIn: true});
                                // Call our fetch functions
-                               handleClickUpdateBar();
-                               handleClickUpdateChar();
-                               handleClickUpdateTrending();
+                               this.handleClickUpdateBar();
+                               this.handleClickUpdateChar();
+                               this.handleClickUpdateTrending();
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
