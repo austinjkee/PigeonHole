@@ -36,11 +36,11 @@ class SearchTable extends Component {
           this.setState({data: this.props.info});
           console.log("z is not null in search");
           console.log("object search", z);
-          console.log("object within:", z.trends.statuses);
+          console.log("object within:", z.statuses);
 
-        if (this.state.data.trends.statuses != null)
+        if (this.state.data.statuses != null)
         {
-          qwerty = this.state.data.trends.statuses.map((item, i) => {
+          qwerty = this.state.data.statuses.map((item, i) => {
               //console.log(item.name);
                 return (
                     <tr>

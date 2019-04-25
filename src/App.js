@@ -487,7 +487,6 @@ class App extends React.Component {
                             </NavDropdown>
                             <Nav.Item>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <h2 style={{color: `rgb(255, 255, 255)`}}> L O G I N </h2>
                                     <Form.Group controlId="formBasicUsername">
                                         <Form.Control type="text" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
                                     </Form.Group>
