@@ -24,7 +24,7 @@ class TrendBar extends React.Component{
     }
 
     render(){
-      var w = this.props;
+      var w = this.props.info;
       //var z = JSON.parse(w);
       var z = w;
       console.log("The Data Passed To Bar",z);
