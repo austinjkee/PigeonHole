@@ -12,7 +12,6 @@ class Bar extends React.Component{
 
         this.componentDidMount = this.componentDidMount.bind(this);
         this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
-        this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
 
     componentDidMount(){
@@ -27,7 +26,7 @@ class Bar extends React.Component{
         return differentTrends;
     }
 
-    componentDidUpdate(){
+    render(){
         var z = this.props.info;
 
         //var z = JSON.parse(w);
@@ -43,8 +42,7 @@ class Bar extends React.Component{
           {
               console.log("qwert");
               //qwerty = z.trends[0].trends;
-              qwerty = JSON.stringify(z);
-              this.setState({data: z})
+              qwerty = JSON.stringify(z, () => this.setState({data: z}));
               //data.sort("tweet_volume");
               this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
                   var data = this.state.data.slice(0, 10);
@@ -67,11 +65,8 @@ class Bar extends React.Component{
              }
 
         }
-    }
 
-    render(){
       return(
-          <div>
     <ResponsiveBar
     position="absolute"
     height={360}
@@ -139,7 +134,6 @@ class Bar extends React.Component{
     motionDamping={15}
 
 />
-</div>
   );
 }
 }
