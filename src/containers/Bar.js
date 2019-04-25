@@ -11,7 +11,6 @@ class Bar extends React.Component{
         }
 
         this.componentDidMount = this.componentDidMount.bind(this);
-        this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
         this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
 
@@ -67,22 +66,14 @@ class Bar extends React.Component{
         }
     }
 
-    shouldComponentUpdate(nextProps) {
-        const differentTrends = this.data !== nextProps.info;
-        return differentTrends;
-    }
-
     render(){
-
-        var dispdat = [];
-        dispdat = this.state.data;
 
       return(
     <ResponsiveBar
     position="absolute"
     height={360}
     width={400}
-    data={dispdat}
+    data={this.state.data}
     keys={[
         "tweet_volume"
     ]}
