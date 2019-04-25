@@ -302,9 +302,6 @@ class App extends React.Component {
       if(user !== undefined && user !== ''){
           this.setState({loggedIn: true});
       }
-      this.handleClickUpdateChart();
-      this.handleClickUpdateTable();
-      this.handleClickUpdateTrending();
   }
 
    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
