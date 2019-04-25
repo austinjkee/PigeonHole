@@ -277,9 +277,9 @@ class App extends React.Component {
       this.callBackendAPI()
         .then(function(res) {
             this.setState({ data: res.express.id });
-            Cookies.set('dcache', res.express.id, { maxAge: 90000 });
         })
         .catch(err => console.log(err));
+            Cookies.set('dcache', res.express.id, { maxAge: 90000 });
     //}
   }
 
@@ -288,7 +288,6 @@ class App extends React.Component {
       this.callBackendAPI3()
         .then(function(res) {
             this.setState({ search: res });
-            Cookies.set('scache', JSON.stringify(res), { maxAge: 90000 });
         })
         .catch(err => console.log(err));
     //}
