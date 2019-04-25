@@ -485,7 +485,13 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                            
+                            <Nav.Item>
+                                <Form onSubmit={this.handleSubmit}>
+                                    <Form.Group controlId="formBasicUsername">
+                                        <Form.Control type="text" placeholder="U S E R N A M E" />
+                                    </Form.Group>
+                                </Form>
+                            </Nav.Item>
                     <Nav.Item className="ml-auto logout">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
@@ -503,7 +509,7 @@ class App extends React.Component {
               {/*sets the size of the grid*/}
               <div key="a" className="Bar" id="barChart"><Bar info={this.state.trends}/></div>
               <div key="b" className="Info" id="trendingChart"><Info info={this.state.trends}/></div>
-              <div key="c" className="Table" id="tableChart"><TweetTable info={this.state.search}/></div>
+              //<div key="c" className="Table" id="tableChart"><TweetTable info={this.state.search}/></div>
             </ReactGridLayout>
         );
     }
