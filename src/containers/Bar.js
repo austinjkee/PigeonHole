@@ -100,6 +100,7 @@ class Bar extends React.Component{
 
     render(){
         var dispdat = [];
+        this.componentDidUpdate();
         var tcache = Cookies.get('tcache');
         if(tcache !== undefined){
             dispdat = JSON.parse(tcache);
