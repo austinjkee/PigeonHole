@@ -269,7 +269,6 @@ class App extends React.Component {
             this.setState({ trends: res.trends[0].trends });
         })
         .catch(err => console.log(err));
-
     //}
   }
 
