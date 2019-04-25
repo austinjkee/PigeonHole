@@ -86,6 +86,8 @@ class Bar extends React.Component{
                   });
               });
 
+              console.log("Lots of Stuff",this.state.data);
+
               //console.log(qwerty);
             // qwerty = z.trends[0].trends.map((item, i) => {
             //     console.log(item.name);
