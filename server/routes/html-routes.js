@@ -218,6 +218,37 @@ module.exports = function(app, connection, twitterApi, bcrypt, clientkey) {
         res.send("NOAUTH");
     }
 });
+
+    app.get('/getloc', (req, res) => {
+        var cookieData = req.cookies;
+        console.log(cookieData.clientkey);
+        bcrypt.compare(clientkey, cookieData.clientkey, function(err, response) {
+            if(response) {
+        console.log(req.params);
+        const q = req.params.keyword;
+        console.log("search by keyword");
+
+        const z = twitterApi
+        // .get("statuses/show", {
+        //   id: q
+        // })
+        .get("search/tweets", {
+            q: q,
+            result_type: "popular",
+            tweet_mode: "extended"
+        })
+        .then(results => {
+            console.log("results", results);
+            res.json({trends: results});
+        })
+        .catch(console.error);
+    }
+    else {
+        console.log("NOAUTH");
+        res.statusMessage = "NOAUTH";
+        res.send("NOAUTH");
+    }
+    }
     });
 
 }

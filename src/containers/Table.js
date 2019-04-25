@@ -110,7 +110,7 @@ class TweetTable extends Component {
           qwerty = JSON.parse(scache);
       }
       else{
-          qwerty = {<></>};
+          qwerty = () => {return (<></>)};
       }
 
     return (
