@@ -1,66 +1,60 @@
 import React, {Component} from "react";
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
-import ReactTable from "react-table";
 
-import * as data from '../json/search_university.json';
-
-const stuff = data[0].name;
-console.log(stuff);
-
-class Info extends Component{
-  render(){
-    function hi(){
-      console.log("hi");
+//const Info = () => (
+class Info extends Component {
+    constructor() {
+        super()
+        this.state = {
+            data: null
+        }
     }
-    return(
-      <div className="Info">
-          <div>
-              <Table className="table">
-                  <thead className="thead-dark">
-                  <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Location</th>
-                      <th scope="col">Followers</th>
-                      <th scope="col">Friends</th>
-                  </tr>
-                  </thead>
-                  <tbody>
+
+    render() {
+      var w = this.props.info
+      var z = JSON.parse(w);
+      let qwerty = "";
+      console.log("object", z);
+      if (z != null)
+      {
+          console.log("z is not null");
+          //this.setState({data: z});
+
+        if (z.trends[0].trends != null)
+        {
+          qwerty = z.trends[0].trends.map((item, i) => {
+              console.log(item.name);
+                return (
                     <tr>
-                      <th>Twitter University</th>
-                      <th>San Francisco, CA</th>
-                      <th>39260</th>
-                      <th>82</th>
+                        <td>{item.name}</td>
+                        <td>{item.tweet_volume}</td>
                     </tr>
+
+                );
+              });
+          }
+
+      }
+    return (
+
+    <div>
+        <div className="Info">
+            <table class="table">
+                <thead class="thead-dark">
                     <tr>
-                      <th>Columbia University</th>
-                      <th>New York, New York</th>
-                      <th>305118</th>
-                      <th>538</th>
+                        <th scope="col">Trend</th>
+                        <th scope="col">Tweet Volume</th>
                     </tr>
-                    <tr>
-                      <th>Stanford University</th>
-                      <th>Stanford, CA</th>
-                      <th>657354</th>
-                      <th>512</th>
-                    </tr>
-                    <tr>
-                      <th>Harvard University</th>
-                      <th>Cambridge, MA</th>
-                      <th>923678</th>
-                      <th>768</th>
-                    </tr>
-                    <tr>
-                      <th>Oxford University</th>
-                      <th>Oxford, UK</th>
-                      <th>499708</th>
-                      <th>989</th>
-                    </tr>
-                  </tbody>
-              </Table>
-          </div>
-      </div>
-    );
-  }
+                </thead>
+                <tbody>
+                    {qwerty}
+                </tbody>
+            </table>
+
+    </div>
+</div>
+);
+}
 }
 
 export default Info;

@@ -75,9 +75,9 @@ class Bar extends React.Component{
     ]}
     indexBy="name"
     margin={{
-        "top": 10,
+        "top": 30,
         "right": 10,
-        "bottom": 90,
+        "bottom": 100,
         "left": 90
     }}
     padding={0.3}
