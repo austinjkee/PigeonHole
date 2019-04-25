@@ -100,6 +100,7 @@ class App extends React.Component {
 
   handleQueryChange(event) {
     this.setState({query: event.target.value});
+    this.handleClickUpdateTrending();
   }
 
   handleSubmit(event) {
