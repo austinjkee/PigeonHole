@@ -55,11 +55,11 @@ class App extends React.Component {
     this.callBackendAPI2 = this.callBackendAPI2.bind(this);
     this.callBackendAPI3 = this.callBackendAPI3.bind(this);
 
-    this.handleClickBar = this.handleClickBar.bind(this);
+    this.handleClickChart = this.handleClickBar.bind(this);
     this.handleClickTable = this.handleClickTable.bind(this);
     this.handleClickTrending = this.handleClickTrending.bind(this);
 
-    this.handleClickUpdateBar = this.handleClickUpdateBar.bind(this);
+    this.handleClickUpdateChart = this.handleClickUpdateChart.bind(this);
     this.handleClickUpdateTable = this.handleClickUpdateTable.bind(this);
     this.handleClickUpdateTrending = this.handleClickUpdateTrending.bind(this);
 
@@ -124,8 +124,8 @@ class App extends React.Component {
             else if (dat === "GOOD"){
                 this.setState({loggedIn: true});
                 // Call our fetch functions
-                this.handleClickUpdateBar();
-                this.handleClickUpdateChar();
+                this.handleClickUpdateChart();
+                this.handleClickUpdateTable();
                 this.handleClickUpdateTrending();
             }
             else{
@@ -200,8 +200,8 @@ class App extends React.Component {
                           if(dat === "SUCCESS"){
                                context.setState({loggedIn: true});
                                // Call our fetch functions
-                               this.handleClickUpdateBar();
-                               this.handleClickUpdateChar();
+                               this.handleClickUpdateChart();
+                               this.handleClickUpdateTable();
                                this.handleClickUpdateTrending();
                           }
                           else if(dat === "FAIL"){
@@ -230,7 +230,7 @@ class App extends React.Component {
       Cookies.remove('clientkey', { path: '' });
   }
 
-  handleClickBar() {
+  handleClickChart() {
     //alert("An element should be added.");
     var x = document.getElementById("barChart");
     if(x.style.display === "none"){
@@ -260,7 +260,7 @@ class App extends React.Component {
     }
   }
 
-  handleClickUpdateBar() {
+  handleClickUpdateChart() {
       this.callBackendAPI2()
         .then(res => {
             console.log("qwerdtf:", res.trends);
@@ -461,7 +461,7 @@ class App extends React.Component {
                                 <img id="navbarBrand" src="resources/drawing.svg" alt=""/>
                             </Nav.Item>
                             <NavDropdown className="dashbar" title="Chart">
-                                <NavDropdown.Item onClick={this.handleClickBar}>Toggle Chart View</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleClickChart}>Toggle Chart View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
                             </NavDropdown>
