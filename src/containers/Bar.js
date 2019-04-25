@@ -139,8 +139,8 @@ class Bar extends React.Component{
     motionDamping={15}
 
 />
+</div>
   );
-  </div>
 }
 }
 
