@@ -34,7 +34,7 @@ class Bar extends React.Component{
         let qwerty = "";
         //console.log("object", z);
 
-        var data[]
+        var data[];
 
         if (z != null)
         {
