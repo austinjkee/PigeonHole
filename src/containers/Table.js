@@ -13,13 +13,6 @@ class TweetTable extends Component {
     }
 
     componentDidMount() {
-        var scache = Cookies.get('scache');
-        if (scache !== undefined) {
-            this.setState({data: JSON.parse(scache)}, function(){
-                console.log("data", this.state.data);
-            });
-        }
-        else{
             var z = this.props.info
             //this.setState({data: w});
             //console.log("w", w);
@@ -33,23 +26,7 @@ class TweetTable extends Component {
                 console.log("object within:", z);
                 this.setState({data: z});
 
-                if (z != null)
-                {
-                    qwerty = z.map((item, i) => {
-                        //console.log(item.name);
-                        return (
-                            <tr>
-                                <td>{item.user.name}</td>
-                                <td>{item.full_text}</td>
-                                <td>{item.favorite_count}</td>
-                                <td>{item.retweet_count}</td>
-                            </tr>
-                        );
-                    });
-                }
-
-                console.log(qwerty);
-                Cookies.set('scache', JSON.stringify(qwerty), { maxAge: 90000 });
+                Cookies.set('scache', JSON.stringify(z), { maxAge: 90000 });
             }
 
             //console.log("object2", JSON.stringify(z));
@@ -59,7 +36,6 @@ class TweetTable extends Component {
             //<th scope="row">1</th>
             //
 
-        }
     }
 
     componentDidUpdate() {
@@ -75,27 +51,7 @@ class TweetTable extends Component {
             console.log("object search", z);
             console.log("object within:", z);
             //this.setState({data: z});
-
-          if (z != null)
-          {
-            qwerty = z.map((item, i) => {
-                //console.log(item.name);
-                  return (
-                      <tr>
-                          <td>{item.user.name}</td>
-                          <td>{item.full_text}</td>
-                          <td>{item.favorite_count}</td>
-                          <td>{item.retweet_count}</td>
-                      </tr>
-
-
-                  );
-                });
-            }
-
-            console.log(qwerty);
-
-            Cookies.set('scache', JSON.stringify(qwerty), { maxAge: 90000 });
+            Cookies.set('scache', JSON.stringify(z), { maxAge: 90000 });
 
         }
         //console.log("object2", JSON.stringify(z));
@@ -112,7 +68,18 @@ class TweetTable extends Component {
 
       var scache = Cookies.get('scache');
       if (scache !== undefined && scache !== null) {
-          qwerty = JSON.parse(scache);
+          var smcache = JSON.parse(scache);
+          qwerty = smcache.map((item, i) => {
+              //console.log(item.name);
+              return (
+                  <tr>
+                      <td>{item.user.name}</td>
+                      <td>{item.full_text}</td>
+                      <td>{item.favorite_count}</td>
+                      <td>{item.retweet_count}</td>
+                  </tr>
+              );
+          });
       }
       else{
           qwerty = () => {return (<></>)};

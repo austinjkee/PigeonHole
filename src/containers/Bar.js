@@ -15,13 +15,6 @@ class Bar extends React.Component{
     }
 
     componentDidMount(){
-        var tcache = Cookies.get('tcache');
-        if(tcache !== undefined){
-            this.setState({data: JSON.parse(tcache)}, function(){
-                console.log("data", this.state.data);
-            });
-        }
-        else{
             var z = this.props.info;
 
             //var z = JSON.parse(w);
@@ -57,7 +50,6 @@ class Bar extends React.Component{
                 //       );
                 //     });
             }
-        }
     }
 
     componentDidUpdate(){
