@@ -48,6 +48,7 @@ class TweetTable extends Component {
                     });
                 }
             }
+            Cookies.set('scache', JSON.stringify(qwerty), { maxAge: 90000 });
             //console.log("object2", JSON.stringify(z));
             // <option key={i} value={item}>
             //   {item.name}{ item.tweet_volume}
@@ -90,6 +91,8 @@ class TweetTable extends Component {
             }
 
         }
+
+        Cookies.set('scache', JSON.stringify(qwerty), { maxAge: 90000 });
         //console.log("object2", JSON.stringify(z));
         // <option key={i} value={item}>
         //   {item.name}{ item.tweet_volume}
@@ -99,6 +102,16 @@ class TweetTable extends Component {
     }
 
   render() {
+
+      let qwerty = "";
+
+      var scache = Cookies.get('scache');
+      if (scache !== undefined && scache !== NULL) {
+          qwerty = JSON.parse(scache);
+      }
+      else{
+          qwerty = {<></>};
+      }
 
     return (
 
