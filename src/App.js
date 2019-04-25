@@ -305,6 +305,9 @@ class App extends React.Component {
       var user = Cookies.get('uname');
       if(user !== undefined && user !== ''){
           this.setState({loggedIn: true});
+          this.handleClickUpdateChart();
+          this.handleClickUpdateTable();
+          this.handleClickUpdateTrending();
       }
   }
 
