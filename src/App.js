@@ -485,13 +485,7 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Item>
-                                <Form onSubmit={this.handleSubmit}>
-                                    <Form.Group controlId="formBasicUsername">
-                                        <Form.Control type="text" placeholder="U S E R N A M E" value={this.state.uname} onChange={this.handleUnameChange} />
-                                    </Form.Group>
-                                </Form>
-                            </Nav.Item>
+                            
                     <Nav.Item className="ml-auto logout">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
                                 Log Out
