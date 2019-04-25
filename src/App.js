@@ -279,7 +279,6 @@ class App extends React.Component {
             this.setState({ data: res.express.id });
         })
         .catch(err => console.log(err));
-            Cookies.set('dcache', res.express.id, { maxAge: 90000 });
     //}
   }
 
