@@ -81,7 +81,7 @@ class Info extends React.Component{
           console.log("object345", z);
           //this.setState({data: z});
 
-          if (z.trends[0].trends != null)
+          if (z != null)
           {
               qwerty = z.map((item, i) => {
               //console.log(item.name);
