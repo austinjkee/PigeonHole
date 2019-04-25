@@ -486,12 +486,12 @@ class App extends React.Component {
                             <NavDropdown className="dashbar" title="Table">
                                 <NavDropdown.Item onClick={this.handleClickTable}>Toggle Table View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
-                                <NavDropdown.Item onClick={this.handleClickUpdateTable}>Update Table</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Table</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown className="dashbar" title="Trending">
                                 <NavDropdown.Item onClick={this.handleClickTrending}>Toggle Trending View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
-                                <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Trending</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Trending</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Item className="dashbar">
                                 <Form>
