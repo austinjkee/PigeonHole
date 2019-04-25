@@ -296,9 +296,9 @@ class App extends React.Component {
       this.callBackendAPI3()
         .then(function(res) {
             this.setState({ statuses: res.trends.statuses });
+            console.log(res.trends.statuses);
         })
         .catch(err => console.log(err));
-        console.log(res.trends.statuses);
     //}
   }
 
