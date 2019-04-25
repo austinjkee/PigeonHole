@@ -19,7 +19,7 @@ class TrendBar extends React.Component{
     }
 
     shouldComponentUpdate(nextProps) {
-        const differentTrends = this.props.info !== nextProps.trends[0].trends;
+        const differentTrends = this.props.info !== nextProps.info;
         return differentTrends;
     }
 
