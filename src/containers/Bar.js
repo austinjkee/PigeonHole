@@ -7,7 +7,7 @@ class Bar extends React.Component{
     constructor() {
         super();
         this.state = {
-            data: null,
+            data: [],
         }
 
         this.componentDidMount = this.componentDidMount.bind(this);
