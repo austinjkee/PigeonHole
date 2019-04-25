@@ -489,10 +489,10 @@ class App extends React.Component {
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group controlId="formBasicSearch">
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
+                                        <Button variant="outline-primary" type="Submit">
+                                        Search
+                                        </Button>
                                     </Form.Group>
-                                    <Button variant="outline-light" type="Submit">
-                                    Search
-                                    </Button>
                                 </Form>
                             </Nav.Item>
                     <Nav.Item className="ml-auto logout">
