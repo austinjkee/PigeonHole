@@ -30,12 +30,12 @@ class TweetTable extends Component {
             {
                 console.log("z is not null in search");
                 console.log("object search", z);
-                console.log("object within:", z.trends.statuses);
+                console.log("object within:", z);
                 this.setState({data: z});
 
-                if (z.trends.statuses != null)
+                if (z != null)
                 {
-                    qwerty = z.trends.statuses.map((item, i) => {
+                    qwerty = z.map((item, i) => {
                         //console.log(item.name);
                         return (
                             <tr>
@@ -70,12 +70,12 @@ class TweetTable extends Component {
         {
             console.log("z is not null in search");
             console.log("object search", z);
-            console.log("object within:", z.trends.statuses);
+            console.log("object within:", z);
             //this.setState({data: z});
 
-          if (z.trends.statuses != null)
+          if (z != null)
           {
-            qwerty = z.trends.statuses.map((item, i) => {
+            qwerty = z.map((item, i) => {
                 //console.log(item.name);
                   return (
                       <tr>

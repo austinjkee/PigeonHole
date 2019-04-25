@@ -295,7 +295,7 @@ class App extends React.Component {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
         .then(function(res) {
-            this.setState({ search: res });
+            this.setState({ search: res.trends[0].statuses });
         })
         .catch(err => console.log(err));
     //}
@@ -344,15 +344,16 @@ class App extends React.Component {
 
   //console.log(respo);
   const body = await respo.json();
-  console.log(body);
+  //console.log(body);
   //console.log(body.trends[0]);
-  var b = JSON.stringify(body);
+  //var b = JSON.stringify(body);
+  console.log("Search",body);
   //console.log(body[0].as_of);
 
   if (respo.status !== 200) {
     throw Error(body.message)
   }
-  return b;
+  return body;
 };
 
   render() {
