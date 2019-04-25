@@ -295,7 +295,7 @@ class App extends React.Component {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
         .then(function(res) {
-            this.setState({ search: JSON.stringify(res) });
+            this.setState({ search: res });
         })
         .catch(err => console.log(err));
     //}
