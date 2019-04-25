@@ -14,8 +14,7 @@ class TrendBar extends React.Component{
     }
 
     componentDidMount(){
-      let {clientHeight, clientWidth} = this.refs.Bar;
-      console.log(clientHeight, clientWidth);
+
     }
 
     shouldComponentUpdate(nextProps) {
@@ -67,8 +66,9 @@ class TrendBar extends React.Component{
 
 
       return(
-    <div ref="Bar" style={{height: '100%', width: '100%'}}>
     <ResponsiveBar
+    height="90%";
+    width="90%";
     data={data}
     keys={[
         "tweet_volume"
@@ -76,7 +76,7 @@ class TrendBar extends React.Component{
     indexBy="name"
     margin={{
         "top": 50,
-        "right": 10,
+        "right": 50,
         "bottom": 10,
         "left": 130
     }}
@@ -132,7 +132,6 @@ class TrendBar extends React.Component{
     motionDamping={15}
 
 />
-    </div>
   );
 }
 }
