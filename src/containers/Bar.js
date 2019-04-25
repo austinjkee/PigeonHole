@@ -80,9 +80,8 @@ class Bar extends React.Component{
 
             console.log(w);
 
-            var data = w.slice(0, 10);
-            const array = data.toArray();
-            this.setState({data: array}, () => {
+            const data = w.slice(0, 10);
+            this.setState({data: data}, () => {
                 Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                 console.log("Lots of Stuff",this.state.data);
             });
