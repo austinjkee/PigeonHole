@@ -106,7 +106,7 @@ class TweetTable extends Component {
       let qwerty = "";
 
       var scache = Cookies.get('scache');
-      if (scache !== undefined && scache !== NULL) {
+      if (scache !== undefined && scache !== null) {
           qwerty = JSON.parse(scache);
       }
       else{
