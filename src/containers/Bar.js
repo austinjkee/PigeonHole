@@ -83,10 +83,11 @@ class Bar extends React.Component{
                   var data = z.slice(0, 10);
                   this.setState({data: data}, function(){
                       Cookies.set('tcache', this.state.data, { maxAge: 90000 });
+                      console.log("Lots of Stuff",this.state.data);
                   });
               });
 
-              console.log("Lots of Stuff",this.state.data);
+
 
               //console.log(qwerty);
             // qwerty = z.trends[0].trends.map((item, i) => {
