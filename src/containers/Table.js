@@ -70,7 +70,7 @@ class TweetTable extends Component {
       let qwerty = "";
 
       var scache = Cookies.get('scache');
-
+      if(scache !== undefined){
           var smcache = JSON.parse(scache);
           qwerty = smcache.map((item, i) => {
               console.log(item.name);
@@ -83,6 +83,12 @@ class TweetTable extends Component {
                   </tr>
               );
           });
+      }
+      else{
+          qwerty = () => {
+            return (<></>);  
+          };
+      }
 
     return (
 
