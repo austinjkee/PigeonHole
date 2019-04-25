@@ -71,6 +71,7 @@ class Bar extends React.Component{
 
     render(){
       return(
+          <div>
     <ResponsiveBar
     position="absolute"
     height={360}
@@ -139,6 +140,7 @@ class Bar extends React.Component{
 
 />
   );
+  </div>
 }
 }
 
