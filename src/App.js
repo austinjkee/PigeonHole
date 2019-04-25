@@ -34,8 +34,9 @@ class App extends React.Component {
         agree: false,
         creatingAccount: false,
         loggedIn: false,
-        data: null,
-        trends: null,
+        data: [],
+        trends: [],
+        search: [],
         query: '',
     };
 
