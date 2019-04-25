@@ -25,7 +25,7 @@ class SearchTable extends Component {
   render() {
       //var q = JSON.stringify(this.props.info);
       var z = this.props.info
-      this.setState({data: this.props.info});
+      this.setState({data: z});
 //this.setState({data: w});
       //console.log("w", w);
       //console.log("Asda", w);
