@@ -47,8 +47,8 @@ class Info extends React.Component{
 
                         );
                     });
-                    Cookies.set('dcache', qwerty, { maxAge: 90000 });
-                    console.log("Lots of Stuff", qwerty);
+                    Cookies.set('dcache', JSON.stringify(qwerty), { maxAge: 90000 });
+                    console.log("Lots of Stuff", JSON.stringify(qwerty));
 
                 }
 
@@ -96,8 +96,8 @@ class Info extends React.Component{
           }
 
 
-            Cookies.set('dcache', qwerty, { maxAge: 90000 });
-            console.log("Lots of Stuff", qwerty);
+            Cookies.set('dcache', JSON.stringify(qwerty), { maxAge: 90000 });
+            console.log("Lots of Stuff", JSON.stringify(qwerty));
 
               //console.log(qwerty);
             // qwerty = z.trends[0].trends.map((item, i) => {
