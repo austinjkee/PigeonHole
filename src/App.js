@@ -316,7 +316,7 @@ class App extends React.Component {
    console.log(body);
    console.log(body.trends[0]);
    var b = JSON.stringify(body);
-   console.log(body[0].as_of);
+   console.log(body[0].trends);
 
    if (respo.status !== 200) {
      throw Error(body.message)

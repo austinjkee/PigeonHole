@@ -8,12 +8,21 @@ class TrendBar extends React.Component{
         this.state = {
             data: null,
         }
+
+        this.componentDidMount = this.componentDidMount.bind(this);
+        this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
     }
 
     componentDidMount(){
       let {clientHeight, clientWidth} = this.refs.BarBar;
       console.log(clientHeight, clientWidth);
     }
+
+    shouldComponentUpdate(nextProps) {
+        const differentTrends = this.data !== nextProps.trends[0].trends;
+        return differentTitle || differentDone;
+    }
+
     render(){
       var w = this.props.info
       var z = JSON.parse(w);
