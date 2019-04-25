@@ -489,7 +489,7 @@ class App extends React.Component {
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group controlId="formBasicSearch">
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
-                                        <Button variant="outline-primary" type="Submit">
+                                        <Button variant="outline-primary" style={{display:"inline-block"}} type="Submit">
                                         Search
                                         </Button>
                                     </Form.Group>
