@@ -47,8 +47,8 @@ class Info extends React.Component{
 
                         );
                     });
-                    Cookies.set('dcache', z, { maxAge: 90000 });
-                    console.log("Lots of Stuff", w);
+                    Cookies.set('dcache', qwerty, { maxAge: 90000 });
+                    console.log("Lots of Stuff", qwerty);
 
                 }
 
@@ -118,7 +118,7 @@ class Info extends React.Component{
         this.componentDidUpdate();
         var tcache = Cookies.get('dcache');
         if(tcache !== undefined){
-            qwery = tcache;
+            qwerty = tcache;
         }
         else{
             qwerty = this.state.data;

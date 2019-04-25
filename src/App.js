@@ -47,6 +47,7 @@ class App extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleVPwordChange = this.handleVPwordChange.bind(this);
     this.handleAgreeChange = this.handleAgreeChange.bind(this);
+    this.handleQueryChange = this.handleQueryChange.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
