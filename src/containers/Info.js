@@ -11,8 +11,7 @@ class Info extends Component {
     }
 
     render() {
-      var w = this.props.info
-      var z = JSON.parse(w);
+      var z = this.props.info
       let qwerty = "";
       console.log("object", z);
       if (z != null)
