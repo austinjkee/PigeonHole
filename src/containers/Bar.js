@@ -37,7 +37,7 @@ class Bar extends React.Component{
 
       if (z != null)
       {
-          this.setState({data: this.props.info});
+          this.setState({data: z});
           console.log("z is not null");
 
         if (z != null)
@@ -45,10 +45,10 @@ class Bar extends React.Component{
             console.log("qwert");
             //qwerty = z.trends[0].trends;
             qwerty = JSON.stringify(z);
-            this.state.data = z;
+            data = z;
             //data.sort("tweet_volume");
-            this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume);
-            this.state.data = this.state.data.slice(0, 10);
+            data.sort((a, b) => a.tweet_volume < b.tweet_volume);
+            data = data.slice(0, 10);
 
             //console.log(qwerty);
           // qwerty = z.trends[0].trends.map((item, i) => {
@@ -72,7 +72,7 @@ class Bar extends React.Component{
     position="absolute"
     height={360}
     width={400}
-    data={this.state.data}
+    data={data}
     keys={[
         "tweet_volume"
     ]}
