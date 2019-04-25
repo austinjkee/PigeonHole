@@ -67,7 +67,7 @@ class TrendBar extends React.Component{
       return(
     <ResponsiveBar
     position="absolute"
-    height={350}
+    height={360}
     width={400}
     data={data}
     keys={[
@@ -77,8 +77,8 @@ class TrendBar extends React.Component{
     margin={{
         "top": 10,
         "right": 10,
-        "bottom": 70,
-        "left": 50
+        "bottom": 80,
+        "left": 80
     }}
     padding={0.3}
     colors="#38bcb2"
