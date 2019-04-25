@@ -34,8 +34,6 @@ class Bar extends React.Component{
         let qwerty = "";
         //console.log("object", z);
 
-        var data[];
-
         if (z != null)
         {
             console.log("z is not null");
@@ -48,10 +46,9 @@ class Bar extends React.Component{
               //data.sort("tweet_volume");
               this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume, function(){
                   var data = this.state.data.slice(0, 10);
-                  this.setState({data: data}, function(){
+                  this.setState({data: data.toArray()}, function(){
                       Cookies.set('tcache', this.state.data, { maxAge: 90000 });
                   });
-                  data = this.state.data;
               });
 
               //console.log(qwerty);
@@ -74,7 +71,7 @@ class Bar extends React.Component{
     position="absolute"
     height={360}
     width={400}
-    data={data}
+    data={this.state.data.toArray()}
     keys={[
         "tweet_volume"
     ]}
