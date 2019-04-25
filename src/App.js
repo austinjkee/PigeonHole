@@ -270,7 +270,7 @@ class App extends React.Component {
         })
         .catch(err => console.log(err));
         //Cookies.set('tcache', this.state.trends, { maxAge: 90000 });
-    }
+    //}
   }
 
   handleClickUpdateTable() {
