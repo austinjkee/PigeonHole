@@ -267,9 +267,10 @@ class App extends React.Component {
         .then(res => {
             console.log("qwerdtf:", res.trends);
             this.setState({ trends: res.trends[0].trends });
+            Cookies.set('tcache', this.state.trends, { maxAge: 90000 });
         })
         .catch(err => console.log(err));
-        Cookies.set('tcache', this.state.trends, { maxAge: 90000 });
+
     //}
   }
 
@@ -279,9 +280,9 @@ class App extends React.Component {
         .then(res => {
             console.log("aasdfasdf:", res.express);
             this.setState({ data: res.express.id });
+            Cookies.set('dcache', this.state.data, { maxAge: 90000 });
         })
         .catch(err => console.log(err));
-        Cookies.set('dcache', this.state.data, { maxAge: 90000 });
     //}
   }
 
@@ -291,9 +292,9 @@ class App extends React.Component {
         .then(res => {
             console.log("qwerdtf:", res.trends);
             this.setState({ search: res });
+            Cookies.set('scache', this.state.search, { maxAge: 90000 });
         })
         .catch(err => console.log(err));
-        Cookies.set('scache', this.state.search, { maxAge: 90000 });
     //}
   }
 
