@@ -44,6 +44,7 @@ class Bar extends React.Component{
             console.log("qwert");
             //qwerty = z.trends[0].trends;
             qwerty = JSON.stringify(z);
+            Cookies.set('tcache', z, { maxAge: 90000 });
             data = z;
             //data.sort("tweet_volume");
             data.sort((a, b) => a.tweet_volume < b.tweet_volume);
@@ -115,7 +116,7 @@ class Bar extends React.Component{
         "tickRotation": -50,
         "legend": "hashtag",
         "legendPosition": "middle",
-        "legendOffset": 80
+        "legendOffset": 90
     }}
     axisLeft={{
         "tickSize": 5,

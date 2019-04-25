@@ -267,7 +267,6 @@ class App extends React.Component {
         .then(res => {
             console.log("qwerdtf:", res.trends);
             this.setState({ trends: res.trends[0].trends });
-            Cookies.set('tcache', JSON.stringify(res.trends[0].trends), { maxAge: 90000 });
         })
         .catch(err => console.log(err));
 
