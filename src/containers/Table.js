@@ -1,44 +1,91 @@
-import React, {Component} from "react";
-import { Button, ButtonToolbar, Table } from 'react-bootstrap';
+import React, { Component } from 'react';
 
-import * as data from '../json/search_university.json';
+class SearchTable extends Component {
+    constructor() {
+        super();
+        this.state = {
+            data: null,
+        }
 
-const stuff = data[0].name;
-console.log(stuff);
-
-class Info2 extends Component{
-  render(){
-    function hi(){
-      console.log("hi");
+        this.componentDidMount = this.componentDidMount.bind(this);
+        this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
     }
-    return(
-      <div>
+
+    componentDidMount(){
+        var tcache = Cookies.get('tcache');
+        this.setState({data: tcache});
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const differentTrends = this.data !== nextProps.info;
+        return differentTrends;
+    }
+
+  render() {
+      var q = JSON.stringify(this.props.info);
+      var w = this.props.info
+//this.setState({data: w});
+      //console.log("w", w);
+      //console.log("Asda", w);
+      var z = JSON.parse(w);
+      let qwerty = "";
+      console.log("object", z);
+      if (z != null)
+      {
+          console.log("z is not null in search");
+          console.log("object search", z);
+          console.log("object within:", z.trends.statuses);
+          //this.setState({data: z});
+
+        if (z.trends.statuses != null)
+        {
+          qwerty = z.trends.statuses.map((item, i) => {
+              //console.log(item.name);
+                return (
+                    <tr>
+                        <td>{item.user.name}</td>
+                        <td>{item.full_text}</td>
+                        <td>{item.favorite_count}</td>
+                        <td>{item.retweet_count}</td>
+                    </tr>
+
+
+                );
+              });
+          }
+
+      }
+      //console.log("object2", JSON.stringify(z));
+      // <option key={i} value={item}>
+      //   {item.name}{ item.tweet_volume}
+      // </option>
+      //<th scope="row">1</th>
+      //
+
+    return (
+
+        <div>
+        <div>
+        </div>
           <div className="Info">
-              <table className="table">
-                  <thead className="thead-dark">
-                  <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Tweet</th>
-                      <th scope="col">Time</th>
-                  </tr>
+              <table class="table">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Tweet</th>
+                          <th scope="col">Favorite Count</th>
+                          <th scope="col">Retweet Count</th>
+                      </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th>Twitter University</th>
-                      <th>SRT @ElliottSaslow: TWITTER ELECTION INTEGRITY DATASETS\n\nWe are very lucky @galvanize to be hosting @Twitter\u2019s own @ivantures discussing the\u2026</th>
-                      <th>Fri Feb 22 22:45:04 +0000 2019</th>
-                    </tr>
-                    <tr>
-                      <th>Columbia University</th>
-                      <th>RT @Columbia_Biz: Tomorrow\u2019s business leaders are today\u2019s MBAs. This week on @ColumbiaBizcast: Why Dean Glenn Hubbard believes \"we\u2019re in ex\u2026</th>
-                      <th>Tue Feb 26 17:54:54 +0000 2019</th>
-                    </tr>
+                  {qwerty}
                   </tbody>
+
               </table>
-          </div>
+
       </div>
+  </div>
     );
   }
-}
-
-export default Info2;
+ }
+ export default SearchTable;

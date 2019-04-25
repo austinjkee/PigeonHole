@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 import { generateCountriesData } from '@nivo/generators';
+import Cookies from 'js-cookie';
 
 class Bar extends React.Component{
     constructor() {
@@ -14,11 +15,12 @@ class Bar extends React.Component{
     }
 
     componentDidMount(){
-
+        var tcache = Cookies.get('tcache');
+        this.setState({data: tcache});
     }
 
     shouldComponentUpdate(nextProps) {
-        const differentTrends = this.props.info !== nextProps.info;
+        const differentTrends = this.data !== nextProps.info;
         return differentTrends;
     }
 

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Button, ButtonToolbar, Table } from 'react-bootstrap';
+import Cookies from 'js-cookie';
 
 //const Info = () => (
 class Info extends Component {
@@ -8,6 +9,19 @@ class Info extends Component {
         this.state = {
             data: null
         }
+
+        this.componentDidMount = this.componentDidMount.bind(this);
+        this.shouldComponentUpdate = this.shouldComponentUpdate.bind(this);
+    }
+
+    componentDidMount(){
+        var tcache = Cookies.get('tcache');
+        this.setState({data: tcache});
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const differentTrends = this.data !== nextProps.info;
+        return differentTrends;
     }
 
     render() {
@@ -17,11 +31,13 @@ class Info extends Component {
       if (z != null)
       {
           console.log("z is not null");
-          //this.setState({data: z});
+          this.setState({data: z});
 
-        if (z.trends[0].trends != null)
+        if (z != null)
         {
-          qwerty = z.trends[0].trends.map((item, i) => {
+          data.sort((a, b) => a.tweet_volume < b.tweet_volume);
+          data = data.slice(0, 10);
+          qwerty = data.map((item, i) => {
               console.log(item.name);
                 return (
                     <tr>
