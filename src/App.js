@@ -36,6 +36,7 @@ class App extends React.Component {
         loggedIn: false,
         data: null,
         trends: null,
+        query: '';
     };
 
     this.handleUnameChange = this.handleUnameChange.bind(this);
@@ -95,6 +96,10 @@ class App extends React.Component {
 
   handleAgreeChange(event) {
     this.setState({agree: event.target.checked});
+  }
+
+  handleQueryChange(event) {
+    this.setState({query: event.target.value});
   }
 
   handleSubmit(event) {
@@ -330,7 +335,7 @@ class App extends React.Component {
  };
 
  async callBackendAPI3() {
-  const respo = await fetch('db/search/nasa');
+  const respo = await fetch('db/search/' + this.state.query);
   console.log("3 has been called");
 
   //console.log(respo);
@@ -482,7 +487,7 @@ class App extends React.Component {
                             </NavDropdown>
                             <Nav.Item className="dashbar">
                                 <Form>
-                                    <Form.Group controlId="formBasicSearch">
+                                    <Form.Group controlId="formBasicSearch" value={this.state.query} onChange={this.handleQueryChange}>
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
                                     </Form.Group>
                                 </Form>
