@@ -26,6 +26,7 @@ class Bar extends React.Component{
 
     render(){
       var z = this.props.info;
+      this.setState({data: this.props.info});
       //var z = JSON.parse(w);
       console.log("The Data Passed To Bar",z);
       let qwerty = "";
@@ -37,17 +38,16 @@ class Bar extends React.Component{
       if (z != null)
       {
           console.log("z is not null");
-          //this.setState({data: z});
 
         if (z != null)
         {
             console.log("qwert");
             //qwerty = z.trends[0].trends;
             qwerty = JSON.stringify(z);
-            data = z;
+            this.state.data = z;
             //data.sort("tweet_volume");
-            data.sort((a, b) => a.tweet_volume < b.tweet_volume);
-            data = data.slice(0, 10);
+            this.state.data.sort((a, b) => a.tweet_volume < b.tweet_volume);
+            this.state.data = this.state.data.slice(0, 10);
 
             //console.log(qwerty);
           // qwerty = z.trends[0].trends.map((item, i) => {
@@ -71,7 +71,7 @@ class Bar extends React.Component{
     position="absolute"
     height={360}
     width={400}
-    data={data}
+    data={this.state.data}
     keys={[
         "tweet_volume"
     ]}

@@ -26,12 +26,12 @@ class Info extends Component {
 
     render() {
       var z = this.props.info
+      this.setState({data: this.props.info});
       let qwerty = "";
       console.log("object", z);
       if (z != null)
       {
           console.log("z is not null");
-          this.setState({data: z});
 
         if (z != null)
         {
