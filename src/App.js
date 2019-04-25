@@ -490,9 +490,9 @@ class App extends React.Component {
         display = (
             <ReactGridLayout className="layout" layout={layout} cols={24} rowHeight={30} width={1300}>
               {/*sets the size of the grid*/}
-              <div key="a" className="BarBar" id = "barChart"><Bar info={this.state.trends}/></div>
-              <div key="b" className="Info" id= "trendingChart"><Info/></div>
-              <div key="c" className="Table" id = "tableChart"><WTable/></div>
+              <div key="a" className="Bar" id="barChart"><Bar info={this.state.trends}/></div>
+              <div key="b" className="Info" id="trendingChart"><Info/></div>
+              <div key="c" className="Table" id="tableChart"><WTable/></div>
             </ReactGridLayout>
         );
     }
