@@ -44,12 +44,12 @@ class Bar extends React.Component{
             console.log("qwert");
             //qwerty = z.trends[0].trends;
             qwerty = JSON.stringify(z);
-            Cookies.set('tcache', z, { maxAge: 90000 });
             data = z;
             //data.sort("tweet_volume");
             data.sort((a, b) => a.tweet_volume < b.tweet_volume);
             data = data.slice(0, 10);
 
+            Cookies.set('tcache', data, { maxAge: 90000 });
             //console.log(qwerty);
           // qwerty = z.trends[0].trends.map((item, i) => {
           //     console.log(item.name);
