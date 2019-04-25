@@ -294,8 +294,8 @@ class App extends React.Component {
   handleClickUpdateTrending() {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
-        .then(function(res) {
-            this.setState({ statuses: res.trends.statuses });
+        .then(res => {
+            this.setState({ statuses: res.trends.statuses});
             console.log(res.trends.statuses);
         })
         .catch(err => console.log(err));
@@ -500,11 +500,6 @@ class App extends React.Component {
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
                                     </Form.Group>
                                 </Form>
-                            </Nav.Item>
-                            <Nav.Item className="searchbar">
-                                <Button variant="outline-primary" type="Submit">
-                                Search
-                                </Button>
                             </Nav.Item>
                     <Nav.Item className="ml-auto logout">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
