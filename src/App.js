@@ -298,7 +298,6 @@ class App extends React.Component {
         .then(res => {
             this.setState({ statuses: res.trends.statuses}, () => {
                 console.log("Potato", this.state.statuses);
-                Cookies.set("scache", JSON.stringify(this.state.statuses));
             });
         })
         .catch(err => console.log(err));

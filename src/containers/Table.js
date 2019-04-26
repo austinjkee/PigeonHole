@@ -7,14 +7,25 @@ class TweetTable extends Component {
         this.state = {
             data: null
         }
+
+        this.componentDidMount = this.componentDidMount.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
+    }
+
+    componentDidMount() {
+        Cookies.set('search', this.props.info, { maxAge: 90000 });
+    }
+
+    componentDidUpdate() {
+        Cookies.set('search', this.props.info, { maxAge: 90000 });
     }
 
   render() {
       let qwerty = "";
-      var scache = Cookies.get('scache');
-      console.log("cookie", scache);
-      if(scache !== undefined){
-          var smcache = JSON.parse(scache);
+      var search = Cookies.get('search');
+      console.log("cookie", search);
+      if(search !== undefined){
+          var smcache = JSON.parse(search);
           console.log("object that was in cookie.", smcache);
           qwerty = smcache.map((item, i) => {
               console.log(item.name);
