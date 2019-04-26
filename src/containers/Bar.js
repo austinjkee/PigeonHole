@@ -27,9 +27,8 @@ class Bar extends React.Component{
                 console.log("The Data Passed To Bar",z);
                 //qwerty = z.trends[0].trends;
                 //data.sort("tweet_volume");
-                var w = z;
 
-                w.sort((a, b) => a.tweet_volume < b.tweet_volume);
+                var w = z.sort((a, b) => {return a.tweet_volume < b.tweet_volume ? 1 : -1;});
 
                 console.log(w);
 
@@ -65,9 +64,8 @@ class Bar extends React.Component{
             console.log("Z has contents.");
             //qwerty = z.trends[0].trends;
             //data.sort("tweet_volume");
-            var w = z;
 
-            w.sort((a, b) => a.tweet_volume < b.tweet_volume);
+            var w = z.sort((a, b) => {return a.tweet_volume < b.tweet_volume ? 1 : -1;});
 
             console.log(w);
 
