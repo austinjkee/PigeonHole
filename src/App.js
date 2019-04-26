@@ -7,8 +7,7 @@
 import React from 'react';
 import Cookies from 'js-cookie';
 import RGL, {WidthProvider} from 'react-grid-layout';
-import ReactDOM from 'react-dom';
-import { Form, Button, Container, Row, Col, ButtonToolbar, Table, Nav, NavDropdown} from 'react-bootstrap';
+import { Form, Button, Col, Nav, NavDropdown} from 'react-bootstrap';
 import { } from 'reactstrap';
 import Bar from './containers/Bar';
 import Info from './containers/Info';

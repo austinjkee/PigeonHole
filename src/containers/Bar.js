@@ -1,6 +1,5 @@
 import React from 'react';
-import { ResponsiveBar } from '@nivo/bar';
-import { generateCountriesData } from '@nivo/generators';
+import { ResponsiveBar } from '@nivo/bar'
 import Cookies from 'js-cookie';
 
 class Bar extends React.Component{
@@ -19,7 +18,6 @@ class Bar extends React.Component{
 
             //var z = JSON.parse(w);
             console.log("The Data Passed To Bar",z);
-            let qwerty = "";
             //console.log("object", z);
 
             if (z != null)
@@ -32,10 +30,10 @@ class Bar extends React.Component{
 
                 console.log(w);
 
-                var data = w.slice(0, 10);
+                const data = w.slice(0, 10);
 
-                Cookies.set('tcache', w, { maxAge: 90000 });
-                console.log("Lots of Stuff", w);
+                Cookies.set('tcache', data, { maxAge: 90000 });
+                console.log("Lots of Stuff", data);
 
                   //console.log(qwerty);
                 // qwerty = z.trends[0].trends.map((item, i) => {
@@ -56,7 +54,6 @@ class Bar extends React.Component{
 
         //var z = JSON.parse(w);
         console.log("The Data Passed To Bar",z);
-        let qwerty = "";
         //console.log("object", z);
 
         if (z != null)
