@@ -27,7 +27,7 @@ class TweetTable extends Component {
   render() {
       const z = this.props.info;
       var qwerty = '';
-      if( z !== []){
+      if( z.length !== 0){
           console.log("object that was in cookie.", z);
           qwerty = z.map((item, i) => {
               console.log(item.name);
