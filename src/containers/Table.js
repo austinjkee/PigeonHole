@@ -15,13 +15,15 @@ class TweetTable extends Component {
     componentDidMount() {
         const z = this.props.info;
         console.log("Search Mounted.", this.props.info);
-        Cookies.set('search', z, { maxAge: 90000 });
+        var Cookies2 = Cookies.noConflict();
+        Cookies2.set('search', z, { maxAge: 90000 });
     }
 
     componentDidUpdate() {
         const z = this.props.info;
         console.log("Search Updated.", this.props.info);
-        Cookies.set('search', z, { maxAge: 90000 });
+        var Cookies2 = Cookies.noConflict();
+        Cookies2.set('search', z, { maxAge: 90000 });
     }
 
   render() {
