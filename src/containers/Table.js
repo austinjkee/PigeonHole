@@ -13,10 +13,12 @@ class TweetTable extends Component {
     }
 
     componentDidMount() {
+        console.log("Search Mounted.", this.props.info);
         Cookies.set('search', this.props.info, { maxAge: 90000 });
     }
 
     componentDidUpdate() {
+        console.log("Search Updated.", this.props.info);
         Cookies.set('search', this.props.info, { maxAge: 90000 });
     }
 
