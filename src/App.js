@@ -484,10 +484,10 @@ class App extends React.Component {
                                 <NavDropdown.Divider/>
                                 <NavDropdown.Item onClick={this.handleClickUpdateChart}>Update Chart</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown className="dashbar" title="Table">
-                                <NavDropdown.Item onClick={this.handleClickTable}>Toggle Table View</NavDropdown.Item>
+                            <NavDropdown className="dashbar" title="Tweets">
+                                <NavDropdown.Item onClick={this.handleClickTable}>Toggle Tweet View</NavDropdown.Item>
                                 <NavDropdown.Divider/>
-                                <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Table</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleClickUpdateTrending}>Update Tweets</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown className="dashbar" title="Trending">
                                 <NavDropdown.Item onClick={this.handleClickTrending}>Toggle Trending View</NavDropdown.Item>
@@ -496,10 +496,15 @@ class App extends React.Component {
                             </NavDropdown>
                             <Nav.Item className="dashbar">
                                 <Form>
-                                    <Form.Group controlId="formBasicSearch" value={this.state.query} onChange={this.handleQueryChange} onSubmit={e => {e.preventDefault();}}>
+                                    <Form.Group controlId="formBasicSearch" value={this.state.query} onChange={this.handleQueryChange} onSubmit={e => {e.preventDefault();}} onKeyPress={(e)=>{e.target.keyCode === 13 && e.preventDefault();}}>
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
                                     </Form.Group>
                                 </Form>
+                            </Nav.Item>
+                            <Nav.Item className="searchbar">
+                                <Button variant="outline-primary" onClick={this.handleClickUpdateTrending}>
+	                                    Search
+	                            </Button>
                             </Nav.Item>
                     <Nav.Item className="ml-auto logout">
                             <Button  variant="outline-primary" href='/' onClick={this.handleLogout}>
