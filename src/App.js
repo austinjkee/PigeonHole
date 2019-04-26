@@ -510,8 +510,8 @@ class App extends React.Component {
         );
         const layout = [
              {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 9, maxW: 9, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
-             {i: 'b', x: 9.5, y: 0, w: 13, h: 7.5, minW: 13, minH: 7.5 /*restrict the size of the item with min/max*/},
-             {i: 'c', x: 9.5, y: 12.5, w: 13, h: 7.5, minW: 13, minH: 7.5 /*does whatever it wants*/}
+             {i: 'b', x: 9.5, y: 0, w: 13, h: 7.5, minW: 13, minH: 40 /*restrict the size of the item with min/max*/},
+             {i: 'c', x: 1, y: 9.5, w: 13, h: 7.5, minW: 9.5, minH: 7.5 /*does whatever it wants*/}
         ];
         display = (
             <ReactGridLayout className="layout" layout={layout} cols={24} rowHeight={30} width={1300}>
