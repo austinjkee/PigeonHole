@@ -28,7 +28,7 @@ class TweetTable extends Component {
 
                 const data = z.slice(0, 10);
 
-                Cookies.remove('scache, { path:'' }');
+                Cookies.remove('scache', { path:'' });
                 Cookies.set('scache', data, { maxAge: 90000 });
                 console.log("object in cookie", data);
             }
@@ -56,7 +56,7 @@ class TweetTable extends Component {
             console.log("object within:", z);
             //this.setState({data: z});
             const data = z.slice(0, 10);
-            Cookies.remove('scache, { path:'' }');
+            Cookies.remove('scache', { path:'' });
             Cookies.set('scache', data, { maxAge: 90000 });
             console.log("object in cookie", data);
 
