@@ -285,9 +285,8 @@ class App extends React.Component {
       //if(Cookies.get('dcache') === undefined){
       this.callBackendAPI()
         .then(function(res) {
-            this.setState({ data: res.express.id }, () => {
-                Cookies.set('scache', this.state.statuses, { maxAge: 90000 });
-            });
+            this.setState({ data: res.express.id });
+
         })
         .catch(err => console.log(err));
     //}
@@ -297,7 +296,9 @@ class App extends React.Component {
       //if(Cookies.get('scache') === undefined){
       this.callBackendAPI3()
         .then(res => {
-            this.setState({ statuses: res.trends.statuses});
+            this.setState({ statuses: res.trends.statuses}, () => {
+                Cookies.set('scache', this.state.statuses, { maxAge: 90000 });
+            });
         })
         .catch(err => console.log(err));
     //}
