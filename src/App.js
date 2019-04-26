@@ -498,7 +498,7 @@ class App extends React.Component {
                             </NavDropdown>
                             <Nav.Item className="dashbar">
                                 <Form>
-                                    <Form.Group controlId="formBasicSearch" value={this.state.query} onChange={this.handleQueryChange} onSubmit={this.handleClickUpdateTrending}>
+                                    <Form.Group controlId="formBasicSearch" value={this.state.query} onChange={this.handleQueryChange} onSubmit={e => {e.preventDefault();}}>
                                         <Form.Control type="text" placeholder="s e a r c h  t w e e t s" />
                                     </Form.Group>
                                 </Form>
