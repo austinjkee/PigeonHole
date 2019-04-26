@@ -16,7 +16,7 @@ class Info extends React.Component{
         var qwerty = "";
         var tcache = Cookies.get('tcache');
         if(tcache !== undefined){
-            var stcache = JSON.parse(tcache);
+            var stcache = JSON.parse(tcache).slice(0,5);
             qwerty = stcache.map((item, i) => {
             console.log(item.name);
               return (
