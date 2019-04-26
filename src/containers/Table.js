@@ -43,7 +43,11 @@ class TweetTable extends Component {
       }
       else{
           qwerty = () => {
-             return (<></>);
+             return (
+                 <tr>
+                     <h1>Search For Tweets To See Them Here</h1>
+                 </tr>
+             );
           };
       }
 
