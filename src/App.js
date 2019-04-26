@@ -239,7 +239,6 @@ class App extends React.Component {
       Cookies.remove('uname', { path: '' });
       Cookies.remove('clientkey', { path: '' });
       Cookies.remove('tcache', { path: '' });
-      Cookies.remove('dcache', { path: '' });
       Cookies.remove('scache', { path: '' });
   }
 

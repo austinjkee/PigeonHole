@@ -14,7 +14,7 @@ class TweetTable extends Component {
       var scache = Cookies.get('scache');
       console.log("cookie", scache);
       if(scache !== undefined){
-          var smcache = JSON.parse(scache).slice(0,3);
+          var smcache = JSON.parse(scache);
           console.log("object that was in cookie.", smcache);
           qwerty = smcache.map((item, i) => {
               console.log(item.name);
@@ -29,16 +29,8 @@ class TweetTable extends Component {
           });
       }
       else{
-          qwerty = this.state.data.map((item, i) => {
-              console.log(item.name);
-              return (
-                  <tr>
-                      <td>{item.user.name}</td>
-                      <td>{item.full_text}</td>
-                      <td>{item.favorite_count}</td>
-                      <td>{item.retweet_count}</td>
-                  </tr>
-              );
+          qwerty = () => {
+             return (<></>);
           });
       }
 
