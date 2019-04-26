@@ -28,7 +28,9 @@ class TweetTable extends Component {
 
   render() {
       let qwerty = "";
-      var search = Cookies.get('search');
+      this.componentDidUpdate();
+      var Cookies2 = Cookies.noConflict();
+      var search = Cookies2.get('search');
       console.log("cookie", search);
       if(search !== undefined){
           var smcache = JSON.parse(search);
