@@ -28,9 +28,8 @@ class TweetTable extends Component {
       const z = this.props.info;
       var qwerty = '';
       if( z !== []){
-          var smcache = JSON.parse(z);
-          console.log("object that was in cookie.", smcache);
-          qwerty = smcache.map((item, i) => {
+          console.log("object that was in cookie.", z);
+          qwerty = z.map((item, i) => {
               console.log(item.name);
               return (
                   <tr>
