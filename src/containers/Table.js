@@ -25,12 +25,8 @@ class TweetTable extends Component {
     }
 
   render() {
-      let qwerty = "";
-      this.componentDidUpdate();
-      var search = Cookies.get('search');
-      console.log("cookie", search);
       if(search !== undefined){
-          var smcache = JSON.parse(search);
+          var smcache = JSON.parse(this.props.info);
           console.log("object that was in cookie.", smcache);
           qwerty = smcache.map((item, i) => {
               console.log(item.name);
