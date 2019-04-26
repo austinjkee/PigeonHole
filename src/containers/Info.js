@@ -48,7 +48,7 @@ class Info extends React.Component{
                  <table class="table">
                      <thead class="thead-dark">
                          <tr>
-                             <th scope="col">Trend</th>
+                             <th scope="col">Trending Topics</th>
                              <th scope="col">Tweet Volume</th>
 
                          </tr>

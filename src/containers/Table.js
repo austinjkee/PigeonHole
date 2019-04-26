@@ -24,10 +24,11 @@ class TweetTable extends Component {
                 console.log("z is not null in search");
                 console.log("object search", z);
                 console.log("object within:", z);
-                this.setState({data: z});
+                //this.setState({data: z});
 
                 const data = z.slice(0, 10);
 
+                Cookies.remove('scache, { path:'' }');
                 Cookies.set('scache', data, { maxAge: 90000 });
                 console.log("object in cookie", data);
             }
@@ -55,6 +56,7 @@ class TweetTable extends Component {
             console.log("object within:", z);
             //this.setState({data: z});
             const data = z.slice(0, 10);
+            Cookies.remove('scache, { path:'' }');
             Cookies.set('scache', data, { maxAge: 90000 });
             console.log("object in cookie", data);
 

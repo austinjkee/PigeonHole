@@ -308,7 +308,6 @@ class App extends React.Component {
           this.setState({loggedIn: true});
       }
       this.handleClickUpdateChart();
-      this.handleClickUpdateTable();
       this.handleClickUpdateTrending();
   }
 
