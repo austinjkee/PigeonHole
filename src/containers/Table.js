@@ -30,7 +30,8 @@ class TweetTable extends Component {
 
                 Cookies.remove('scache', { path:'' });
                 Cookies.set('scache', data, { maxAge: 90000 });
-                console.log("object in cookie", data);
+                this.setState({data:z});
+                console.log("object in data", this.state.data);
             }
 
             //console.log("object2", JSON.stringify(z));
@@ -58,7 +59,8 @@ class TweetTable extends Component {
             const data = z.slice(0, 10);
             Cookies.remove('scache', { path:'' });
             Cookies.set('scache', data, { maxAge: 90000 });
-            console.log("object in cookie", data);
+            this.setState({data:z});
+            console.log("object in data", this.state.data);
 
         }
         //console.log("object2", JSON.stringify(z));
@@ -91,9 +93,17 @@ class TweetTable extends Component {
           });
       }
       else{
-          qwerty = () => {
-            return (<></>);
-          };
+          qwerty = this.state.data.map((item, i) => {
+              console.log(item.name);
+              return (
+                  <tr>
+                      <td>{item.user.name}</td>
+                      <td>{item.full_text}</td>
+                      <td>{item.favorite_count}</td>
+                      <td>{item.retweet_count}</td>
+                  </tr>
+              );
+          });
       }
 
     return (
