@@ -45,12 +45,11 @@ class Info extends React.Component{
            <div>
            </div>
              <div className="Info">
-                 <table class="table">
-                     <thead class="thead-dark">
+                 <table className="table">
+                     <thead className="thead-dark">
                          <tr>
                              <th scope="col">Trending Topics</th>
                              <th scope="col">Tweet Volume</th>
-
                          </tr>
                      </thead>
                      <tbody>
