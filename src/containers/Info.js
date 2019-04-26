@@ -1,6 +1,4 @@
 import React from 'react';
-import { ResponsiveBar } from '@nivo/bar';
-import { generateCountriesData } from '@nivo/generators';
 import Cookies from 'js-cookie';
 
 class Info extends React.Component{
