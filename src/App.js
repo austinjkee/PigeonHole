@@ -312,7 +312,6 @@ class App extends React.Component {
       }
       this.handleClickUpdateChart();
       this.handleClickUpdateTrending();
-      Cookies.set('scache', [], { maxAge: 90000 });
   }
 
    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
