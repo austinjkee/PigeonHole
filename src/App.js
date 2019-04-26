@@ -159,7 +159,6 @@ class App extends React.Component {
   handleAdd(event) {
       this.setState({creatingAccount: true});
       this.handleClickUpdateTable();
-      Cookies.set('scache', this.state.statuses, { maxAge: 90000 });
       event.preventDefault();
   }
 
@@ -286,7 +285,9 @@ class App extends React.Component {
       //if(Cookies.get('dcache') === undefined){
       this.callBackendAPI()
         .then(function(res) {
-            this.setState({ data: res.express.id });
+            this.setState({ data: res.express.id }, () => {
+                Cookies.set('scache', this.state.statuses, { maxAge: 90000 });
+            });
         })
         .catch(err => console.log(err));
     //}
