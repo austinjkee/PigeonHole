@@ -11,7 +11,6 @@ class TweetTable extends Component {
 
   render() {
       let qwerty = "";
-      this.componentDidUpdate();
       var scache = Cookies.get('scache');
       console.log("cookie", scache);
       if(scache !== undefined){
