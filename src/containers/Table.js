@@ -26,6 +26,7 @@ class TweetTable extends Component {
 
   render() {
       const z = this.props.info;
+      var qwerty = '';
       if( z !== []){
           var smcache = JSON.parse(z);
           console.log("object that was in cookie.", smcache);
