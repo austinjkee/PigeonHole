@@ -15,22 +15,19 @@ class TweetTable extends Component {
     componentDidMount() {
         const z = this.props.info;
         console.log("Search Mounted.", this.props.info);
-        var Cookies2 = Cookies.noConflict();
-        Cookies2.set('search', z, { maxAge: 90000 });
+        Cookies.set('search', z, { maxAge: 90000 });
     }
 
     componentDidUpdate() {
         const z = this.props.info;
         console.log("Search Updated.", this.props.info);
-        var Cookies2 = Cookies.noConflict();
-        Cookies2.set('search', z, { maxAge: 90000 });
+        Cookies.set('search', z, { maxAge: 90000 });
     }
 
   render() {
       let qwerty = "";
       this.componentDidUpdate();
-      var Cookies2 = Cookies.noConflict();
-      var search = Cookies2.get('search');
+      var search = Cookies.get('search');
       console.log("cookie", search);
       if(search !== undefined){
           var smcache = JSON.parse(search);
