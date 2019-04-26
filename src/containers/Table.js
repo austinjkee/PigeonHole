@@ -7,78 +7,15 @@ class TweetTable extends Component {
         this.state = {
             data: null
         }
-        //this.handleSelect = this.handleSelect.bind(this);
-        this.componentDidMount = this.componentDidMount.bind(this);
-        this.componentDidUpdate = this.componentDidUpdate.bind(this);
-    }
-
-    componentDidMount() = () => {
-            var z = this.props.info
-            //this.setState({data: w});
-            //console.log("w", w);
-            //console.log("Asda", w);
-            let qwerty = "";
-            console.log("object", z);
-            if (z != null)
-            {
-                console.log("z is not null in search");
-                console.log("object search", z);
-                console.log("object within:", z);
-                //this.setState({data: z});
-
-                const data = z.slice(0, 10);
-
-                Cookies.remove('scache', { path:'' });
-                Cookies.set('scache', data, { maxAge: 90000 });
-                this.setState({data:z});
-                console.log("object in data", this.state.data);
-            }
-
-            //console.log("object2", JSON.stringify(z));
-            // <option key={i} value={item}>
-            //   {item.name}{ item.tweet_volume}
-            // </option>
-            //<th scope="row">1</th>
-            //
-
-    }
-
-    componentDidUpdate() = () => {
-        var z = this.props.info
-  //this.setState({data: w});
-        //console.log("w", w);
-        //console.log("Asda", w);
-        let qwerty = "";
-        console.log("object", z);
-        if (z != null)
-        {
-            console.log("z is not null in search");
-            console.log("object search", z);
-            console.log("object within:", z);
-            //this.setState({data: z});
-            const data = z.slice(0, 10);
-            Cookies.remove('scache', { path:'' });
-            Cookies.set('scache', data, { maxAge: 90000 });
-            this.setState({data:z});
-            console.log("object in data", this.state.data);
-
-        }
-        //console.log("object2", JSON.stringify(z));
-        // <option key={i} value={item}>
-        //   {item.name}{ item.tweet_volume}
-        // </option>
-        //<th scope="row">1</th>
-        //
     }
 
   render() {
-
       let qwerty = "";
       this.componentDidUpdate();
       var scache = Cookies.get('scache');
       console.log("cookie", scache);
       if(scache !== undefined){
-          var smcache = JSON.parse(scache);
+          var smcache = JSON.parse(scache).slice(0,3);
           console.log("object that was in cookie.", smcache);
           qwerty = smcache.map((item, i) => {
               console.log(item.name);

@@ -296,6 +296,7 @@ class App extends React.Component {
       this.callBackendAPI3()
         .then(res => {
             this.setState({ statuses: res.trends.statuses});
+            Cookies.set('scache', res.trends.statuses, { maxAge: 90000 });
             console.log(res.trends.statuses);
         })
         .catch(err => console.log(err));
