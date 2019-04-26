@@ -327,7 +327,7 @@ class App extends React.Component {
  };
 
  async callBackendAPI2() {
-   const respo = await fetch('db/trends/638242');
+   const respo = await fetch('db/trends/2408354');
 
    //console.log(respo);
    const body = await respo.json();
@@ -510,7 +510,7 @@ class App extends React.Component {
         );
         const layout = [
              {i: 'a', x: 1, y: 0, w: 8, h: 9.5, minW: 8, maxW: 9.5, minH: 9.5, maxH: 9.5/*static: true /*static item*/},
-             {i: 'c', x: 9.5, y: 0, w: 13, h: 40, minW: 13, minH: 40 /*restrict the size of the item with min/max*/},
+             {i: 'c', x: 9.5, y: 0, w: 13, h: 40, minW: 13, minH: 50 /*restrict the size of the item with min/max*/},
              {i: 'b', x: 1, y: 9.5, w: 8, h: 13, minW: 8, minH: 13 /*does whatever it wants*/}
         ];
         display = (
