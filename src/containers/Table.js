@@ -12,7 +12,7 @@ class TweetTable extends Component {
         this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
 
-    componentDidMount() {
+    componentDidMount() = () => {
             var z = this.props.info
             //this.setState({data: w});
             //console.log("w", w);
@@ -43,7 +43,7 @@ class TweetTable extends Component {
 
     }
 
-    componentDidUpdate() {
+    componentDidUpdate() = () => {
         var z = this.props.info
   //this.setState({data: w});
         //console.log("w", w);
