@@ -31,7 +31,7 @@ class TweetTable extends Component {
       else{
           qwerty = () => {
              return (<></>);
-          });
+          };
       }
 
     return (
