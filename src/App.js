@@ -49,6 +49,8 @@ class App extends React.Component {
     this.handleAgreeChange = this.handleAgreeChange.bind(this);
     this.handleQueryChange = this.handleQueryChange.bind(this);
 
+    this.doSubmit = this.doSubmit.bind(this);
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
@@ -105,48 +107,52 @@ class App extends React.Component {
     this.handleClickUpdateTrending();
   }
 
+  doSubmit(){
+      if(this.state.uname === '' || this.state.pword === ''){
+          alert('Missing fields!');
+      }
+      else{
+          const packet ={
+              uname: this.state.uname,
+              pword: this.state.pword,
+          };
+          fetch('db/verif', {
+              method: 'POST',
+              mode: 'same-origin',
+              redirect: 'follow',
+              credentials: 'include',
+              headers:{
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify(packet),
+          })
+          .then(res => {return res;})
+          .then(res => {
+              var dat = res.statusText;
+              if (dat === "BAD"){
+                  alert("Bad username or password.  Please try again.");
+              }
+              else if (dat === "GOOD"){
+                  this.setState({loggedIn: true});
+                  // Call our fetch functions
+                  this.handleClickUpdateChart();
+                  this.handleClickUpdateTrending();
+              }
+              else{
+                  alert("Error: There was a problem contacting the database.  Please try again later.");
+              }
+              console.log('Success:', res);
+          })
+          .catch(error => {
+              console.error('Error:', error);
+              alert("Error: There was a problem contacting the database.  Please try again later.");
+          });
+      }
+  }
+
   handleSubmit(event) {
-    if(this.state.uname === '' || this.state.pword === ''){
-        alert('Missing fields!');
-    }
-    else{
-        const packet ={
-            uname: this.state.uname,
-            pword: this.state.pword,
-        };
-        fetch('db/verif', {
-            method: 'POST',
-            mode: 'same-origin',
-            redirect: 'follow',
-            credentials: 'include',
-            headers:{
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(packet),
-        })
-        .then(res => {return res;})
-        .then(res => {
-            var dat = res.statusText;
-            if (dat === "BAD"){
-                alert("Bad username or password.  Please try again.");
-            }
-            else if (dat === "GOOD"){
-                this.setState({loggedIn: true});
-                // Call our fetch functions
-                this.handleClickUpdateChart();
-                this.handleClickUpdateTrending();
-            }
-            else{
-                alert("Error: There was a problem contacting the database.  Please try again later.");
-            }
-            console.log('Success:', res);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert("Error: There was a problem contacting the database.  Please try again later.");
-        });
-    }
-    event.preventDefault();
+      this.doSubmit();
+      event.preventDefault();
   }
 
   handleCancel(event) {
@@ -207,7 +213,7 @@ class App extends React.Component {
                       .then(res => {
                           var dat = res.statusText;
                           if(dat === "SUCCESS"){
-                                context.handleSubmit(0);
+                                context.doSubmit();
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
