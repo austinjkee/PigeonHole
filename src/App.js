@@ -185,7 +185,7 @@ class App extends React.Component {
               var context = this;
               // store password as it is taken in from the LOGIN/CREATION page here.
               //THIS METHOD IS ACCOUNT CREATION. (do not forget username as well for storing in DB)
-              bcrypt.hash(packet.pword, 10, function(err, hash){
+              bcrypt.hash(packet.pword, 10, (err, hash) => {
                   //store the "hash" into the database along with the username.
                   if(err){
                       console.error("Error:", err);
@@ -207,10 +207,7 @@ class App extends React.Component {
                       .then(res => {
                           var dat = res.statusText;
                           if(dat === "SUCCESS"){
-                               context.setState({loggedIn: true});
-                               // Call our fetch functions
-                               context.handleClickUpdateChart();
-                               context.handleClickUpdateTrending();
+                                context.handleSubmit(0);
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
