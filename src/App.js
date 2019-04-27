@@ -134,7 +134,6 @@ class App extends React.Component {
                 this.setState({loggedIn: true});
                 // Call our fetch functions
                 this.handleClickUpdateChart();
-                //this.handleClickUpdateTable();
                 this.handleClickUpdateTrending();
             }
             else{
@@ -210,9 +209,8 @@ class App extends React.Component {
                           if(dat === "SUCCESS"){
                                context.setState({loggedIn: true});
                                // Call our fetch functions
-                               this.handleClickUpdateChart();
-                               //this.handleClickUpdateTable();
-                               this.handleClickUpdateTrending();
+                               context.handleClickUpdateChart();
+                               context.handleClickUpdateTrending();
                           }
                           else if(dat === "FAIL"){
                                 alert("This username is already taken.");
